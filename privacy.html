@@ -3,11 +3,11 @@
   <head>
   <title>Privacy | bithost</title>
 
-  <link rel="stylesheet" href="/assets/tailwind-ecc744b7c35a8a32ce3aec6c688acf1f78d946a684de3f76f9b3e118a3738ce8.css" media="all" />
-  <script src="/assets/next-4a2b57f70d9732bd6c9aab35aba0ee251f09129882d65e86e2906959b523e80a.js" data-turbolinks-track="true" defer="defer"></script>
+  <link rel="stylesheet" href="/assets/tailwind-548280c962a66e0e948bc7622306d81daa17ad57cc198e7dc56e1b910ad74322.css" media="all" />
+  <script src="/assets/next-857b268e001d503bcef9213950d03fb24f47260e660e9dc3c3fa3ecdace0b672.js" data-turbolinks-track="true" defer="defer"></script>
 
   <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="EW-OeGw7MZO3pIdp_SuqEXdAy1r3cYpaDr3VvwgW-TEe90-84xv8u4dWBZptmXe2hNSLMKud6CwHk9GaeGaU4g" />
+<meta name="csrf-token" content="8w05zgOXmGb86rR8CsCQrKPZEjbusdZjR_bKnwLgk-K_JcBDNBd96c14udqp98OJEBi_D22laUCp_LIT_AJSfg" />
   <meta name="action-cable-url" content="/cable" />
 
   <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
@@ -61,9 +61,9 @@
 </head>
 
   <body class="min-h-screen flex flex-col">
-    <div class="landing-page flex-1 flex flex-col">
+    <div class="relative z-0 pt-20 flex-1 flex flex-col [&_h1]:font-extrabold [&_h2]:font-extrabold" style="--spacing-section-sm: 1.5em; --spacing-section: 3em; --spacing-section-lg: 5em">
       <div class="header landing-header">
-        <div class="max-w-[1100px] mx-auto px-gutter brand-bg">
+        <div class="container bg-brand text-white">
           <div class="header-inner">
             <h1 class="logo">
               <a class="bithost-logo logo-white" href="https://dashboard.bithost.io/">bithost</a>
@@ -89,10 +89,10 @@
 
 <div class="container">
   <div class="py-section">
-    <div class="page-title pt-section">
-      <div class="page-title-inner">
-        <div class="title">
-          <h1>Privacy</h1>
+    <div class="pt-section">
+      <div class="flex">
+        <div>
+          <h1 class="text-3xl font-extrabold !pb-0">Privacy</h1>
           <div class="subline"></div>
         </div>
       </div>
@@ -104,12 +104,12 @@
       <h3>User Data</h3>
       <p>
         We preserve user data on user deletion for restoration purposes. If you want your data deleted
-        send us a mail to <a href="/cdn-cgi/l/email-protection#83f0f6f3f3ecf1f7c3e1eaf7ebecf0f7adeaec"><span class="__cf_email__" data-cfemail="41323431312e333501232835292e32356f282e">[email&#160;protected]</span></a> from the mail you
+        send us a mail to <a href="/cdn-cgi/l/email-protection#b6c5c3c6c6d9c4c2f6d4dfc2ded9c5c298dfd9"><span class="__cf_email__" data-cfemail="9cefe9ececf3eee8dcfef5e8f4f3efe8b2f5f3">[email&#160;protected]</span></a> from the mail you
         registered that user.
       </p>
       <p>
         We preserve servers data on server deletion for history and debugging purposes. If you want
-        your server data deleted send us a mail to <a href="/cdn-cgi/l/email-protection#20535550504f525460424954484f53540e494f"><span class="__cf_email__" data-cfemail="a0d3d5d0d0cfd2d4e0c2c9d4c8cfd3d48ec9cf">[email&#160;protected]</span></a>
+        your server data deleted send us a mail to <a href="/cdn-cgi/l/email-protection#8ffcfaffffe0fdfbcfede6fbe7e0fcfba1e6e0"><span class="__cf_email__" data-cfemail="43303633332c313703212a372b2c30376d2a2c">[email&#160;protected]</span></a>
         from the mail you registered that user.
       </p>
       <h3>Tracking</h3>
@@ -123,18 +123,18 @@
         <a href="https://hcaptcha.com/terms">terms of service</a> apply.
       </p>
       <div class="alert">
-        If you have any questions, please do not hesitate to <a href="/cdn-cgi/l/email-protection#ff8c8a8f8f908d8bbf9d968b97908c8bd19690">contact us</a>.
+        If you have any questions, please do not hesitate to <a href="/cdn-cgi/l/email-protection#6c1f191c1c031e182c0e051804031f18420503">contact us</a>.
       </div>
     </div>
   </div>
 </div>
 
 
-      <div class="landing-footer">
-        <div class="max-w-[1100px] mx-auto px-gutter">
-          <div class="footer-slim">
-            <div class="copyright">© 2026 bithost</div>
-            <nav>
+      <div class="bg-brand text-white [&_a]:text-white [&_a]:no-underline hover:[&_a]:underline max-lg:text-center">
+        <div class="container">
+          <div class="flex py-4 text-sm justify-between max-lg:flex-wrap max-lg:justify-center">
+            <div>© 2026 bithost</div>
+            <nav class="[&>*]:mr-4 [&>*:last-child]:mr-0 max-lg:mt-2">
               <a href="https://www.superbithost.com">Dedicated Servers</a>
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms of Service</a>
@@ -143,5 +143,5 @@
         </div>
       </div>
     </div>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e684618fefbb8ab',t:'MTc3NTIyMTQxMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e68dd1b4d737140',t:'MTc3NTIyNzU5Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
