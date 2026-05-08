@@ -1,6 +1,5 @@
-User-agent: BithostStaticBuilder
-User-agent: Wget
-Disallow:
-
 User-agent: *
-Disallow: /
+Disallow: /dashboard/
+Disallow: /billing/
+
+Sitemap: https://bithost.io/sitemap.xml
