@@ -40,7 +40,120 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://dashboard.bithost.io/assets/ogp-banner-91ba09e66d4b6db7cd1aaa6bbef234ced1320668898fabdf45d5ce54551581c4.png">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bithost.io/#organization",
+        "name": "bithost",
+        "alternateName": "BitHost",
+        "url": "https://bithost.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bithost.io/android-icon-192x192.png",
+          "width": 192,
+          "height": 192,
+          "caption": "bithost"
+        },
+        "description": "bithost lets you pay for DigitalOcean, Linode, and Vultr cloud servers with Bitcoin (BTC), Litecoin (LTC), Ethereum (ETH), and other cryptocurrencies.",
+        "founder": {
+          "@type": "Person",
+          "name": "bithost team"
+        },
+        "sameAs": [
+          "https://www.superbithost.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bithost.io/#website",
+        "url": "https://bithost.io/",
+        "name": "bithost",
+        "description": "Crypto Cloud Hosting – pay for DigitalOcean, Linode, and Vultr with Bitcoin and other cryptocurrencies.",
+        "publisher": { "@id": "https://bithost.io/#organization" },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://bithost.io/#webpage",
+      "url": "https://bithost.io/",
+      "name": "Crypto Cloud Hosting – bithost",
+      "description": "Pay for DigitalOcean, Linode, and Vultr cloud servers with Bitcoin, Ethereum, Litecoin and other cryptocurrencies.",
+      "isPartOf": { "@id": "https://bithost.io/#website" },
+      "about": { "@id": "https://bithost.io/#organization" },
+      "inLanguage": "en"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://bithost.io/#service",
+      "name": "Crypto Cloud Hosting",
+      "serviceType": "Cloud Hosting",
+      "provider": { "@id": "https://bithost.io/#organization" },
+      "description": "Get your DigitalOcean, Linode and Vultr cloud server by paying with Bitcoin (BTC), Litecoin (LTC), Ethereum (ETH) and other cryptocurrencies.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Developers, businesses, and individuals seeking cryptocurrency-funded cloud infrastructure"
+      },
+      "category": "VPS / Cloud Server Hosting",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "12.00",
+        "highPrice": "6000.00",
+        "offerCount": "100",
+        "availability": "https://schema.org/InStock",
+        "url": "https://bithost.io/prices"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "bithost cloud server plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "DigitalOcean droplets paid with crypto",
+              "provider": { "@type": "Organization", "name": "DigitalOcean (via bithost)" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Linode instances paid with crypto",
+              "provider": { "@type": "Organization", "name": "Linode (via bithost)" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vultr servers paid with crypto",
+              "provider": { "@type": "Organization", "name": "Vultr (via bithost)" }
+            }
+          }
+        ]
+      }
+    }
+</script>
+  
+    
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
