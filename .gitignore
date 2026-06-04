@@ -4,3 +4,7 @@ _site/
 .jekyll-metadata
 .DS_Store
 *.swp
+
+# Local `bundle install` output (GitHub builds server-side; never commit these)
+vendor/
+.bundle/

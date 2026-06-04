@@ -80,10 +80,11 @@ its YAML **front matter**; `_includes/head.html` turns those into `<head>` tags.
 
 ## Deployment
 
-GitHub Pages builds and serves the site automatically on every push:
+GitHub Pages builds and serves the site automatically on every push to the
+`gh-pages` branch:
 
 - **Settings → Pages → Build and deployment → Source: _Deploy from a branch_**,
-  branch `main`, folder `/ (root)`.
+  branch `gh-pages`, folder `/ (root)`.
 - The custom domain (`bithost.io`) is set via the `CNAME` file; enable
   **Enforce HTTPS** in the Pages settings.
 
