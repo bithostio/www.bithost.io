@@ -15,10 +15,10 @@ category: "Getting Started"
 read_time: "3 min read"
 updated: "May 2026"
 toc:
-  - { id: "1-understand-your-workload", label: "Understand Your Workload" }
-  - { id: "2-key-specs-explained", label: "Key Specs Explained" }
-  - { id: "3-common-use-cases-recommended-plans", label: "Common Use Cases & Recommended Plans" }
-  - { id: "4-start-small-scale-later", label: "Start Small, Scale Later" }
+  - { id: "understand-your-workload", label: "Understand Your Workload" }
+  - { id: "key-specs-explained", label: "Key Specs Explained" }
+  - { id: "common-use-cases-recommended-plans", label: "Common Use Cases & Recommended Plans" }
+  - { id: "start-small-scale-later", label: "Start Small, Scale Later" }
 sidebar_title: "Getting Started"
 sidebar:
   - { url: "/guides/getting-started", label: "Deploy your first server" }
@@ -31,7 +31,7 @@ Picking the right cloud server plan from the start saves you time,
 money, and headaches. This guide walks you through the key factors to
 consider so you can make a confident decision.
 
-## 1. Understand Your Workload   {#1-understand-your-workload}
+## 1. Understand Your Workload   {#understand-your-workload}
 
 Before comparing plans, ask yourself:
 
@@ -42,7 +42,7 @@ Before comparing plans, ask yourself:
 * **Does it need to run 24/7?** Most cloud servers do, but knowing this
   upfront helps you budget correctly.
 
-## 2. Key Specs Explained   {#2-key-specs-explained}
+## 2. Key Specs Explained   {#key-specs-explained}
 
 ### CPU (vCPUs)
 
@@ -82,7 +82,7 @@ This is the amount of data your server can send and receive per month.
 * Check whether overage is charged or if the connection is simply
   throttled
 
-## 3. Common Use Cases &amp; Recommended Plans   {#3-common-use-cases-recommended-plans}
+## 3. Common Use Cases &amp; Recommended Plans   {#common-use-cases-recommended-plans}
 
 | Use Case | vCPUs | RAM | Storage |
 |----------
@@ -94,7 +94,7 @@ This is the amount of data your server can send and receive per month.
 | E-commerce store | 2–4 | 4–8 GB | 100 GB |
 | Self-hosted file storage | 2 | 4 GB | 200 GB+ |
 
-## 4. Start Small, Scale Later   {#4-start-small-scale-later}
+## 4. Start Small, Scale Later   {#start-small-scale-later}
 
 If you\'re unsure, **start with a smaller plan**. Cloud servers can be
 upgraded (scaled up) as your needs grow. It\'s much easier to scale up
