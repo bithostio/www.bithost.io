@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Guides | bithost — Cloud VPS with Bitcoin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=optional" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/tailwind-ebd512f89f8056b1671432580a600e581bad336da6b51d8eea479938341fe16c.css" media="all" />
+  <link rel="stylesheet" href="/assets/redesign.css" media="all" />
+  <script src="/assets/next-6ff347cc1576bc2972d417cb788cc0722ed1e0d693dbb7767823072a0997d191.js" defer></script>
+
+  <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="/manifest.json" rel="manifest">
+  <meta content="#4f64e1" name="msapplication-TileColor">
+
+  <meta name="description" content="Guides and tutorials for bithost — how to deploy your first server, top up with Bitcoin, use the bh CLI, and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bithost.io/guides/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f64e1">
+
+  <meta property="og:title" content="Guides — bithost">
+  <meta property="og:description" content="Step-by-step guides for deploying cloud servers paid with Bitcoin and cryptocurrency on bithost.">
+  <meta property="og:url" content="https://bithost.io/guides/">
+  <meta property="og:type" content="website">
+
+  <!-- Breadcrumb schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bithost.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://bithost.io/guides/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://bithost.io/guides/#webpage",
+    "url": "https://bithost.io/guides/",
+    "name": "Guides | bithost",
+    "description": "Step-by-step guides for deploying cloud servers paid with Bitcoin and cryptocurrency on bithost.",
+    "isPartOf": { "@id": "https://bithost.io/#website" },
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+
+<body data-theme="navy" class="rd-page">
+
+  <!-- NAV -->
+  <nav class="rd-topnav" aria-label="Main navigation">
+    <a class="rd-brand" href="/" aria-label="bithost home">
+      <img src="/assets/logo-white-ce5f5b6b661137f848342518267ebf9b77d7e5dd90236b775503cdcd3d0c64f0.svg" alt="bithost logo" width="26" height="26">
+      <span class="rd-wordmark">[bithost]</span>
+    </a>
+    <nav class="rd-nav-links" id="rd-nav-links">
+      <a href="/prices">Prices</a>
+      <a href="/guides">Guides</a>
+      <a href="/bithost-cli-api">API &amp; CLI</a>
+      
+      <a href="/faq">FAQ</a>
+      <a href="/tour">About Us</a>
+    </nav>
+    <div class="rd-nav-auth">
+      <button class="rd-menu-toggle" id="rd-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="rd-btn" href="https://dashboard.bithost.io/">Login</a>
+      <a class="rd-btn solid" href="https://dashboard.bithost.io/registration">Register</a>
+    </div>
+  </nav>
+
+  <!-- GUIDE HEADER -->
+  <div class="rd-guide-header">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <div class="rd-guide-breadcrumb">
+        <a href="/">Home</a><span>→</span>Guides
+      </div>
+      <h1>Guides</h1>
+      <p style="color: var(--rd-white-mute); font-size: 16px; margin: 10px 0 0; max-width: 560px; line-height: 1.55;">Step-by-step tutorials for deploying, managing, and scaling cloud servers paid with Bitcoin and cryptocurrency.</p>
+    </div>
+  </div>
+
+  <!-- GUIDE CARDS -->
+  <main>
+    <div class="rd-guide-cards">
+
+      <a class="rd-guide-card" href="/guides/getting-started">
+        <div class="rd-card-tag">Getting Started</div>
+        <h3>Deploy your first server with Bitcoin</h3>
+        <p>Create your account, top up your balance with BTC or Lightning, and have a live Ubuntu server in under 5 minutes.</p>
+        <div class="rd-card-arrow">Read guide →</div>
+      </a>
+
+      <a class="rd-guide-card" href="/guides/top-up-with-lightning">
+        <div class="rd-card-tag">Payments</div>
+        <h3>Top up instantly with Lightning Network</h3>
+        <p>Lightning credits to your balance in under a second. Learn how to generate a payment request and confirm the top-up.</p>
+        <div class="rd-card-arrow">Read guide →</div>
+      </a>
+
+      <a class="rd-guide-card" href="/guides/install-bh-cli">
+        <div class="rd-card-tag">Developer Tools</div>
+        <h3>Install and use the bh CLI</h3>
+        <p>Install the <code style="font-family:'JetBrains Mono',monospace; font-size:12px;">bh</code> command-line tool and manage your servers entirely from the terminal — deploy, resize, snapshot, and destroy.</p>
+        <div class="rd-card-arrow">Read guide →</div>
+      </a>
+
+      <a class="rd-guide-card" href="/guides/ssh-keys">
+        <div class="rd-card-tag">Security</div>
+        <h3>Add and manage SSH keys</h3>
+        <p>bithost uses SSH key authentication. Learn how to generate a key pair and add your public key before deploying a server.</p>
+        <div class="rd-card-arrow">Read guide →</div>
+      </a>
+
+      <a class="rd-guide-card" href="/guides/choose-provider">
+        <div class="rd-card-tag">Providers</div>
+        <h3>DigitalOcean vs Linode vs Vultr — which to choose?</h3>
+        <p>A practical comparison of the three providers available on bithost to help you pick the right one for your workload.</p>
+        <div class="rd-card-arrow">Read guide →</div>
+      </a>
+
+      <a class="rd-guide-card" href="/guides/api">
+        <div class="rd-card-tag">Developer Tools</div>
+        <h3>Automate deployments with the REST API</h3>
+        <p>Use Bearer token auth and the bithost API to provision, resize, snapshot and destroy servers programmatically.</p>
+        <div class="rd-card-arrow">Read guide →</div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="rd-foot" aria-label="Site footer">
+    <div class="rd-foot-inner">
+      <div class="rd-foot-top">
+        <div>
+          <div class="rd-foot-brand">
+            <img src="/assets/logo-white-ce5f5b6b661137f848342518267ebf9b77d7e5dd90236b775503cdcd3d0c64f0.svg" alt="bithost" width="22" height="22">
+            <span class="rd-brand-name">bithost</span>
+          </div>
+          <p class="rd-blurb">Privacy-first cloud reseller for DigitalOcean, Linode, and Vultr. Pay in crypto. No KYC. Hourly billing. Since 2014.</p>
+        </div>
+        <div>
+          <h5>Product</h5>
+          <a href="/prices">Prices</a><a href="/tour">Tour</a><a href="/faq#supported-cryptocurrencies">Supported Coins</a><a href="/bithost-cli-api">CLI</a>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <a href="/guides">Guides</a><a href="/faq">FAQ</a><a href="https://www.superbithost.com">Dedicated Servers</a>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <a href="/privacy">Privacy</a><a href="/terms">Terms of Service</a>
+        </div>
+        <div>
+          <h5>Get started</h5>
+          <a href="https://dashboard.bithost.io/registration">Create account</a><a href="https://dashboard.bithost.io/">Login</a>
+        </div>
+      </div>
+      <div class="rd-foot-bottom">
+        <span>© 2014 — 2026 · bithost</span>
+        <span class="rd-foot-status"><span class="rd-live-dot" aria-hidden="true"></span>all systems operational</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('rd-menu-toggle');
+      var links  = document.getElementById('rd-nav-links');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

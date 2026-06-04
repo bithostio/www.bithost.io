@@ -1,0 +1,162 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bithost.io/#organization",
+      "name": "bithost",
+      "alternateName": "BitHost",
+      "url": "https://bithost.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bithost.io/android-icon-192x192.png",
+        "width": 192,
+        "height": 192,
+        "caption": "bithost"
+      },
+      "description": "bithost lets you pay for DigitalOcean, Linode, and Vultr cloud servers with Bitcoin (BTC), Lightning, Litecoin (LTC), Ethereum (ETH), and other cryptocurrencies. No KYC, no credit card required. Since 2014.",
+      "foundingDate": "2014",
+      "sameAs": ["https://www.superbithost.com"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bithost.io/#website",
+      "url": "https://bithost.io/",
+      "name": "bithost",
+      "description": "Crypto Cloud Hosting — pay for DigitalOcean, Linode, and Vultr with Bitcoin and other cryptocurrencies.",
+      "publisher": { "@id": "https://bithost.io/#organization" },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bithost.io/faq?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://bithost.io/#webpage",
+  "url": "https://bithost.io/",
+  "name": "Bithost — Buy Cloud VPS with Bitcoin &amp; Crypto | No KYC Since 2014",
+  "description": "Buy DigitalOcean, Linode, and Vultr cloud servers with Bitcoin, Lightning, ETH, LTC, DOGE and more. Hourly billing. No ID. No credit card. 30K+ users since 2014.",
+  "isPartOf": { "@id": "https://bithost.io/#website" },
+  "about": { "@id": "https://bithost.io/#organization" },
+  "inLanguage": "en",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bithost.io/"
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://bithost.io/#service",
+  "name": "Crypto Cloud VPS Hosting",
+  "serviceType": "Cloud Hosting",
+  "provider": { "@id": "https://bithost.io/#organization" },
+  "description": "Get DigitalOcean, Linode and Vultr cloud servers by paying with Bitcoin (BTC), Lightning, Litecoin (LTC), Ethereum (ETH) and other cryptocurrencies. No KYC, no credit card, hourly billing.",
+  "areaServed": { "@type": "Place", "name": "Worldwide" },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Developers, businesses, and privacy-conscious individuals seeking cryptocurrency-funded cloud infrastructure"
+  },
+  "category": "VPS / Cloud Server Hosting",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "6.00",
+    "highPrice": "6000.00",
+    "offerCount": "100",
+    "availability": "https://schema.org/InStock",
+    "url": "https://bithost.io/prices"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "bithost cloud server plans",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DigitalOcean droplets paid with cryptocurrency",
+          "provider": { "@type": "Organization", "name": "DigitalOcean (via bithost)" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Linode instances paid with cryptocurrency",
+          "provider": { "@type": "Organization", "name": "Linode (via bithost)" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vultr servers paid with cryptocurrency",
+          "provider": { "@type": "Organization", "name": "Vultr (via bithost)" }
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to share ID or a credit card to use bithost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Sign up with an email address, send a top-up in any supported cryptocurrency, and deploy your server. We are a reseller of DigitalOcean, Linode, and Vultr — we handle the fiat side so you don't have to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cryptocurrencies does bithost accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "bithost accepts Bitcoin (BTC), Lightning Network, Ethereum (ETH), Litecoin (LTC), Dogecoin (DOGE), USDC
+        , Zcash (ZEC), XRP, BCH, BSV, DASH, and EOS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does billing work on bithost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Servers are billed on a per-hour basis. If you use a server for less than a month, you only pay the hourly usage. The hourly price is charged until the monthly price cap is reached. Servers are billed as long as they exist, even if powered off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cloud providers does bithost support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "bithost supports DigitalOcean, Linode (Akamai Cloud), and Vultr. All three providers offer SSD/NVMe storage and are billed per-hour through your bithost balance."
+      }
+    }
+  ]
+}
+</script>

@@ -1,0 +1,39 @@
+<!-- Main navigation (server-rendered; was assets/nav.js).
+     Set `nav:` in a page's front matter to one of:
+     prices | bithost-cli-api | guides | pay-with-crypto | faq  to highlight a link. -->
+<nav class="rd-topnav" aria-label="Main navigation">
+  <a class="rd-brand" href="/" aria-label="[bithost] home">
+    <img src="/assets/logo-white-ce5f5b6b661137f848342518267ebf9b77d7e5dd90236b775503cdcd3d0c64f0.svg" alt="bithost logo" width="26" height="26" fetchpriority="high">
+    <span class="rd-wordmark">[bithost]</span>
+  </a>
+  <nav class="rd-nav-links" id="rd-nav-links">
+    <a href="/prices"{% if page.nav == 'prices' %} class="rd-nav-active"{% endif %}>Prices</a>
+    <a href="/bithost-cli-api"{% if page.nav == 'bithost-cli-api' %} class="rd-nav-active"{% endif %}>API &amp; CLI</a>
+    <a href="/guides"{% if page.nav == 'guides' %} class="rd-nav-active"{% endif %}>Guides</a>
+    <a href="/pay-with-crypto"{% if page.nav == 'pay-with-crypto' %} class="rd-nav-active"{% endif %}>Pay with Crypto</a>
+    <a href="/faq"{% if page.nav == 'faq' %} class="rd-nav-active"{% endif %}>FAQ</a>
+    <div class="rd-mobile-auth">
+      <a class="rd-btn" href="https://dashboard.bithost.io/">Login</a>
+      <a class="rd-btn solid" href="https://dashboard.bithost.io/registration">Register</a>
+    </div>
+  </nav>
+  <div class="rd-nav-auth">
+    <button class="rd-menu-toggle" id="rd-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="rd-btn" href="https://dashboard.bithost.io/">Login</a>
+    <a class="rd-btn solid" href="https://dashboard.bithost.io/registration">Register</a>
+  </div>
+</nav>
+<script>
+  /* Mobile menu toggle (was in nav.js) */
+  (function () {
+    var toggle = document.getElementById('rd-menu-toggle');
+    var links = document.getElementById('rd-nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>

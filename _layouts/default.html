@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body data-theme="{{ page.theme | default: 'navy' }}" class="rd-page">
+{% if page.promo %}{% include promo-bar.html %}{% endif %}
+{% include nav.html %}
+{{ content }}
+{% include footer.html %}
+{% include cookie-consent.html %}
+</body>
+</html>

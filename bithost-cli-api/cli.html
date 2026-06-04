@@ -1,0 +1,245 @@
+---
+layout: default
+nav: bithost-cli-api
+title: "CLI Docs | bithost - Buy Cloud VPS with Bitcoin &amp; Crypto"
+description: "bithost CLI (bh) documentation - install and use the bh command-line tool to manage your cloud servers from the terminal."
+canonical: "https://bithost.io/bithost-cli-api/cli"
+og_title: "CLI Docs | bithost"
+og_url: "https://bithost.io/bithost-cli-api/cli"
+og_description: "Install and use the bh command-line tool to manage your bithost cloud servers from the terminal."
+jsonld: jsonld/cli-api-cli.html
+---
+
+
+  <!-- DARK HEADER -->
+  <div class="rd-guide-header">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; margin-bottom: 10px;">CLI · bh</div>
+    <h1>CLI Docs</h1>
+  </div>
+
+  <!-- BODY -->
+  <div class="rd-guide-layout">
+
+    <nav class="rd-breadcrumb" style="grid-column: 1 / -1;" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="rd-breadcrumb-sep">→</span>
+      <a href="/bithost-cli-api">API &amp; CLI</a>
+      <span class="rd-breadcrumb-sep">→</span>
+      <span class="rd-breadcrumb-current">CLI Docs</span>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <aside class="rd-guide-sidebar">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rd-ink-mute); margin-bottom: 12px;">API &amp; CLI</div>
+      <a href="/bithost-cli-api/" style="display: block; font-size: 14px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 8px; opacity: 0.7;">Overview</a>
+      <a href="/bithost-cli-api/api" style="display: block; font-size: 14px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 8px; opacity: 0.7;">REST API Reference</a>
+      <a href="/bithost-cli-api/cli" style="display: block; font-size: 14px; color: var(--rd-indigo); text-decoration: none; font-weight: 600; margin-bottom: 16px;">CLI Docs</a>
+
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rd-ink-mute); margin-bottom: 10px; margin-top: 4px;">On this page</div>
+      <a href="#installation" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Installation</a>
+      <a href="#quick-start" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Quick Start</a>
+      <a href="#tui" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Interactive TUI</a>
+      <a href="#cli-commands" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">CLI Commands</a>
+      <a href="#configuration" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Configuration</a>
+      <a href="#troubleshooting" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Troubleshooting</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="rd-guide-body">
+
+      <!-- Installation -->
+      <h2 id="installation" style="font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px; padding-top: 4px;">Installation</h2>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 16px;">Install with a single command:</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 16px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">curl -fsSL https://bithost.io/cli | bash</code></pre>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 16px;">The installer places the <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">bh</code> binary in <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">~/.local/bin/</code>. If your shell can't find <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">bh</code> after installing, add it to your PATH:</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 16px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">export PATH="$HOME/.local/bin:$PATH"</code></pre>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 40px;">To make this permanent, add the line above to your <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">~/.bashrc</code> or <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">~/.zshrc</code>.</p>
+
+      <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 12px; color: var(--rd-ink);">Building from source (contributors only)</h3>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 8px;">Only needed if you want to contribute to or modify the CLI. Requires <a href="https://go.dev/dl/" style="color: var(--rd-indigo);">Go</a> to be installed.</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 40px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">git clone https://github.com/bithostio/bh.git
+cd bh
+make build</code></pre>
+
+      <!-- Quick Start -->
+      <h2 id="quick-start" style="font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px;">Quick Start</h2>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 16px;">After installing, configure authentication with your API key:</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 16px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">bh auth</code></pre>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 16px;">Get your API key from <a href="https://dashboard.bithost.io/api/keys" style="color: var(--rd-indigo);">dashboard.bithost.io/api/keys</a>.</p>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 8px;">Check your account balance and details:</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 40px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">bh user</code></pre>
+
+      <!-- Interactive TUI -->
+      <h2 id="tui" style="font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px;">Interactive TUI</h2>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 16px;">Launch the full-screen terminal UI for visual server management:</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 24px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">bh manage</code></pre>
+
+      <!-- TUI screenshot -->
+      <div style="background: #0d1629; border-radius: 10px; padding: 20px 24px; margin: 0 0 24px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.7; color: #e2e8f0;">
+        <!-- header row -->
+        <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+          <span style="color: #4f64e1; font-weight: 700;">bithost.io</span>
+          <span style="color: #9ca3af;">Balance: $75.36&nbsp;&nbsp;&nbsp;Servers: 1/10</span>
+        </div>
+        <div style="color: #6b7280; margin-bottom: 12px;">user@domain.com&nbsp;&nbsp;&nbsp;v0.1.1</div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 14px;"></div>
+        <!-- servers section -->
+        <div style="color: #4f64e1; font-weight: 700; margin-bottom: 8px;">SERVERS</div>
+        <div style="display: grid; grid-template-columns: 180px 160px 120px 80px 1fr; color: #6b7280; font-size: 12px; margin-bottom: 6px; padding-left: 16px;">
+          <span>NAME</span><span>IP</span><span>STATUS</span><span>COST</span><span>PROVIDER</span>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 8px; width: 580px; max-width: 100%;"></div>
+        <div style="display: grid; grid-template-columns: 180px 160px 120px 80px 1fr; align-items: center;">
+          <span style="color: #4f64e1; font-weight: 700;">&gt; server</span>
+          <span>111.111.111.111</span>
+          <span style="color: #22c55e;">active</span>
+          <span>$0.02</span>
+          <span style="color: #9ca3af;">digital_ocean</span>
+        </div>
+        <!-- footer -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 20px; padding-top: 12px; color: #6b7280; font-size: 12px;">
+          n: new server &bull; s: ssh keys &bull; t: top up &bull; r: refresh &bull; enter: details &bull; d: delete &bull; q: quit
+        </div>
+      </div>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 8px;">The TUI includes:</p>
+      <ul style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 40px; padding-left: 20px;">
+        <li style="margin-bottom: 6px;">Dashboard with server list and account balance</li>
+        <li style="margin-bottom: 6px;">Create servers with a step-by-step wizard</li>
+        <li style="margin-bottom: 6px;">Manage SSH keys</li>
+        <li style="margin-bottom: 6px;">Delete servers with confirmation</li>
+        <li style="margin-bottom: 6px;">Copy SSH commands to clipboard</li>
+        <li style="margin-bottom: 6px;">Auto-refresh server status</li>
+        <li>Vim-style navigation (j/k, q to quit)</li>
+      </ul>
+
+      <!-- CLI Commands -->
+      <h2 id="cli-commands" style="font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 24px;">CLI Commands</h2>
+
+      <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 12px; color: var(--rd-ink);">Server Management</h3>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 28px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;"><span style="color: #64748b;"># List active servers</span>
+bh servers list
+
+<span style="color: #64748b;"># List all servers including failed</span>
+bh servers list --all
+
+<span style="color: #64748b;"># Create a server</span>
+bh servers new --name myserver --provider digital_ocean --region 2 --size 5 --image 10 --keys 1,2
+
+<span style="color: #64748b;"># Create a server with backups enabled</span>
+bh servers new --name myserver --provider digital_ocean --region 2 --size 5 --image 10 --keys 1,2 --backups
+
+<span style="color: #64748b;"># Delete a server (with confirmation prompt)</span>
+bh servers delete &lt;id&gt;
+
+<span style="color: #64748b;"># Delete a server without confirmation</span>
+bh servers delete &lt;id&gt; --force</code></pre>
+
+      <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 12px; color: var(--rd-ink);">Resource Discovery</h3>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 12px;">Providers are identified by slug strings (e.g. <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">digital_ocean</code>). Use <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">bh providers</code> to list available slugs.</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 28px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;"><span style="color: #64748b;"># List available providers</span>
+bh providers
+
+<span style="color: #64748b;"># List regions for a provider</span>
+bh regions --provider digital_ocean
+
+<span style="color: #64748b;"># List sizes/plans for a region</span>
+bh sizes --provider digital_ocean --region &lt;region-id&gt;
+
+<span style="color: #64748b;"># List OS images</span>
+bh images --provider digital_ocean
+bh images --provider digital_ocean --arch arm  <span style="color: #64748b;"># filter by architecture (default: x86)</span></code></pre>
+
+      <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 12px; color: var(--rd-ink);">SSH Key Management</h3>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 28px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;"><span style="color: #64748b;"># List SSH keys</span>
+bh ssh-keys list
+
+<span style="color: #64748b;"># Add SSH key (interactive prompts)</span>
+bh ssh-keys add
+
+<span style="color: #64748b;"># Add SSH key from file</span>
+bh ssh-keys add --label "my-key" --file ~/.ssh/id_rsa.pub
+
+<span style="color: #64748b;"># Add SSH key directly</span>
+bh ssh-keys add --label "my-key" --key "ssh-rsa AAAA..."
+
+<span style="color: #64748b;"># Add SSH key for a specific provider (default: digital_ocean)</span>
+bh ssh-keys add --label "my-key" --file ~/.ssh/id_rsa.pub --provider digital_ocean</code></pre>
+
+      <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 12px; color: var(--rd-ink);">Account</h3>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 40px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;"><span style="color: #64748b;"># Show user info (name, email, balance, server limit)</span>
+bh user
+
+<span style="color: #64748b;"># Configure API key</span>
+bh auth</code></pre>
+
+      <!-- Configuration -->
+      <h2 id="configuration" style="font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px;">Configuration</h2>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 16px;">Config is stored in <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">~/.bh/config.json</code> with 0600 permissions:</p>
+      <pre style="background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 16px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">{
+  "api_key": "your-api-key",
+  "api_base_url": "https://dashboard.bithost.io/api/v1/"
+}</code></pre>
+      <p style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 8px;">Environment variable overrides:</p>
+      <ul style="color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 40px; padding-left: 20px;">
+        <li style="margin-bottom: 6px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">BH_API_KEY</code> - API key</li>
+        <li><code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">BH_API_URL</code> - API base URL</li>
+      </ul>
+
+      <!-- Troubleshooting -->
+      <h2 id="troubleshooting" style="font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px;">Troubleshooting</h2>
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px;">
+        <div style="border: 1px solid var(--rd-line); border-radius: 10px; padding: 18px 20px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--rd-ink); margin-bottom: 6px;">"config not found"</div>
+          <p style="color: var(--rd-ink); opacity: 0.7; line-height: 1.6; margin: 0;">Run <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">bh auth</code> to set up your API key.</p>
+        </div>
+        <div style="border: 1px solid var(--rd-line); border-radius: 10px; padding: 18px 20px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--rd-ink); margin-bottom: 6px;">"Authentication failed"</div>
+          <p style="color: var(--rd-ink); opacity: 0.7; line-height: 1.6; margin: 0;">Get a new API key from <a href="https://dashboard.bithost.io/api/keys" style="color: var(--rd-indigo);">dashboard.bithost.io/api/keys</a>.</p>
+        </div>
+        <div style="border: 1px solid var(--rd-line); border-radius: 10px; padding: 18px 20px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--rd-ink); margin-bottom: 6px;">"No SSH keys found"</div>
+          <p style="color: var(--rd-ink); opacity: 0.7; line-height: 1.6; margin: 0;">Add keys with <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">bh ssh-keys add</code> or at <a href="https://dashboard.bithost.io/keys" style="color: var(--rd-indigo);">dashboard.bithost.io/keys</a>.</p>
+        </div>
+        <div style="border: 1px solid var(--rd-line); border-radius: 10px; padding: 18px 20px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--rd-ink); margin-bottom: 6px;">Low balance</div>
+          <p style="color: var(--rd-ink); opacity: 0.7; line-height: 1.6; margin: 0;">Top up at <a href="https://dashboard.bithost.io" style="color: var(--rd-indigo);">dashboard.bithost.io</a>.</p>
+        </div>
+      </div>
+
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: var(--rd-ink-mute);">
+        Source on GitHub: <a href="https://github.com/bithostio/bh" target="_blank" rel="noopener" style="color: var(--rd-ink-mute); text-decoration: underline;">github.com/bithostio/bh</a>
+      </p>
+
+    </main>
+
+  </div>
+
+  <!-- CTA BAND -->
+  <section style="
+    background: var(--rd-hero-bg);
+    color: var(--rd-hero-fg);
+    position: relative;
+    overflow: hidden;
+    padding: 96px 56px;
+    text-align: center;
+    border-top: 1px solid var(--rd-navy-3);
+  ">
+    <div aria-hidden="true" style="
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(var(--rd-hero-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--rd-hero-grid) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 30%, transparent 85%);
+      -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 30%, transparent 85%);
+    "></div>
+    <div style="position: relative; max-width: 720px; margin: 0 auto;">
+      <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; color: var(--rd-hero-fg); margin: 0 0 24px;">Top up in crypto.<br>Be root in a minute.</h2>
+      <p style="font-size: 1rem; line-height: 1.65; color: var(--rd-hero-mute); max-width: 480px; margin: 0 auto 40px;">No cards. No KYC. Uninterrupted service since 2014. For people who'd rather not explain why they need a server.</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a class="rd-btn solid lg" href="https://dashboard.bithost.io/registration">Deploy a server →</a>
+      </div>
+    </div>
+  </section>
+
+

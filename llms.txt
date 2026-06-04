@@ -1,0 +1,68 @@
+# bithost
+
+> Privacy-first cloud VPS reseller powered by DigitalOcean, Linode, and Vultr. Pay with Bitcoin, Lightning Network, Ethereum, and 11 other cryptocurrencies. No KYC, no credit card, no identity verification. Hourly billing with no auto-renewals. Operating since 2014.
+
+bithost lets anyone deploy a Linux or Windows cloud server anonymously using crypto. Servers are provisioned in minutes across 30+ global locations. Full root access via SSH. Manage everything from the web dashboard or the bh CLI. Minimum top-up is $20.
+
+## Core pages
+
+- [Homepage](https://bithost.io/): Overview of the service, providers, billing model, and supported cryptocurrencies
+- [Prices](https://bithost.io/prices): Full pricing tables for DigitalOcean, Linode, and Vultr plans - CPU, RAM, storage, and hourly/monthly rates
+- [FAQ](https://bithost.io/faq): Answers on crypto payments, billing, server limits, account security, and balance management
+- [Pay with Crypto](https://bithost.io/pay-with-crypto): Full list of accepted cryptocurrencies - Bitcoin, ETH, DOGE, LTC, USDC, SOL, and more
+- [API & CLI](https://bithost.io/bithost-cli-api/): Overview of the REST API and bh command-line tool
+- [API Docs](https://bithost.io/bithost-cli-api/api): Full REST API reference - authentication, endpoints, request/response format
+- [CLI Docs](https://bithost.io/bithost-cli-api/cli): bh CLI installation, commands, and usage examples
+- [Privacy Policy](https://bithost.io/privacy): What data is collected, retention periods, cookie usage, and user rights
+- [Terms of Service](https://bithost.io/terms): Acceptable use, account limits, billing, refund policy, and liability
+
+## Guides - Getting Started
+
+- [Deploy your first server with bithost](https://bithost.io/guides/getting-started): Step-by-step guide to creating an account, topping up with crypto, and deploying your first VPS
+- [How to choose the right cloud server plan](https://bithost.io/guides/choose-the-right-plan): Comparison of plan types - general purpose, CPU-optimised, memory-optimised, and storage plans
+- [How to set up your first cloud server](https://bithost.io/guides/set-up-your-first-server): Initial server configuration after deployment - updates, user setup, firewall basics
+- [How to connect to your server via SSH](https://bithost.io/guides/connect-via-ssh): SSH connection instructions for Linux, macOS, and Windows clients
+- [Understanding your server dashboard](https://bithost.io/guides/understanding-your-dashboard): Tour of the bithost control panel - server stats, actions, billing, and snapshots
+- [Top up instantly with Lightning Network](https://bithost.io/guides/top-up-with-lightning): How to add credit using Bitcoin Lightning for instant, low-fee top-ups
+- [DigitalOcean vs Linode vs Vultr](https://bithost.io/guides/choose-provider): Comparison of the three underlying providers - regions, performance, and best use cases
+
+## Guides - Account Security
+
+- [How to enable two-factor authentication (2FA)](https://bithost.io/guides/enable-2fa): Protecting your bithost account with an authenticator app - setup, QR code scanning, and confirmation
+- [REST API reference](https://bithost.io/guides/api): Full API documentation - bearer token authentication, server provisioning, SSH keys, regions, and sizes
+
+## Guides - Server Security
+
+- [How to secure your cloud server](https://bithost.io/guides/secure-your-server): Hardening checklist - SSH config, firewall rules, fail2ban, unattended upgrades
+- [How to set up automated backups](https://bithost.io/guides/automated-backups): Enabling and scheduling server snapshots and backups through the dashboard
+- [Monitor your server for suspicious activity](https://bithost.io/guides/monitor-suspicious-activity): Tools and techniques for detecting intrusions and unusual behaviour
+- [Disable SSH key auth and enable password login](https://bithost.io/guides/disable-ssh-keys): How to switch between SSH key and password authentication
+- [Add and manage SSH keys](https://bithost.io/guides/ssh-keys): Generating Ed25519 key pairs, adding them to bithost, and connecting securely
+
+## Guides - Web Hosting
+
+- [Host a website with Nginx](https://bithost.io/guides/host-a-website-with-nginx): Installing Nginx, configuring server blocks, and serving a static or dynamic site
+- [Install WordPress on a cloud server](https://bithost.io/guides/install-wordpress): Full LEMP stack setup with WordPress, Nginx, MySQL, and PHP
+- [Set up HTTPS with Let's Encrypt](https://bithost.io/guides/setup-ssl-https): Obtaining and auto-renewing free SSL certificates with Certbot
+- [Point your domain name to your server](https://bithost.io/guides/point-domain-to-server): DNS configuration - A records, TTL, and propagation
+
+## Guides - Use Cases
+
+- [Set up your own VPN with WireGuard](https://bithost.io/guides/setup-vpn-server): Installing and configuring WireGuard for a private, self-hosted VPN
+- [Run a game server (Minecraft and more)](https://bithost.io/guides/game-server): Deploying and managing game servers on a VPS
+- [Self-host cloud storage with Nextcloud](https://bithost.io/guides/nextcloud-cloud-storage): Installing Nextcloud for private file storage and sync
+- [Host a Node.js or Python web app](https://bithost.io/guides/host-nodejs-python-app): Deploying web applications with PM2, Gunicorn, and Nginx reverse proxy
+- [Set up a mail server with Mailcow](https://bithost.io/guides/mail-server): Full mail server setup with Mailcow, DNS records, and spam protection
+
+## Guides - Performance & Scaling
+
+- [How to scale your server resources](https://bithost.io/guides/scale-server-resources): Resizing CPU, RAM, and disk through the dashboard or CLI
+- [Monitor CPU, RAM, and disk usage](https://bithost.io/guides/monitor-resource-usage): Using htop, df, and other tools to track resource consumption
+- [Migrate a website to your cloud server](https://bithost.io/guides/migrate-a-website): Moving files, databases, and DNS from a previous host
+- [Set up Docker on your cloud server](https://bithost.io/guides/setup-docker): Installing Docker and Docker Compose, running containers
+
+## Guides - Troubleshooting
+
+- [What to do if your server is unreachable](https://bithost.io/guides/server-unreachable): Diagnosing connectivity issues, using the web console, checking firewall rules
+- [How to recover from a failed deployment](https://bithost.io/guides/failed-deployment): Steps to rebuild, restore from snapshot, or redeploy after a failure
+- [Common server error messages and fixes](https://bithost.io/guides/common-errors): Reference for frequent SSH, disk, permission, and service errors

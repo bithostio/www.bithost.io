@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Deploy your first server with Bitcoin | Guides | bithost</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=optional" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/tailwind-ebd512f89f8056b1671432580a600e581bad336da6b51d8eea479938341fe16c.css" media="all" />
+  <link rel="stylesheet" href="/assets/redesign.css" media="all" />
+  <script src="/assets/next-6ff347cc1576bc2972d417cb788cc0722ed1e0d693dbb7767823072a0997d191.js" defer></script>
+
+  <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="/manifest.json" rel="manifest">
+  <meta content="#4f64e1" name="msapplication-TileColor">
+
+  <meta name="description" content="Step-by-step guide: create a bithost account, top up your balance with Bitcoin or Lightning, add an SSH key, and deploy your first cloud VPS in under 5 minutes.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bithost.io/guides/getting-started">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f64e1">
+
+  <meta property="og:title" content="Deploy your first server with Bitcoin — bithost Guide">
+  <meta property="og:description" content="Create your bithost account, top up with BTC or Lightning, add an SSH key, and deploy a live cloud server in under 5 minutes. No ID required.">
+  <meta property="og:url" content="https://bithost.io/guides/getting-started">
+  <meta property="og:type" content="article">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": "https://bithost.io/guides/getting-started#howto",
+    "name": "Deploy your first server with Bitcoin on bithost",
+    "description": "Create a bithost account, top up your balance with Bitcoin or Lightning, add an SSH key, and deploy your first cloud VPS in under 5 minutes.",
+    "totalTime": "PT5M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Create a free account",
+        "text": "Go to https://dashboard.bithost.io/registration and sign up with your email address. No ID or credit card is required."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Add an SSH key",
+        "text": "Generate an SSH key pair on your local machine and add the public key to your bithost account under Settings → SSH Keys."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Top up your balance",
+        "text": "Click 'Add funds', select your preferred cryptocurrency (Bitcoin, Lightning, ETH, LTC, DOGE, etc.) and send the amount to the generated address."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Deploy your server",
+        "text": "Click 'New Server', choose a provider (DigitalOcean, Linode, or Vultr), select a region, plan, and OS image, then click Deploy."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Connect via SSH",
+        "text": "Once the server is ready (typically 30–60 seconds), connect using: ssh root@YOUR_SERVER_IP"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bithost.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://bithost.io/guides/" },
+      { "@type": "ListItem", "position": 3, "name": "Getting Started", "item": "https://bithost.io/guides/getting-started" }
+    ]
+  }
+  </script>
+</head>
+
+<body data-theme="navy" class="rd-page">
+
+  <!-- NAV -->
+  <nav class="rd-topnav" aria-label="Main navigation">
+    <a class="rd-brand" href="/" aria-label="bithost home">
+      <img src="/assets/logo-white-ce5f5b6b661137f848342518267ebf9b77d7e5dd90236b775503cdcd3d0c64f0.svg" alt="bithost logo" width="26" height="26">
+      <span class="rd-wordmark">[bithost]</span>
+    </a>
+    <nav class="rd-nav-links" id="rd-nav-links">
+      <a href="/prices">Prices</a>
+      <a href="/guides">Guides</a>
+      <a href="/bithost-cli-api">API &amp; CLI</a>
+      
+      <a href="/faq">FAQ</a>
+      <a href="/tour">About Us</a>
+    </nav>
+    <div class="rd-nav-auth">
+      <button class="rd-menu-toggle" id="rd-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="rd-btn" href="https://dashboard.bithost.io/">Login</a>
+      <a class="rd-btn solid" href="https://dashboard.bithost.io/registration">Register</a>
+    </div>
+  </nav>
+
+  <!-- GUIDE HEADER -->
+  <div class="rd-guide-header">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <div class="rd-guide-breadcrumb">
+        <a href="/">Home</a><span>→</span><a href="/guides">Guides</a><span>→</span>Getting Started
+      </div>
+      <h1>Deploy your first server with Bitcoin</h1>
+    </div>
+  </div>
+
+  <!-- GUIDE CONTENT -->
+  <div style="max-width: 1240px; margin: 0 auto; padding: 48px 56px 80px; display: grid; grid-template-columns: 240px 1fr; gap: 0; align-items: start;">
+
+    <!-- SIDEBAR -->
+    <aside class="rd-guide-sidebar" aria-label="Guide navigation">
+      <h5>On this page</h5>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#create-account">1. Create account</a></li>
+        <li><a href="#add-ssh-key">2. Add SSH key</a></li>
+        <li><a href="#top-up">3. Top up balance</a></li>
+        <li><a href="#deploy">4. Deploy server</a></li>
+        <li><a href="#connect">5. Connect via SSH</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+      </ul>
+
+      <h5>Other guides</h5>
+      <ul>
+        <li><a href="/guides/top-up-with-lightning">Lightning top-up</a></li>
+        <li><a href="/guides/install-bh-cli">bh CLI</a></li>
+        <li><a href="/guides/ssh-keys">SSH keys</a></li>
+        <li><a href="/guides/choose-provider">Choose a provider</a></li>
+      </ul>
+    </aside>
+
+    <!-- BODY -->
+    <main class="rd-guide-body">
+      <div class="rd-guide-meta">
+        <span>Getting Started</span>
+        <span>5 min read</span>
+        <span>Updated May 2026</span>
+      </div>
+
+      <p>This guide walks you through creating your first bithost account and deploying a cloud VPS paid entirely in Bitcoin. No ID, no credit card — just an email address and some crypto.</p>
+
+      <h2 id="prerequisites">Prerequisites</h2>
+      <ul>
+        <li>A Bitcoin wallet (or any supported coin: ETH, LTC, DOGE, Lightning, etc.)</li>
+        <li>An SSH key pair (we'll create one if you don't have one)</li>
+        <li>5 minutes</li>
+      </ul>
+
+      <h2 id="create-account">1. Create a free account</h2>
+      <p>Go to <a href="https://dashboard.bithost.io/registration" style="color: var(--rd-indigo);">dashboard.bithost.io/registration</a> and enter your email address and a password. That's the entire signup flow — no phone number, no ID, no credit card.</p>
+      <p>You will receive a confirmation email. Click the link to verify your address (required to receive low-balance alerts).</p>
+
+      <h2 id="add-ssh-key">2. Add an SSH key</h2>
+      <p>bithost uses SSH key authentication — there are no passwords emailed to you. Before you can deploy a server, you need to add at least one public key.</p>
+
+      <p><strong>Generate a key pair</strong> (skip if you already have one):</p>
+      <pre><code>ssh-keygen -t ed25519 -C "your@email.com"</code></pre>
+
+      <p>This creates <code>~/.ssh/id_ed25519</code> (private) and <code>~/.ssh/id_ed25519.pub</code> (public). Copy the public key:</p>
+      <pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+
+      <p>In the dashboard, go to <strong>Settings → SSH Keys → Add Key</strong>, paste the public key and give it a name.</p>
+
+      <h2 id="top-up">3. Top up your balance</h2>
+      <p>Click <strong>Add Funds</strong> in the dashboard. Choose your preferred cryptocurrency:</p>
+      <ul>
+        <li><strong>Bitcoin (BTC)</strong> — On-chain. Credits once the transaction has 1 confirmation (typically 10–20 min).</li>
+        <li><strong>Lightning Network</strong> — Instant. Credits in under a second. Minimum deposit: $1.</li>
+        <li><strong>ETH, LTC, DOGE, USDT, XRP, ZEC, BCH</strong> — Credits after network confirmation.</li>
+      </ul>
+      <p>A fresh deposit address is generated for each top-up. Send any amount — your balance is denominated in USD and converted at the time of deposit.</p>
+
+      <h2 id="deploy">4. Deploy your server</h2>
+      <p>Click <strong>New Server</strong>. Configure:</p>
+      <ol>
+        <li><strong>Provider</strong> — DigitalOcean, Linode, or Vultr (see the <a href="/guides/choose-provider" style="color: var(--rd-indigo);">provider comparison guide</a>).</li>
+        <li><strong>Region</strong> — Pick the datacenter closest to your users.</li>
+        <li><strong>Plan</strong> — Choose RAM, CPU, and disk. Plans start from $0.007/hr.</li>
+        <li><strong>OS image</strong> — Ubuntu, Debian, CentOS, Fedora, Windows, and more.</li>
+        <li><strong>SSH key</strong> — Select the key you added in step 2.</li>
+      </ol>
+      <p>Click <strong>Deploy</strong>. Your server will be ready in 30–90 seconds.</p>
+
+      <h2 id="connect">5. Connect via SSH</h2>
+      <p>Once the server status shows <strong>Active</strong>, copy the IP address from the dashboard and connect:</p>
+      <pre><code>ssh root@YOUR_SERVER_IP</code></pre>
+      <p>You're in. Your server is live, billed per hour, and paid entirely in crypto.</p>
+
+      <h2 id="next-steps">Next steps</h2>
+      <ul>
+        <li><a href="/guides/install-bh-cli" style="color: var(--rd-indigo);">Install the bh CLI</a> — manage servers from your terminal without opening a browser.</li>
+        <li><a href="/guides/top-up-with-lightning" style="color: var(--rd-indigo);">Top up with Lightning</a> — instant credits, no waiting for block confirmations.</li>
+        <li><a href="/guides/api" style="color: var(--rd-indigo);">Use the REST API</a> — automate provisioning from your scripts and CI pipelines.</li>
+      </ul>
+
+      <hr style="border: none; border-top: 1px solid var(--rd-line); margin: 40px 0;">
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--rd-ink-mute);">Questions? Email us at support@bithost.io — we reply in under 2 hours, 7 days a week.</p>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="rd-foot" aria-label="Site footer">
+    <div class="rd-foot-inner">
+      <div class="rd-foot-top">
+        <div>
+          <div class="rd-foot-brand">
+            <img src="/assets/logo-white-ce5f5b6b661137f848342518267ebf9b77d7e5dd90236b775503cdcd3d0c64f0.svg" alt="bithost" width="22" height="22">
+            <span class="rd-brand-name">bithost</span>
+          </div>
+          <p class="rd-blurb">Privacy-first cloud reseller for DigitalOcean, Linode, and Vultr. Pay in crypto. No KYC. Hourly billing. Since 2014.</p>
+        </div>
+        <div>
+          <h5>Product</h5>
+          <a href="/prices">Prices</a><a href="/tour">Tour</a><a href="/faq#supported-cryptocurrencies">Supported Coins</a>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <a href="/guides">Guides</a>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <a href="/privacy">Privacy</a><a href="/terms">Terms of Service</a>
+        </div>
+        <div>
+          <h5>Get started</h5>
+          <a href="https://dashboard.bithost.io/registration">Create account</a>
+        </div>
+      </div>
+      <div class="rd-foot-bottom">
+        <span>© 2014 — 2026 · bithost</span>
+        <span class="rd-foot-status"><span class="rd-live-dot" aria-hidden="true"></span>all systems operational</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('rd-menu-toggle');
+      var links  = document.getElementById('rd-nav-links');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

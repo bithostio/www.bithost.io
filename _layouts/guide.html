@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<!-- GUIDE HEADER -->
+<div class="rd-guide-header">
+  <div style="max-width: 1240px; margin: 0 auto;">
+    <h1>{{ page.h1 }}</h1>
+  </div>
+</div>
+
+<!-- LAYOUT: sidebar + body -->
+<div class="rd-guide-layout">
+
+  <!-- BREADCRUMB -->
+  <nav class="rd-breadcrumb" aria-label="Breadcrumb" style="grid-column: 1 / -1; margin-bottom: 32px;">
+    <a href="/">Home</a>
+    <span class="rd-breadcrumb-sep">&rarr;</span>
+    <a href="/guides">Guides</a>
+    <span class="rd-breadcrumb-sep">&rarr;</span>
+    <span class="rd-breadcrumb-current">{{ page.h1 }}</span>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <aside class="rd-guide-sidebar" aria-label="Guide navigation">
+    {% if page.toc %}
+    <h5>On this page</h5>
+    <ul>
+      {% for item in page.toc %}<li><a href="#{{ item.id }}">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if page.sidebar %}
+    <h5>{{ page.sidebar_title }}</h5>
+    <ul>
+      {% for link in page.sidebar %}<li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </aside>
+
+  <!-- BODY -->
+  <main class="rd-guide-body">
+    <div class="rd-guide-meta">
+      {% if page.category %}<span>{{ page.category }}</span>{% endif %}
+      {% if page.read_time %}<span>{{ page.read_time }}</span>{% endif %}
+      {% if page.updated %}<span>Updated {{ page.updated }}</span>{% endif %}
+    </div>
+
+    {{ content }}
+
+    <hr style="border: none; border-top: 1px solid var(--rd-line); margin: 40px 0;">
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--rd-ink-mute);">Questions? Email us at support@bithost.io - we reply in under 2 hours, 7 days a week.</p>
+  </main>
+</div>
+
+{% include cta-band.html %}
+<script src="/assets/guides-registry.js"></script>

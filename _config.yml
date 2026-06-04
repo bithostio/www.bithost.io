@@ -1,3 +1,34 @@
+# ---------------------------------------------------------------------------
+# Site
+# ---------------------------------------------------------------------------
+title: bithost
 name: bithost.io
-markdown: redcarpet
 url: 'https://bithost.io'
+description: >-
+  Buy cloud VPS hosting with Bitcoin, Lightning, and 11 other cryptocurrencies.
+  No KYC, no credit card, hourly billing. Since 2014.
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+# Native Jekyll markdown — kramdown is Jekyll's default and the only processor
+# the GitHub Pages built-in build supports. GFM gives fenced code blocks etc.
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true            # generate id="" on headings (TOC anchors)
+  hard_wrap: false
+
+# Clean, extensionless URLs: faq.html -> /faq/  (served at /faq),
+# guides/connect-via-ssh.md -> /guides/connect-via-ssh/.
+permalink: pretty
+
+# Files/dirs that should not be copied into the built _site.
+# (_backups, _layouts, _includes are already ignored by Jekyll convention.)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
+  - _backups

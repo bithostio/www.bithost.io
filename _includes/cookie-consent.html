@@ -1,0 +1,79 @@
+<!-- Cookie consent banner (was the second IIFE in assets/footer.js). -->
+<script>
+(function () {
+  var STORE_KEY = 'rd_cookies_accepted';
+
+  if (localStorage.getItem(STORE_KEY)) return;
+
+  var banner = document.createElement('div');
+  banner.id = 'rd-cookie-banner';
+  banner.setAttribute('role', 'region');
+  banner.setAttribute('aria-label', 'Cookie consent');
+  banner.innerHTML =
+    '<div id="rd-cookie-inner">' +
+      '<p id="rd-cookie-text">' +
+        'We use cookies to keep you logged in and remember your preferences. No tracking, no ads. ' +
+        '<a href="/privacy" id="rd-cookie-link">Privacy policy</a>' +
+      '</p>' +
+      '<div id="rd-cookie-actions">' +
+        '<button id="rd-cookie-decline">Decline</button>' +
+        '<button id="rd-cookie-accept">Accept</button>' +
+      '</div>' +
+    '</div>';
+
+  var style = document.createElement('style');
+  style.textContent =
+    '#rd-cookie-banner{' +
+      'position:fixed;bottom:0;left:0;right:0;z-index:9999;' +
+      'background:#0E1124;border-top:1px solid rgba(255,255,255,0.10);' +
+      'padding:16px 24px;' +
+      'transform:translateY(100%);transition:transform .3s ease;' +
+    '}' +
+    '#rd-cookie-banner.rd-visible{transform:translateY(0);}' +
+    '#rd-cookie-inner{' +
+      'max-width:1240px;margin:0 auto;' +
+      'display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;' +
+    '}' +
+    '#rd-cookie-text{' +
+      'margin:0;font-family:"Sora",sans-serif;font-size:13px;' +
+      'color:rgba(255,255,255,0.62);line-height:1.5;flex:1;min-width:200px;' +
+    '}' +
+    '#rd-cookie-link{color:#4f64e1;text-decoration:none;}' +
+    '#rd-cookie-link:hover{text-decoration:underline;}' +
+    '#rd-cookie-actions{display:flex;gap:10px;align-items:center;flex-shrink:0;}' +
+    '#rd-cookie-decline{' +
+      'background:transparent;border:none;padding:9px 16px;' +
+      'font-family:"Sora",sans-serif;font-size:13px;font-weight:500;' +
+      'color:rgba(255,255,255,0.45);cursor:pointer;border-radius:999px;' +
+      'transition:color .15s;' +
+    '}' +
+    '#rd-cookie-decline:hover{color:rgba(255,255,255,0.75);}' +
+    '#rd-cookie-accept{' +
+      'background:#4f64e1;border:1px solid #4f64e1;padding:9px 20px;' +
+      'font-family:"Sora",sans-serif;font-size:13px;font-weight:600;' +
+      'color:#fff;cursor:pointer;border-radius:999px;' +
+      'transition:opacity .15s;' +
+    '}' +
+    '#rd-cookie-accept:hover{opacity:0.85;}' +
+    '@media(max-width:480px){' +
+      '#rd-cookie-inner{flex-direction:column;align-items:flex-start;gap:14px;}' +
+      '#rd-cookie-actions{width:100%;justify-content:flex-end;}' +
+    '}';
+
+  document.head.appendChild(style);
+  document.body.appendChild(banner);
+
+  /* Slide in after a short delay so it doesn't flash on load */
+  setTimeout(function () { banner.classList.add('rd-visible'); }, 600);
+
+  function dismiss(accepted) {
+    if (accepted) localStorage.setItem(STORE_KEY, '1');
+    banner.style.transition = 'transform .25s ease';
+    banner.style.transform = 'translateY(100%)';
+    setTimeout(function () { banner.remove(); }, 300);
+  }
+
+  document.getElementById('rd-cookie-accept').addEventListener('click', function () { dismiss(true); });
+  document.getElementById('rd-cookie-decline').addEventListener('click', function () { dismiss(false); });
+})();
+</script>

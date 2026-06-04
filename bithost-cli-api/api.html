@@ -1,0 +1,551 @@
+---
+layout: default
+nav: bithost-cli-api
+title: "API Docs | bithost - Buy Cloud VPS with Bitcoin &amp; Crypto"
+description: "Full REST API reference for bithost - create, resize, and destroy cloud servers programmatically from any language or tool."
+canonical: "https://bithost.io/bithost-cli-api/api"
+og_title: "API Docs | bithost"
+og_url: "https://bithost.io/bithost-cli-api/api"
+og_description: "Full REST API reference for bithost - create, resize, and destroy cloud servers programmatically."
+jsonld: jsonld/cli-api-api.html
+---
+
+
+  <!-- DARK HEADER -->
+  <div class="rd-guide-header">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; margin-bottom: 10px;">REST API</div>
+    <h1>API Docs</h1>
+  </div>
+
+  <!-- BODY -->
+  <div class="rd-guide-layout">
+
+    <nav class="rd-breadcrumb" style="grid-column: 1 / -1;" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="rd-breadcrumb-sep">→</span>
+      <a href="/bithost-cli-api">API &amp; CLI</a>
+      <span class="rd-breadcrumb-sep">→</span>
+      <span class="rd-breadcrumb-current">API Docs</span>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <aside class="rd-guide-sidebar">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rd-ink-mute); margin-bottom: 12px;">API &amp; CLI</div>
+      <a href="/bithost-cli-api/" style="display: block; font-size: 14px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 8px; opacity: 0.7;">Overview</a>
+      <a href="/bithost-cli-api/api" style="display: block; font-size: 14px; color: var(--rd-indigo); text-decoration: none; font-weight: 600; margin-bottom: 16px;">API Docs</a>
+      <a href="/bithost-cli-api/cli" style="display: block; font-size: 14px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 16px; opacity: 0.7;">CLI Docs</a>
+
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rd-ink-mute); margin-bottom: 10px;">On this page</div>
+      <a href="#authentication" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Authentication</a>
+      <a href="#base-url" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Base URL</a>
+      <a href="#responses" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Responses &amp; Errors</a>
+      <a href="#pagination" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Pagination</a>
+      <a href="#user" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">User</a>
+      <a href="#servers" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Servers</a>
+      <a href="#providers" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Providers</a>
+      <a href="#ssh-keys" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">SSH Keys</a>
+      <a href="#sizes" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Sizes</a>
+      <a href="#regions" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Regions</a>
+      <a href="#images" style="display: block; font-size: 13px; color: var(--rd-ink-mute); text-decoration: none; margin-bottom: 6px; opacity: 0.7;">Images</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="rd-guide-body">
+
+      <style>
+        .api-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 0 0 28px; }
+        .api-table th { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rd-ink-mute); font-weight: 500; text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--rd-line); }
+        .api-table td { padding: 10px 12px; border-bottom: 1px solid var(--rd-line); vertical-align: top; line-height: 1.5; color: var(--rd-ink); opacity: 0.82; }
+        .api-table td code, .api-table th code { font-family: 'JetBrains Mono', monospace; font-size: 0.9em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px; opacity: 1; }
+        .api-table tr:last-child td { border-bottom: none; }
+        .method { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 5px; margin-right: 8px; vertical-align: middle; }
+        .method-get { background: #dcfce7; color: #15803d; }
+        .method-post { background: #e0e7ff; color: #4338ca; }
+        .method-delete { background: #fee2e2; color: #b91c1c; }
+        .method-patch { background: #fef3c7; color: #b45309; }
+        .endpoint-bar { display: flex; align-items: center; background: var(--rd-paper); border: 1px solid var(--rd-line); border-radius: 10px; padding: 12px 16px; margin: 0 0 16px; }
+        .endpoint-path { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: var(--rd-ink); }
+        .api-h2 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; padding-top: 8px; border-top: 1px solid var(--rd-line); padding-top: 40px; }
+        .api-h2:first-of-type { border-top: none; padding-top: 4px; }
+        .api-h3 { font-size: 1rem; font-weight: 600; margin: 32px 0 12px; color: var(--rd-ink); }
+        .api-p { color: var(--rd-ink); opacity: 0.75; line-height: 1.75; margin: 0 0 16px; }
+        pre.code-block { background: #0d1629; border-radius: 10px; padding: 20px 24px; overflow-x: auto; margin: 0 0 20px; }
+        pre.code-block code { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #e2e8f0; line-height: 1.65; }
+        .comment { color: #64748b; }
+        .inline-code { font-family: 'JetBrains Mono', monospace; font-size: 0.875em; background: var(--rd-line); padding: 1px 6px; border-radius: 4px; }
+      </style>
+
+      <!-- Authentication -->
+      <h2 id="authentication" class="api-h2" style="border-top: none; padding-top: 4px;">Authentication</h2>
+      <p class="api-p">Every request must include a valid API key. Generate one from the <a href="https://dashboard.bithost.io/api/keys" style="color: var(--rd-indigo);">API Keys</a> section of your dashboard.</p>
+      <p class="api-p">Pass your key in the <span class="inline-code">Authorization</span> header using the Bearer scheme:</p>
+      <pre class="code-block"><code>Authorization: Bearer YOUR_API_KEY</code></pre>
+      <p class="api-p">Example:</p>
+      <pre class="code-block"><code>curl https://dashboard.bithost.io/api/v1/user \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+      <p class="api-p" style="background: var(--rd-paper); border: 1px solid var(--rd-line); border-radius: 10px; padding: 14px 18px; font-size: 13.5px;">API keys cost <strong>$10.00</strong> and remain valid for 3 months from the date of purchase.</p>
+
+      <!-- Base URL -->
+      <h2 id="base-url" class="api-h2">Base URL</h2>
+      <p class="api-p">All endpoints are served over HTTPS under a versioned path:</p>
+      <pre class="code-block"><code>https://dashboard.bithost.io/api/v1</code></pre>
+
+      <!-- Response Format & Errors -->
+      <h2 id="responses" class="api-h2">Responses &amp; Errors</h2>
+      <p class="api-p">All responses are JSON. Successful responses wrap data in a named key matching the resource type. Single-object responses use the singular form; collection responses use the plural.</p>
+      <pre class="code-block"><code><span class="comment">// Collection</span>
+{ "servers": [...] }
+
+<span class="comment">// Single object</span>
+{ "server": { ... } }
+
+<span class="comment">// Error</span>
+{
+  "errors": [
+    { "code": "insufficient_funds", "message": "Insufficient funds to create server" },
+    { "code": "blank", "message": "can't be blank", "field": "name" }
+  ]
+}</code></pre>
+
+      <h3 class="api-h3">HTTP Status Codes</h3>
+      <table class="api-table">
+        <thead><tr><th>Status</th><th>Meaning</th><th>When it occurs</th></tr></thead>
+        <tbody>
+          <tr><td><code>200</code></td><td>Success</td><td>Request completed successfully</td></tr>
+          <tr><td><code>401</code></td><td>Unauthorized</td><td>Missing or invalid API key</td></tr>
+          <tr><td><code>403</code></td><td>Forbidden</td><td>Account not allowed to perform this action</td></tr>
+          <tr><td><code>404</code></td><td>Not Found</td><td>Resource does not exist</td></tr>
+          <tr><td><code>422</code></td><td>Unprocessable Entity</td><td>Validation or business-logic failure</td></tr>
+          <tr><td><code>500</code></td><td>Internal Server Error</td><td>Unexpected error on our end</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="api-h3">Error Codes</h3>
+      <table class="api-table">
+        <thead><tr><th>Code</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>internal_error</code></td><td>Unexpected server error</td></tr>
+          <tr><td><code>unauthenticated</code></td><td>Missing or invalid API key</td></tr>
+          <tr><td><code>locked</code></td><td>Account is locked</td></tr>
+          <tr><td><code>not_found</code></td><td>Requested resource does not exist</td></tr>
+          <tr><td><code>busy</code></td><td>Resource is currently processing another operation</td></tr>
+          <tr><td><code>insufficient_funds</code></td><td>Account balance is too low for this operation</td></tr>
+          <tr><td><code>no_keys</code></td><td>No SSH keys are configured on the account</td></tr>
+          <tr><td><code>quota_exceeded</code></td><td>Server limit for the account has been reached</td></tr>
+          <tr><td><code>unconfirmed</code></td><td>Account email address has not been confirmed</td></tr>
+          <tr><td><code>invalid_snapshot</code></td><td>Snapshot does not belong to the authenticated user</td></tr>
+          <tr><td><code>blank</code></td><td>A required field was left empty</td></tr>
+          <tr><td><code>invalid</code></td><td>A field value is not in the expected format</td></tr>
+          <tr><td><code>taken</code></td><td>The value is already in use (duplicate)</td></tr>
+          <tr><td><code>too_long</code></td><td>Value exceeds the maximum allowed length</td></tr>
+          <tr><td><code>too_short</code></td><td>Value is shorter than the minimum required length</td></tr>
+          <tr><td><code>not_a_number</code></td><td>A numeric value was expected</td></tr>
+          <tr><td><code>confirmation</code></td><td>Confirmation field does not match</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <h2 id="pagination" class="api-h2">Pagination</h2>
+      <p class="api-p">Collection endpoints return up to 50 items per page. Navigate pages with the <span class="inline-code">page</span> query parameter. Every paginated response includes a <span class="inline-code">meta.pagination</span> object:</p>
+      <pre class="code-block"><code>{
+  "servers": [...],
+  "meta": {
+    "pagination": {
+      "page": 2,
+      "has_previous_page": true,
+      "has_next_page": false
+    }
+  }
+}</code></pre>
+      <p class="api-p">Use <span class="inline-code">has_next_page</span> to determine whether additional pages are available.</p>
+
+      <!-- User -->
+      <h2 id="user" class="api-h2">User</h2>
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/user</span>
+      </div>
+      <p class="api-p">Returns the profile and account balance of the authenticated user.</p>
+      <pre class="code-block"><code>curl https://dashboard.bithost.io/api/v1/user \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+      <p class="api-p">Response:</p>
+      <pre class="code-block"><code>{
+  "user": {
+    "email": "user@example.com",
+    "full_name": "John Doe",
+    "balance": 42.50,
+    "server_limit": 10
+  }
+}</code></pre>
+      <table class="api-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>email</code></td><td>string</td><td>Account email address</td></tr>
+          <tr><td><code>full_name</code></td><td>string</td><td>Display name</td></tr>
+          <tr><td><code>balance</code></td><td>float</td><td>Current account balance in USD</td></tr>
+          <tr><td><code>server_limit</code></td><td>integer</td><td>Maximum number of servers allowed</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Servers -->
+      <h2 id="servers" class="api-h2">Servers</h2>
+      <p class="api-p">Servers are the core resource in the bithost API. Each server represents a cloud instance running on one of the supported providers.</p>
+
+      <h3 class="api-h3" style="margin-top: 0;">Server object</h3>
+      <table class="api-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>id</code></td><td>integer</td><td>Unique server identifier</td></tr>
+          <tr><td><code>name</code></td><td>string</td><td>Server hostname</td></tr>
+          <tr><td><code>pending</code></td><td>boolean</td><td>Whether the server is processing an operation</td></tr>
+          <tr><td><code>power</code></td><td>boolean</td><td>Whether the server is powered on</td></tr>
+          <tr><td><code>cost_so_far</code></td><td>float</td><td>Accumulated cost in USD for the current billing period</td></tr>
+          <tr><td><code>status</code></td><td>string</td><td><code>active</code>, <code>pending</code>, or <code>deleted</code></td></tr>
+          <tr><td><code>backups_enabled</code></td><td>boolean</td><td>Whether automatic backups are enabled</td></tr>
+          <tr><td><code>message</code></td><td>string or null</td><td>Status message (e.g. error details)</td></tr>
+          <tr><td><code>ip_address</code></td><td>string or null</td><td>Primary public IPv4 address</td></tr>
+          <tr><td><code>private_ip_address</code></td><td>string or null</td><td>Private IPv4 address</td></tr>
+          <tr><td><code>ip_address_v6</code></td><td>string or null</td><td>Public IPv6 address</td></tr>
+          <tr><td><code>private_ip_address_v6</code></td><td>string or null</td><td>Private IPv6 address</td></tr>
+          <tr><td><code>provider</code></td><td>string</td><td>Provider slug: <code>digital_ocean</code>, <code>linode</code>, <code>hetzner</code>, <code>vultr</code></td></tr>
+        </tbody>
+      </table>
+
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/servers</span>
+      </div>
+      <p class="api-p">Returns a paginated list of all servers. Accepts a <span class="inline-code">page</span> query parameter.</p>
+      <pre class="code-block"><code>curl https://dashboard.bithost.io/api/v1/servers \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/servers/:id</span>
+      </div>
+      <p class="api-p">Returns the details of a single server.</p>
+      <pre class="code-block"><code>curl https://dashboard.bithost.io/api/v1/servers/123 \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+
+      <div class="endpoint-bar">
+        <span class="method method-post">POST</span>
+        <span class="endpoint-path">/api/v1/servers</span>
+      </div>
+      <p class="api-p">Provisions a new server. The server is created asynchronously - it will appear immediately with <span class="inline-code">status: "pending"</span> and transition to <span class="inline-code">"active"</span> once the provider finishes provisioning.</p>
+      <p class="api-p">Requirements: confirmed email, at least one SSH key, sufficient balance to cover 5 days of usage at the selected size's hourly rate, and must not exceed the server limit.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>name</code></td><td>Yes</td><td>Server hostname</td></tr>
+          <tr><td><code>size_id</code></td><td>Yes</td><td>Instance size ID (see <a href="#sizes" style="color: var(--rd-indigo);">Sizes</a>)</td></tr>
+          <tr><td><code>region_id</code></td><td>Yes</td><td>Region ID (see <a href="#regions" style="color: var(--rd-indigo);">Regions</a>)</td></tr>
+          <tr><td><code>image_id</code></td><td>Yes</td><td>OS image ID (see <a href="#images" style="color: var(--rd-indigo);">Images</a>)</td></tr>
+          <tr><td><code>provider</code></td><td>Yes</td><td>Provider slug: <code>digital_ocean</code>, <code>linode</code>, <code>hetzner</code>, <code>vultr</code></td></tr>
+          <tr><td><code>key_ids</code></td><td>No</td><td>Array of SSH key IDs to install on the server</td></tr>
+          <tr><td><code>backups_enabled</code></td><td>No</td><td>Set to <code>true</code> to enable automatic backups</td></tr>
+          <tr><td><code>terms</code></td><td>Yes</td><td>Must be <code>true</code> to accept the terms of service</td></tr>
+        </tbody>
+      </table>
+      <pre class="code-block"><code>curl -X POST https://dashboard.bithost.io/api/v1/servers \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "web-prod-02",
+    "size_id": 5,
+    "region_id": 10,
+    "image_id": 20,
+    "provider": "digital_ocean",
+    "key_ids": [1, 2],
+    "backups_enabled": true,
+    "terms": true
+  }'</code></pre>
+      <p class="api-p">Common errors: <span class="inline-code">insufficient_funds</span>, <span class="inline-code">no_keys</span>, <span class="inline-code">quota_exceeded</span>, <span class="inline-code">unconfirmed</span>.</p>
+
+      <div class="endpoint-bar">
+        <span class="method method-delete">DELETE</span>
+        <span class="endpoint-path">/api/v1/servers/:id</span>
+      </div>
+      <p class="api-p">Destroys a server. This action is irreversible - all data on the server will be permanently lost.</p>
+      <pre class="code-block"><code>curl -X DELETE https://dashboard.bithost.io/api/v1/servers/123 \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+
+      <div class="endpoint-bar">
+        <span class="method method-post">POST</span>
+        <span class="endpoint-path">/api/v1/servers/:id/power</span>
+      </div>
+      <p class="api-p">Controls the power state of a server. Returns the updated server object.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>action_type</code></td><td>Yes</td><td>One of: <code>on</code>, <code>off</code>, <code>reboot</code></td></tr>
+        </tbody>
+      </table>
+
+      <div class="endpoint-bar">
+        <span class="method method-post">POST</span>
+        <span class="endpoint-path">/api/v1/servers/:id/backup</span>
+      </div>
+      <p class="api-p">Enables or disables automatic backups. Returns the updated server object.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>automatic</code></td><td>Yes</td><td><code>true</code> to enable backups, <code>false</code> to disable</td></tr>
+        </tbody>
+      </table>
+
+      <div class="endpoint-bar">
+        <span class="method method-post">POST</span>
+        <span class="endpoint-path">/api/v1/servers/:id/rebuild</span>
+      </div>
+      <p class="api-p">Rebuilds a server with a new OS image. Wipes all existing data and reinstalls the OS. The image must belong to the same provider as the server. Returns the updated server object with <span class="inline-code">pending: true</span>.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>image_id</code></td><td>Yes</td><td>The ID of the OS image to install</td></tr>
+        </tbody>
+      </table>
+
+      <div class="endpoint-bar">
+        <span class="method method-post">POST</span>
+        <span class="endpoint-path">/api/v1/servers/:id/resize</span>
+      </div>
+      <p class="api-p">Resizes a server to a different instance type. By default the resize is flexible and can be reversed. Set <span class="inline-code">permanent</span> to <span class="inline-code">true</span> for a permanent disk resize. Returns the updated server object with <span class="inline-code">pending: true</span>.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>size_id</code></td><td>Yes</td><td>The ID of the target size</td></tr>
+          <tr><td><code>permanent</code></td><td>No</td><td><code>true</code> for a permanent disk resize. Default: <code>false</code></td></tr>
+        </tbody>
+      </table>
+
+      <div class="endpoint-bar">
+        <span class="method method-post">POST</span>
+        <span class="endpoint-path">/api/v1/servers/:id/snapshot</span>
+      </div>
+      <p class="api-p">Creates a point-in-time snapshot of the server asynchronously. The server will enter a <span class="inline-code">pending</span> state while the snapshot is being taken. Returns a <span class="inline-code">busy</span> error if the server is already processing another operation.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>name</code></td><td>Yes</td><td>A label for the snapshot</td></tr>
+        </tbody>
+      </table>
+
+      <div class="endpoint-bar">
+        <span class="method method-patch">PATCH</span>
+        <span class="endpoint-path">/api/v1/servers/:id/clear_message</span>
+      </div>
+      <p class="api-p">Clears the status message on a server. Useful after acknowledging an error or informational message. Returns the server object with <span class="inline-code">message: null</span>.</p>
+
+      <!-- Providers -->
+      <h2 id="providers" class="api-h2">Providers</h2>
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/providers</span>
+      </div>
+      <p class="api-p">Returns the list of cloud providers available to the authenticated user. Use the <span class="inline-code">slug</span> value when referencing a provider in other endpoints.</p>
+      <pre class="code-block"><code>curl https://dashboard.bithost.io/api/v1/providers \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+      <pre class="code-block"><code>{
+  "providers": [
+    { "id": 1, "name": "DigitalOcean", "slug": "digital_ocean" },
+    { "id": 2, "name": "Linode",       "slug": "linode" },
+    { "id": 4, "name": "Vultr",        "slug": "vultr" }
+  ],
+  "meta": { "pagination": { "page": 1, "has_previous_page": false, "has_next_page": false } }
+}</code></pre>
+      <p class="api-p">Available provider slugs: <span class="inline-code">digital_ocean</span>, <span class="inline-code">linode</span>, <span class="inline-code">hetzner</span>, <span class="inline-code">vultr</span>.</p>
+
+      <!-- SSH Keys -->
+      <h2 id="ssh-keys" class="api-h2">SSH Keys</h2>
+      <p class="api-p">SSH keys are installed on new servers during provisioning. You must have at least one SSH key on your account before creating a server.</p>
+
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/keys</span>
+      </div>
+      <p class="api-p">Returns a paginated list of the SSH keys on your account.</p>
+      <pre class="code-block"><code>curl https://dashboard.bithost.io/api/v1/keys \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+      <pre class="code-block"><code>{
+  "keys": [
+    { "id": 1, "label": "macbook-pro",  "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAA..." },
+    { "id": 2, "label": "work-desktop", "key": "ssh-rsa AAAAB3NzaC1yc2EAAAA..." }
+  ],
+  "meta": { "pagination": { "page": 1, "has_previous_page": false, "has_next_page": false } }
+}</code></pre>
+
+      <div class="endpoint-bar">
+        <span class="method method-post">POST</span>
+        <span class="endpoint-path">/api/v1/keys</span>
+      </div>
+      <p class="api-p">Adds a new SSH public key to your account. The key is passed inside a nested <span class="inline-code">key</span> object.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>key[label]</code></td><td>Yes</td><td>A human-readable label for the key</td></tr>
+          <tr><td><code>key[key]</code></td><td>Yes</td><td>The SSH public key (e.g. <code>ssh-ed25519 AAAA...</code>)</td></tr>
+        </tbody>
+      </table>
+      <pre class="code-block"><code>curl -X POST https://dashboard.bithost.io/api/v1/keys \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "key": {
+      "label": "deploy-server",
+      "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExample..."
+    }
+  }'</code></pre>
+
+      <!-- Sizes -->
+      <h2 id="sizes" class="api-h2">Sizes</h2>
+      <p class="api-p">Sizes represent the hardware configuration (CPU, memory, disk, bandwidth) for a server. Available sizes vary by provider and region.</p>
+
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/sizes</span>
+      </div>
+      <p class="api-p">Returns a paginated list of available instance sizes. When <span class="inline-code">server_id</span> is provided, returns only the sizes that the specified server can be resized to.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>provider</code></td><td>No</td><td>Provider slug to filter sizes</td></tr>
+          <tr><td><code>region_id</code></td><td>No</td><td>Region ID - limits results to sizes available in that region</td></tr>
+          <tr><td><code>category_id</code></td><td>No</td><td>Size category ID to filter by</td></tr>
+          <tr><td><code>server_id</code></td><td>No</td><td>Server ID - returns sizes valid for resizing this server</td></tr>
+          <tr><td><code>kind</code></td><td>No</td><td>Filter by size kind (e.g. <code>shared</code>, <code>dedicated</code>)</td></tr>
+          <tr><td><code>permanent</code></td><td>No</td><td>Set to <code>false</code> for flexible resize options. Default: <code>true</code></td></tr>
+          <tr><td><code>page</code></td><td>No</td><td>Page number (default: 1)</td></tr>
+        </tbody>
+      </table>
+      <pre class="code-block"><code>curl "https://dashboard.bithost.io/api/v1/sizes?provider=digital_ocean&region_id=10" \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+
+      <h3 class="api-h3">Size object</h3>
+      <table class="api-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>id</code></td><td>integer</td><td>Unique size identifier</td></tr>
+          <tr><td><code>name</code></td><td>string</td><td>Display name</td></tr>
+          <tr><td><code>slug</code></td><td>string</td><td>Provider-specific slug</td></tr>
+          <tr><td><code>price</code></td><td>float</td><td>Monthly price in USD</td></tr>
+          <tr><td><code>price_per_hour</code></td><td>string</td><td>Hourly price in USD</td></tr>
+          <tr><td><code>windows_fee</code></td><td>float</td><td>Additional monthly fee for Windows images (Vultr only, <code>0.0</code> for others)</td></tr>
+          <tr><td><code>memory</code></td><td>integer</td><td>RAM in megabytes</td></tr>
+          <tr><td><code>processor</code></td><td>string</td><td>CPU description (e.g. <code>"2 vCPUs"</code>)</td></tr>
+          <tr><td><code>bandwidth</code></td><td>integer</td><td>Monthly transfer allowance in gigabytes</td></tr>
+          <tr><td><code>disk</code></td><td>integer</td><td>Disk size in gigabytes</td></tr>
+          <tr><td><code>kind</code></td><td>string</td><td>Instance kind: <code>shared</code> or <code>dedicated</code></td></tr>
+        </tbody>
+      </table>
+
+      <!-- Regions -->
+      <h2 id="regions" class="api-h2">Regions</h2>
+      <p class="api-p">Regions represent physical datacenter locations where servers can be deployed. Each region belongs to a single provider.</p>
+
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/regions</span>
+      </div>
+      <p class="api-p">Returns a paginated list of regions for a given provider. Each region includes an <span class="inline-code">available_size_slugs</span> array you can use to check which instance sizes can be deployed there.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>provider</code></td><td>Yes</td><td>Provider slug: <code>digital_ocean</code>, <code>linode</code>, <code>hetzner</code>, <code>vultr</code></td></tr>
+          <tr><td><code>page</code></td><td>No</td><td>Page number (default: 1)</td></tr>
+        </tbody>
+      </table>
+      <pre class="code-block"><code>curl "https://dashboard.bithost.io/api/v1/regions?provider=digital_ocean" \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+
+      <h3 class="api-h3">Region object</h3>
+      <table class="api-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>id</code></td><td>integer</td><td>Unique region identifier</td></tr>
+          <tr><td><code>name</code></td><td>string</td><td>Full display name (e.g. <code>"New York 1"</code>)</td></tr>
+          <tr><td><code>slug</code></td><td>string</td><td>Provider-specific region slug (e.g. <code>"nyc1"</code>)</td></tr>
+          <tr><td><code>origin</code></td><td>string</td><td>City or geographic area (e.g. <code>"New York"</code>)</td></tr>
+          <tr><td><code>number</code></td><td>integer</td><td>Numeric suffix distinguishing regions in the same city</td></tr>
+          <tr><td><code>available_size_slugs</code></td><td>array</td><td>Size slugs that can be deployed in this region</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Images -->
+      <h2 id="images" class="api-h2">Images</h2>
+      <p class="api-p">Images are the OS templates used when creating or rebuilding a server. Bithost supports three image types: <strong>STANDARD</strong> (stock OS images maintained by the provider), <strong>CUSTOM</strong> (provider-specific custom images), and <strong>SNAPSHOT</strong> (point-in-time snapshots you created from your own servers).</p>
+
+      <div class="endpoint-bar">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/images</span>
+      </div>
+      <p class="api-p">Returns a paginated list of available images for a provider. When <span class="inline-code">type</span> is <span class="inline-code">SNAPSHOT</span>, only snapshots owned by the authenticated user are returned.</p>
+      <table class="api-table">
+        <thead><tr><th>Parameter</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>provider</code></td><td>Yes</td><td>Provider slug: <code>digital_ocean</code>, <code>linode</code>, <code>hetzner</code>, <code>vultr</code></td></tr>
+          <tr><td><code>type</code></td><td>No</td><td>Image type: <code>STANDARD</code> (default), <code>CUSTOM</code>, or <code>SNAPSHOT</code></td></tr>
+          <tr><td><code>architecture</code></td><td>No</td><td>CPU architecture: <code>x86</code> (default) or <code>ARM</code></td></tr>
+          <tr><td><code>page</code></td><td>No</td><td>Page number (default: 1)</td></tr>
+        </tbody>
+      </table>
+      <pre class="code-block"><code>curl "https://dashboard.bithost.io/api/v1/images?provider=digital_ocean" \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+
+      <div class="endpoint-bar" style="margin-top: 28px;">
+        <span class="method method-get">GET</span>
+        <span class="endpoint-path">/api/v1/images/:id</span>
+      </div>
+      <p class="api-p">Returns the details of a single image by ID. Returns a <span class="inline-code">404</span> with a <span class="inline-code">not_found</span> error if the image does not exist or has been disabled.</p>
+      <pre class="code-block"><code>curl https://dashboard.bithost.io/api/v1/images/20 \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+
+      <h3 class="api-h3">Image object</h3>
+      <table class="api-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>id</code></td><td>integer</td><td>Unique image identifier</td></tr>
+          <tr><td><code>name</code></td><td>string</td><td>Display name (e.g. <code>"Ubuntu 24.04 LTS"</code>)</td></tr>
+          <tr><td><code>distribution</code></td><td>string</td><td>OS distribution family (e.g. <code>"Ubuntu"</code>, <code>"Debian"</code>)</td></tr>
+          <tr><td><code>windows</code></td><td>boolean</td><td>Whether the image is a Windows OS</td></tr>
+          <tr><td><code>architecture</code></td><td>string</td><td>CPU architecture: <code>x86</code> or <code>arm</code></td></tr>
+          <tr><td><code>provider_id</code></td><td>integer</td><td>ID of the provider that owns this image</td></tr>
+        </tbody>
+      </table>
+
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: var(--rd-ink-mute); margin-top: 40px;">
+        Interactive API explorer: <a href="https://dashboard.bithost.io/api/docs" style="color: var(--rd-ink-mute); text-decoration: underline;">dashboard.bithost.io/api/docs</a>
+      </p>
+
+    </main>
+
+  </div>
+
+  <!-- CTA BAND -->
+  <section style="
+    background: var(--rd-hero-bg);
+    color: var(--rd-hero-fg);
+    position: relative;
+    overflow: hidden;
+    padding: 96px 56px;
+    text-align: center;
+    border-top: 1px solid var(--rd-navy-3);
+  ">
+    <div aria-hidden="true" style="
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(var(--rd-hero-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--rd-hero-grid) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 30%, transparent 85%);
+      -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 30%, transparent 85%);
+    "></div>
+    <div style="position: relative; max-width: 720px; margin: 0 auto;">
+      <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; color: var(--rd-hero-fg); margin: 0 0 24px;">Top up in crypto.<br>Be root in a minute.</h2>
+      <p style="font-size: 1rem; line-height: 1.65; color: var(--rd-hero-mute); max-width: 480px; margin: 0 auto 40px;">No cards. No KYC. Uninterrupted service since 2014. For people who'd rather not explain why they need a server.</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a class="rd-btn solid lg" href="https://dashboard.bithost.io/registration">Deploy a server →</a>
+      </div>
+    </div>
+  </section>
+
+

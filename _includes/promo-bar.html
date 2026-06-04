@@ -1,0 +1,40 @@
+<!-- ===== PROMO BAR — delete this include (or remove `promo: true` from the page) to remove the promotion ===== -->
+<style>
+  @keyframes rd-ticker-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  #rd-promo-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: rd-ticker-scroll 60s linear infinite;
+  }
+  #rd-promo-track:hover { animation-play-state: paused; }
+  .rd-promo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 40px;
+    white-space: nowrap;
+  }
+  .rd-promo-sep {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+</style>
+<div id="rd-promo-bar" style="background:var(--rd-navy-2);border-bottom:1px solid var(--rd-navy-3);position:relative;overflow:hidden;">
+  <div style="overflow:hidden;padding-right:44px;">
+    <div aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:60px;z-index:2;background:linear-gradient(to right,var(--rd-navy-2),transparent);pointer-events:none;"></div>
+    <div aria-hidden="true" style="position:absolute;right:44px;top:0;bottom:0;width:60px;z-index:2;background:linear-gradient(to left,var(--rd-navy-2),transparent);pointer-events:none;"></div>
+    <div id="rd-promo-track">
+      {% for i in (1..8) %}<span class="rd-promo-item"><span style="color:#fff;font-size:13px;font-weight:600;">Only in June:</span><span style="color:rgba(255,255,255,0.9);font-size:13px;">Top up $200+ in crypto and get <strong style="color:#fff;">10% FREE</strong> added to your balance. Contact support after topping up to claim your bonus.</span><a href="https://dashboard.bithost.io/registration" style="color:#fff;font-size:12px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.5);white-space:nowrap;">Get started &rarr;</a></span><span class="rd-promo-sep" aria-hidden="true"></span>
+      {% endfor %}
+    </div>
+  </div>
+  <button onclick="document.getElementById('rd-promo-bar').style.display='none'" aria-label="Dismiss promotion" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,1);font-size:18px;cursor:pointer;line-height:1;padding:0;z-index:3;">&times;</button>
+</div>
+<!-- ===== PROMO BAR END ===== -->
