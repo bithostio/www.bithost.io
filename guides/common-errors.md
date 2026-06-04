@@ -209,7 +209,7 @@ If it won\'t start, check the logs:
     journalctl -u mysql -n 50
 {: .language-bash}
 
-## Disk / System Errors
+## Disk / System Errors   {#disk-system-errors}
 
 ### `No space left on device`
 
@@ -241,7 +241,7 @@ nearly full disk.
 **Fix:** Free disk space (see above) or check the specific command that
 failed.
 
-## SSL / HTTPS Errors
+## SSL / HTTPS Errors   {#ssl-https-errors}
 
 ###  `ERR_SSL_PROTOCOL_ERROR` or `NET::ERR_CERT_AUTHORITY_INVALID` 
 

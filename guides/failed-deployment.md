@@ -34,7 +34,7 @@ Deployments can go wrong - a broken config file, a failed database
 migration, or an incompatible package update can take your site offline.
 This guide walks you through diagnosing and recovering quickly.
 
-## Step 1: Don\'t Panic - Identify What Changed
+## Step 1: Don't Panic - Identify What Changed   {#step-1-dont-panic-identify-what-changed}
 
 Ask yourself:
 

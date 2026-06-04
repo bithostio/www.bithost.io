@@ -37,7 +37,7 @@ storage limits, and no dependence on Gmail or Outlook. However, it
 requires careful configuration. This guide uses **Mailcow** - the
 easiest modern all-in-one mail server stack.
 
-## ⚠️ Before You Start
+## ⚠️ Before You Start   {#before-you-start}
 
 Running a mail server is more complex than other use cases. Be aware:
 
