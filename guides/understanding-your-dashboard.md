@@ -13,7 +13,7 @@ og_type: article
 schema_type: Article
 category: "Getting Started"
 read_time: "4 min read"
-updated: "May 2026"
+updated: "June 2026"
 toc:
   - { id: "details", label: "Details tab" }
   - { id: "rebuild", label: "Rebuild tab" }
