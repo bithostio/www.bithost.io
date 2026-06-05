@@ -13,7 +13,7 @@ og_type: article
 schema_type: HowTo
 category: "Getting Started"
 read_time: "5 min read"
-updated: "May 2026"
+updated: "June 2026"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "create-account", label: "1. Create account" }
