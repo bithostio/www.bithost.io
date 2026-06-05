@@ -38,7 +38,7 @@ upgrades, backups, and more. Here\'s a walkthrough of each tab.
 tab](/assets/screenshots/bithost_server_management_dashboard_1.webp){:
 width="1176" height="656" style="width: 100%; height: auto; display:
 block; border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy"
-fetchpriority="high"}
+fetchpriority="high" srcset="/assets/screenshots/bithost_server_management_dashboard_1_740w.webp 740w, /assets/screenshots/bithost_server_management_dashboard_1_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
 At the top you\'ll see your server\'s name, provider, hourly and monthly
@@ -70,7 +70,7 @@ over with a clean slate or switch to a different operating system.
 distribution](/assets/screenshots/bithost_server_management_rebuild_2.webp){:
 width="1188" height="692" style="width: 100%; height: auto; display:
 block; border-radius: 8px; border: 1px solid var(--rd-line);"
-loading="lazy"}
+loading="lazy" srcset="/assets/screenshots/bithost_server_management_rebuild_2_740w.webp 740w, /assets/screenshots/bithost_server_management_rebuild_2_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
 The **Distribution** sub-tab lets you pick a fresh OS image - AlmaLinux,
@@ -82,7 +82,7 @@ lets you rebuild from one of your own saved snapshots instead.
 sub-tab](/assets/screenshots/bithost_server_management_rebuild_from_snapshot_3.webp){:
 width="1172" height="673" style="width: 100%; height: auto; display:
 block; border-radius: 8px; border: 1px solid var(--rd-line);"
-loading="lazy"}
+loading="lazy" srcset="/assets/screenshots/bithost_server_management_rebuild_from_snapshot_3_740w.webp 740w, /assets/screenshots/bithost_server_management_rebuild_from_snapshot_3_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
 **Warning:** Rebuilding permanently deletes all data on the server. Take
@@ -100,7 +100,7 @@ Storage-Optimized.
 options](/assets/screenshots/bithost_server_management_resize_4.webp){:
 width="1196" height="615" style="width: 100%; height: auto; display:
 block; border-radius: 8px; border: 1px solid var(--rd-line);"
-loading="lazy"}
+loading="lazy" srcset="/assets/screenshots/bithost_server_management_resize_4_740w.webp 740w, /assets/screenshots/bithost_server_management_resize_4_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
 Note the **Permanent resize** toggle on the right. When off, only CPU
@@ -121,7 +121,7 @@ Two options for protecting your data:
 controls](/assets/screenshots/bithost_server_management_backups_and_snapshots_5.webp){:
 width="1180" height="644" style="width: 100%; height: auto; display:
 block; border-radius: 8px; border: 1px solid var(--rd-line);"
-loading="lazy"}
+loading="lazy" srcset="/assets/screenshots/bithost_server_management_backups_and_snapshots_5_740w.webp 740w, /assets/screenshots/bithost_server_management_backups_and_snapshots_5_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
 **Tip:** Take a snapshot before any major change - OS update, new
@@ -140,7 +140,7 @@ troubleshooting or auditing changes.
 timestamps](/assets/screenshots/bithost_server_management_view_events_6.webp){:
 width="1162" height="610" style="width: 100%; height: auto; display:
 block; border-radius: 8px; border: 1px solid var(--rd-line);"
-loading="lazy"}
+loading="lazy" srcset="/assets/screenshots/bithost_server_management_view_events_6_740w.webp 740w, /assets/screenshots/bithost_server_management_view_events_6_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
 ## Stop, Restart &amp; Delete   {#power}
@@ -153,7 +153,7 @@ of the server page, regardless of which tab you\'re on.
 highlighted](/assets/screenshots/bithost_server_management_stop_restart_delete_7.webp){:
 width="1232" height="632" style="width: 100%; height: auto; display:
 block; border-radius: 8px; border: 1px solid var(--rd-line);"
-loading="lazy"}
+loading="lazy" srcset="/assets/screenshots/bithost_server_management_stop_restart_delete_7_740w.webp 740w, /assets/screenshots/bithost_server_management_stop_restart_delete_7_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
 * **Toggle (ON/OFF)** - turns the server on or off. Stopping a server
