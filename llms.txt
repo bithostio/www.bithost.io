@@ -9,10 +9,12 @@ bithost lets anyone deploy a Linux or Windows cloud server anonymously using cry
 - [Homepage](https://bithost.io/): Overview of the service, providers, billing model, and supported cryptocurrencies
 - [Prices](https://bithost.io/prices): Full pricing tables for DigitalOcean, Linode, and Vultr plans - CPU, RAM, storage, and hourly/monthly rates
 - [FAQ](https://bithost.io/faq): Answers on crypto payments, billing, server limits, account security, and balance management
-- [Pay with Crypto](https://bithost.io/pay-with-crypto): Full list of accepted cryptocurrencies - Bitcoin, ETH, DOGE, LTC, USDC, SOL, and more
+- [Pay with Crypto](https://bithost.io/pay-with-crypto): Full list of accepted cryptocurrencies - Bitcoin, Lightning Network, ETH, DOGE, LTC, USDC, SOL, and more
+- [Dashboard](https://dashboard.bithost.io/): Login, top up balance, deploy and manage servers
 - [API & CLI](https://bithost.io/bithost-cli-api/): Overview of the REST API and bh command-line tool
 - [API Docs](https://bithost.io/bithost-cli-api/api): Full REST API reference - authentication, endpoints, request/response format
 - [CLI Docs](https://bithost.io/bithost-cli-api/cli): bh CLI installation, commands, and usage examples
+- [Full API & CLI Reference](https://bithost.io/llms-full.txt): Complete API endpoints, error codes, cURL examples, and bh CLI command reference
 
 ## Guides - Getting Started
 
