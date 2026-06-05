@@ -62,7 +62,9 @@ style="color: var(--rd-indigo);"} and click **Account** in the top
 navigation, then select **Profile**. Scroll down to the **Security**
 section and click **Enable 2FA**.
 
-<img src="/assets/guides/enable-2fa-profile.webp" alt="bithost Profile page showing the Security section with Enable 2FA link" width="1272" height="848" loading="lazy" style="width: 100%; border-radius: 10px; margin: 16px 0 24px; border: 1px solid var(--rd-line);">
+<figure style="margin: 24px auto 32px; width: 100%; max-width: 640px;">
+<img src="/assets/guides/enable-2fa-profile.webp" alt="bithost Profile page showing the Security section with Enable 2FA link" width="1272" height="848" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--rd-line);">
+</figure>
 
 You'll see two links in the Security section - **Enable 2FA** and
 **Change password**. Click **Enable 2FA** to open the setup dialog.
@@ -73,7 +75,9 @@ A dialog will appear showing a QR code and a code input field. Open your
 authenticator app, tap the **+** or **Add account** button, and choose
 **Scan QR code**. Point your phone camera at the QR code on screen.
 
-<img src="/assets/guides/enable-2fa-qr-code.webp" alt="Enable 2-Factor Authentication dialog showing QR code and empty code field" width="1266" height="624" loading="lazy" style="width: 100%; border-radius: 10px; margin: 16px 0 24px; border: 1px solid var(--rd-line);">
+<figure style="margin: 24px auto 32px; width: 100%; max-width: 640px;">
+<img src="/assets/guides/enable-2fa-qr-code.webp" alt="Enable 2-Factor Authentication dialog showing QR code and empty code field" width="1266" height="624" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--rd-line);">
+</figure>
 
 Your authenticator app will add a bithost entry and immediately start
 showing a 6-digit code that refreshes every 30 seconds. If your phone
@@ -87,7 +91,9 @@ Type the 6-digit code currently shown in your authenticator app into the
 code before it expires - if the timer is about to run out, wait for the
 next one.
 
-<img src="/assets/guides/enable-2fa-confirm.webp" alt="Enable 2-Factor Authentication dialog with a 6-digit code entered and the Enable button highlighted" width="1276" height="632" loading="lazy" style="width: 100%; border-radius: 10px; margin: 16px 0 24px; border: 1px solid var(--rd-line);">
+<figure style="margin: 24px auto 32px; width: 100%; max-width: 640px;">
+<img src="/assets/guides/enable-2fa-confirm.webp" alt="Enable 2-Factor Authentication dialog with a 6-digit code entered and the Enable button highlighted" width="1276" height="632" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--rd-line);">
+</figure>
 
 Once confirmed, 2FA is active. From now on, every login will require your
 password and a fresh code from your authenticator app.
