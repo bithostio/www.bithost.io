@@ -1,0 +1,138 @@
+# bithost Full API & CLI Technical Reference
+
+This document provides comprehensive syntax, parameters, and error handling for automating bithost infrastructure.
+
+## 1. Authentication & System Access
+
+- **API Key**: Generate from https://dashboard.bithost.io/api/keys
+- **API keys cost $10.00 and are valid for 3 months from date of purchase.**
+- **Authorization Header**: `Authorization: Bearer YOUR_API_KEY`
+- **Base URL**: `https://dashboard.bithost.io/api/v1`
+
+Example:
+```bash
+curl https://dashboard.bithost.io/api/v1/user \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+## 2. API Responses & Error Handling
+
+All responses are JSON. Errors use the following envelope:
+
+```json
+{"errors": [{"code": "string", "message": "string", "field": "string"}]}
+```
+
+### HTTP Status Codes
+
+- `200` — Success
+- `401` — Unauthorized (missing or invalid API key)
+- `403` — Forbidden (account not allowed to perform this action)
+- `404` — Not Found
+- `422` — Validation error
+
+### Error Codes
+
+`unauthenticated`, `locked`, `insufficient_funds`, `no_keys`, `quota_exceeded`, `unconfirmed`, `not_found`, `internal_error`
+
+## 3. Pagination
+
+Collection endpoints return up to 50 items per page. Use the `page` query parameter to navigate. Every paginated response includes a `meta.pagination` object.
+
+## 4. REST API Endpoints
+
+### User
+- `GET /api/v1/user` — Profile and account balance
+
+### Servers
+- `GET /api/v1/servers` — List servers
+- `GET /api/v1/servers/:id` — Get server details
+- `POST /api/v1/servers` — Deploy a server (requires `terms: true`)
+- `DELETE /api/v1/servers/:id` — Destroy a server
+- `POST /api/v1/servers/:id/power` — Power action (`on`, `off`, `reboot`)
+- `POST /api/v1/servers/:id/rebuild` — Rebuild server
+- `POST /api/v1/servers/:id/resize` — Resize server
+- `POST /api/v1/servers/:id/backup` — Trigger backup
+- `POST /api/v1/servers/:id/snapshot` — Take snapshot
+
+### SSH Keys
+- `GET /api/v1/keys` — List SSH keys
+- `POST /api/v1/keys` — Add SSH key (requires nested `{"key": {"label": "...", "key": "..."}}`)
+
+### Discovery
+- `GET /api/v1/providers` — List available providers (digitalocean, linode, vultr)
+- `GET /api/v1/regions?provider=<slug>` — List regions for a provider
+- `GET /api/v1/sizes?provider=<slug>` — List sizes for a provider
+- `GET /api/v1/images?provider=<slug>` — List images for a provider
+- `GET /api/v1/images/:id` — Get image details
+
+Note: deployment requires integer IDs (size_id, region_id, image_id), not slugs.
+
+## 5. Deploy a Server (cURL example)
+
+```bash
+curl -X POST https://dashboard.bithost.io/api/v1/servers \
+  -H "Authorization: Bearer $BITHOST_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "my-server",
+    "provider": "digital_ocean",
+    "size_id": 5,
+    "region_id": 2,
+    "image_id": 10,
+    "terms": true
+  }'
+```
+
+## 6. CLI Reference (bh)
+
+### Installation
+
+```bash
+curl -fsSL https://bithost.io/cli | bash
+```
+
+The installer places `bh` in `~/.local/bin/`. Add to PATH if needed:
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+### Configuration
+
+Config file: `~/.bh/config.json`
+
+### Authentication
+
+```bash
+bh auth
+```
+
+### Interactive TUI
+
+```bash
+bh manage
+```
+
+Launches a full terminal UI for managing servers, SSH keys, and account settings interactively.
+
+### Commands
+
+```bash
+bh user                          # Show profile and balance
+bh providers                     # List available providers
+bh regions --provider <slug>     # List regions for a provider
+
+bh servers list                  # List your servers
+bh servers list --all            # Include stopped servers
+bh servers new \
+  --name myserver \
+  --provider digital_ocean \
+  --region 2 \
+  --size 5 \
+  --image 10 \
+  --keys 1,2                     # Deploy a server
+bh servers new ... --backups     # Deploy with backups enabled
+bh servers delete <id>           # Destroy a server
+bh servers delete <id> --force   # Destroy without confirmation
+```
