@@ -2,7 +2,7 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "Understanding Your Server Dashboard and Control Panel | Guides | bithost"
+title: "Understanding Your Server Dashboard | Guides | bithost"
 h1: "Understanding Your Server Dashboard and Control Panel"
 description: "A walkthrough of every tab in your bithost server dashboard - connection details, OS rebuild, plan resize, backups, snapshots, event log, and power controls."
 canonical: "https://bithost.io/guides/understanding-your-dashboard"
@@ -14,6 +14,8 @@ schema_type: Article
 category: "Getting Started"
 read_time: "4 min read"
 updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "details", label: "Details tab" }
   - { id: "rebuild", label: "Rebuild tab" }
@@ -37,7 +39,7 @@ upgrades, backups, and more. Here\'s a walkthrough of each tab.
 ![bithost server dashboard - Details
 tab](/assets/screenshots/bithost_server_management_dashboard_1.webp){:
 width="1176" height="656" style="width: 100%; height: auto; display:
-block; border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy"
+block; border-radius: 8px; border: 1px solid var(--rd-line);"
 fetchpriority="high" srcset="/assets/screenshots/bithost_server_management_dashboard_1_740w.webp 740w, /assets/screenshots/bithost_server_management_dashboard_1_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
@@ -50,7 +52,7 @@ else.
 The default tab. It shows everything you need to connect to and identify
 your server:
 
-* **Connect** - the ready-to-use SSH command for your server
+* **Connect** - the ready-to-use [SSH command](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"} for your server
 * **IPv4 / IPv6** - your server\'s public IP addresses
 * **Private IPv4 / IPv6** - internal network addresses (within the
   provider\'s network)
@@ -91,9 +93,10 @@ a snapshot first if you need to preserve anything.
 
 ## Resize tab   {#resize}
 
-Upgrade your server\'s plan - more CPU, RAM, disk, or traffic. Plans are
-grouped by type: General Purpose, CPU-Optimized, Memory-Optimized, and
-Storage-Optimized.
+[Upgrade your server\'s plan](/guides/scale-server-resources/){: style="color: var(--rd-indigo);"} -
+more CPU, RAM, disk, or traffic. Plans are grouped by type: General
+Purpose, CPU-Optimized, Memory-Optimized, and Storage-Optimized. Not
+sure how big to go? See [choosing the right plan](/guides/choose-the-right-plan/){: style="color: var(--rd-indigo);"}.
 
 <figure style="margin: 24px auto 32px; width: 100%; max-width: 640px;" markdown="1">
 ![bithost server - Resize tab showing plan
@@ -115,6 +118,7 @@ Two options for protecting your data:
   charged at 20% of your server price. Toggle them on to enable.
 * **Snapshots** - manual, on-demand copies of your entire disk. Enter a
   name and click **Create snapshot**. Snapshots cost $0.06/GB per month.
+  See the full [backups guide](/guides/automated-backups/){: style="color: var(--rd-indigo);"}.
 
 <figure style="margin: 24px auto 32px; width: 100%; max-width: 640px;" markdown="1">
 ![bithost server - Backups tab with automatic backups and snapshot

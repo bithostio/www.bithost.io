@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Host a Website on Your Cloud Server Using Nginx | Guides | bithost"
-h1: "How to Host a Website on Your Cloud Server Using Nginx"
-description: "Nginx is a fast, lightweight web server used to serve websites and web applications. This guide walks you through installing Nginx and serving your first w..."
+title: "How to Host a Website on a VPS with Nginx | bithost"
+h1: "How to Host a Website on a VPS with Nginx"
+description: "Host a website with Nginx on a VPS: install and configure Nginx on Ubuntu 22.04, set up a server block, upload your site, and go live in minutes."
 canonical: "https://bithost.io/guides/host-a-website-with-nginx"
-og_title: "How to Host a Website on Your Cloud Server Using Nginx - bithost Guide"
+og_title: "How to Host a Website on a VPS with Nginx - bithost Guide"
 og_url: "https://bithost.io/guides/host-a-website-with-nginx"
-og_description: "Nginx is a fast, lightweight web server used to serve websites and web applications. This guide walks you through installing Nginx and serving your first w..."
+og_description: "Host a website with Nginx on a VPS: install and configure Nginx on Ubuntu 22.04, set up a server block, upload your site, and go live in minutes."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Web Hosting"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "step-1-update-your-server", label: "Update Your Server" }
@@ -23,6 +25,7 @@ toc:
   - { id: "step-5-upload-your-website-files", label: "Upload Your Website Files" }
   - { id: "step-6-configure-a-server-block-virtual-host", label: "Configure a Server Block (Virtual Host)" }
   - { id: "step-7-enable-the-site", label: "Enable the Site" }
+  - { id: "step-8-visit-your-website", label: "Visit Your Website" }
 sidebar_title: "Web Hosting"
 sidebar:
   - { url: "/guides/install-wordpress", label: "Install WordPress" }
@@ -37,10 +40,10 @@ your first website on a cloud server running Ubuntu 22.04.
 
 ## Prerequisites
 
-* A cloud server running Ubuntu 22.04
+* A VPS running Ubuntu 22.04 ([see vps prices](/prices/){: style="color: var(--rd-indigo);"}). Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
 * SSH access to the server ([How to Connect via
   SSH](/guides/connect-via-ssh){: style="color: var(--rd-indigo);"})
-* A domain name pointed to your server\'s IP (optional, but recommended)
+* A [domain name pointed to your server\'s IP](/guides/point-domain-to-server/){: style="color: var(--rd-indigo);"} (optional, but recommended)
 
 ## Step 1: Update Your Server
 
@@ -154,3 +157,7 @@ Otherwise, visit:
     http://YOUR_SERVER_IP
 
 Your website is now live!
+
+Next, [secure it with HTTPS](/guides/setup-ssl-https/){: style="color: var(--rd-indigo);"} for
+a free SSL certificate, or [install WordPress](/guides/install-wordpress/){: style="color: var(--rd-indigo);"} if
+you want a CMS instead of static files.

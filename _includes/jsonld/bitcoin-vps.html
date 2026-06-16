@@ -4,7 +4,7 @@
     "@type": "Service",
     "@id": "https://bithost.io/bitcoin-vps#service",
     "name": "Bitcoin VPS Hosting — bithost",
-    "description": "Deploy DigitalOcean, Linode, and Vultr VPS servers paid with Bitcoin, Lightning Network, ETH, USDT, LTC, and more. No KYC, no credit card, hourly billing since 2014.",
+    "description": "Deploy DigitalOcean, Linode, or Vultr VPS servers paid with Bitcoin or Lightning. Run a full node, BTCPay Server, or Lightning node. No KYC, no credit card. Since 2014.",
     "url": "https://bithost.io/bitcoin-vps",
     "provider": {
       "@type": "Organization",
@@ -19,12 +19,13 @@
         "description": "DigitalOcean cloud servers purchased with Bitcoin, Lightning, ETH, USDT and 10 more coins. Hourly billing, no KYC.",
         "url": "https://bithost.io/bitcoin-vps",
         "priceCurrency": "USD",
-        "price": "4.00",
+        "price": "0.018",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "4.00",
+          "price": "0.018",
           "priceCurrency": "USD",
-          "unitText": "monthly"
+          "unitCode": "HUR",
+          "unitText": "hour"
         }
       },
       {
@@ -33,12 +34,13 @@
         "description": "Linode cloud servers purchased with Bitcoin, Lightning, ETH, USDT and 10 more coins. Hourly billing, no KYC.",
         "url": "https://bithost.io/bitcoin-vps",
         "priceCurrency": "USD",
-        "price": "5.00",
+        "price": "0.015",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "5.00",
+          "price": "0.015",
           "priceCurrency": "USD",
-          "unitText": "monthly"
+          "unitCode": "HUR",
+          "unitText": "hour"
         }
       },
       {
@@ -47,12 +49,13 @@
         "description": "Vultr cloud servers purchased with Bitcoin, Lightning, ETH, USDT and 10 more coins. Hourly billing, no KYC.",
         "url": "https://bithost.io/bitcoin-vps",
         "priceCurrency": "USD",
-        "price": "6.00",
+        "price": "0.018",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "6.00",
+          "price": "0.018",
           "priceCurrency": "USD",
-          "unitText": "monthly"
+          "unitCode": "HUR",
+          "unitText": "hour"
         }
       }
     ]
@@ -65,6 +68,86 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bithost.io/" },
       { "@type": "ListItem", "position": 2, "name": "Bitcoin VPS", "item": "https://bithost.io/bitcoin-vps" }
+    ]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a Bitcoin VPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Bitcoin VPS is a virtual private server you rent and pay for using Bitcoin instead of a credit card or PayPal. You get the same thing as any other VPS — full root access, a dedicated IP, and your choice of Linux distro — but the purchase is settled in BTC (or another cryptocurrency), so no card or bank account is involved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is buying a VPS with Bitcoin anonymous?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With bithost, yes. We ask for an email and password — no name, address, phone number, or government ID — and you pay in crypto, so there is no card tying the server to your real identity. A fresh deposit address is generated for each top-up. We have run the service this way since 2014. For the strongest privacy, fund with Lightning or a privacy coin and use a dedicated email."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I run a full Bitcoin Core node on this VPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Choose a plan with enough disk for the blockchain (around 700 GB for a full archival node, less for a pruned node) and run bitcoind 24/7. You get full root access, so you install and configure Bitcoin Core exactly as you would on your own hardware."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my node sync faster on a VPS than at home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually, yes. The initial block download is bottlenecked by disk speed, CPU for signature verification, and network throughput. Our NVMe-backed servers on DigitalOcean, Vultr, and Linode sit in data centres with fast networking, so the chain typically syncs in hours rather than the days a home connection can take."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about Lightning Network nodes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A VPS is the natural home for a Lightning node, which needs to stay online to keep channels open and route payments. Run LND, Core Lightning, or Eclair alongside your own Bitcoin Core backend on the same server, or point it at a node you already run."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it cheaper to pay with Bitcoin than a credit card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The server price is the same — you are billed in USD-equivalent and your crypto is converted at the rate when you deposit. The savings are indirect: no card-processing surcharges, no foreign-transaction fees, and no failed-card renewals. Funding over Lightning keeps network fees to a fraction of a cent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to register with DigitalOcean, Vultr, or Linode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You only need a bithost account. bithost manages the provider accounts on the backend — you interact entirely with the bithost dashboard and get full root access to your server via SSH."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a Bitcoin payment take to credit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On-chain Bitcoin credits after 1 confirmation, typically 10–20 minutes. Lightning Network payments credit instantly — under a second. If you need to deploy immediately, Lightning is the fastest option. The minimum top-up is $20 USD equivalent in any supported coin, and your balance carries over with no expiry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What personal data does bithost collect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An email address and password. No name, no address, no phone number, no government ID. bithost has operated this way since 2014. See the privacy policy for the full picture."
+        }
+      }
     ]
   }
 </script>

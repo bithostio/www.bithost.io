@@ -1667,6 +1667,33 @@ body[data-theme="indigo"] {
   border: none;
   padding: 0;
 }
+.rd-guide-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 24px;
+  font-size: 14px;
+  display: block;
+  overflow-x: auto;
+}
+.rd-guide-body thead th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--rd-ink);
+  background: var(--rd-paper-warm);
+  border-bottom: 2px solid var(--rd-line);
+}
+.rd-guide-body th,
+.rd-guide-body td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--rd-line);
+  vertical-align: top;
+}
+.rd-guide-body tbody tr:last-child td {
+  border-bottom: none;
+}
+.rd-guide-body tbody tr:nth-child(even) td {
+  background: var(--rd-paper-warm);
+}
 .rd-guide-meta {
   display: flex;
   gap: 20px;

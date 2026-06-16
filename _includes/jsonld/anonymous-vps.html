@@ -1,0 +1,89 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://bithost.io/anonymous-vps#service",
+    "name": "Anonymous VPS Hosting — bithost",
+    "description": "Rent an anonymous VPS with Bitcoin or crypto. No KYC, no credit card, no real name required. Deploy on DigitalOcean, Vultr, or Linode anonymously since 2014.",
+    "url": "https://bithost.io/anonymous-vps",
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://bithost.io/#organization",
+      "name": "bithost",
+      "url": "https://bithost.io"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Anonymous VPS — pay with Bitcoin",
+      "description": "Anonymous VPS hosting paid with Bitcoin or crypto. No KYC, no credit card, full root access.",
+      "url": "https://bithost.io/anonymous-vps",
+      "priceCurrency": "USD",
+      "price": "0.015",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "0.015",
+        "priceCurrency": "USD",
+        "unitCode": "HUR",
+        "unitText": "hour"
+      }
+    }
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bithost.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Anonymous VPS", "item": "https://bithost.io/anonymous-vps" }
+    ]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is an anonymous VPS legal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Renting a server anonymously is legal in the countries we operate in — privacy is not a crime. What you run on it is your responsibility, and our terms set out the small number of abuse categories we do not allow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you really not ask for ID?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Correct. There is no KYC step, no document upload, and no card. You create an account with an email and password and fund it with cryptocurrency. We have run the service this way since 2014."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which coin is the most private to pay with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On-chain Bitcoin is pseudonymous, not anonymous. For stronger payment privacy, fund over the Lightning Network or use a privacy-focused coin such as Zcash (shielded) or Dash (PrivateSend). Every top-up uses a fresh, one-time deposit address."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the VPS provider identify me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. DigitalOcean, Vultr, and Linode only see bithost — they never receive your details because the account is ours. You deal exclusively with the bithost dashboard."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my data when I delete a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deleting a server stops billing immediately and releases the underlying instance back to the provider. We keep only the minimal account data described in our privacy policy."
+        }
+      }
+    ]
+  }
+</script>

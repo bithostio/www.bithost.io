@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "Common Server Error Messages and How to Fix Them | Guides | bithost"
+title: "Common Server Errors and How to Fix Them | bithost"
 h1: "Common Server Error Messages and How to Fix Them"
-description: "This reference guide covers the most frequent errors you'll encounter when managing a cloud server, with clear explanations and step-by-step fixes."
+description: "Fix the most common Linux server errors: SSH connection refused, 502/504/403/404 Nginx errors, MySQL access denied, disk full, and SSL problems."
 canonical: "https://bithost.io/guides/common-errors"
-og_title: "Common Server Error Messages and How to Fix Them - bithost Guide"
+og_title: "Common Server Errors and How to Fix Them - bithost Guide"
 og_url: "https://bithost.io/guides/common-errors"
-og_description: "This reference guide covers the most frequent errors you'll encounter when managing a cloud server, with clear explanations and step-by-step fixes."
+og_description: "Fix the most common Linux server errors: SSH connection refused, 502/504/403/404 Nginx errors, MySQL access denied, disk full, and SSL problems."
 og_type: article
 schema_type: Article
 category: "Troubleshooting"
 read_time: "5 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "ssh-errors", label: "SSH Errors" }
   - { id: "web-server-errors", label: "Web Server Errors" }
@@ -64,7 +66,7 @@ firewall blocking.
 
 ### `Permission denied (publickey)`
 
-**Meaning:** SSH key authentication failed.
+**Meaning:** [SSH key authentication](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"} failed.
 
 **Fixes:**
 
@@ -94,8 +96,8 @@ rebuild or IP reuse).
 
 ### `502 Bad Gateway`
 
-**Meaning:** Nginx received no valid response from the backend (PHP-FPM,
-Node app, etc.).
+**Meaning:** [Nginx](/guides/host-a-website-with-nginx/){: style="color: var(--rd-indigo);"}
+received no valid response from the backend (PHP-FPM, Node app, etc.).
 
 **Fixes:**
 
@@ -118,7 +120,6 @@ Node app, etc.).
 **Fixes:**
 
 * Increase Nginx timeout in server block:
-^
 
     proxy_read_timeout 120;
     proxy_connect_timeout 120;
@@ -233,6 +234,8 @@ If it won\'t start, check the logs:
     docker system prune -a
 {: .language-bash}
 
+To stay ahead of this, [monitor disk usage](/guides/monitor-resource-usage/){: style="color: var(--rd-indigo);"} regularly.
+
 ### `bash: /usr/bin/python3: Argument list too long`
 
 **Meaning:** Usually caused by a glob expanding to too many files, or a
@@ -257,6 +260,9 @@ failed.
     nginx -t
     systemctl reload nginx
 {: .language-bash}
+
+For full certificate setup, see [Set up HTTPS
+(SSL)](/guides/setup-ssl-https/){: style="color: var(--rd-indigo);"}.
 
 ### `Too Many Redirects`
 

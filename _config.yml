@@ -19,6 +19,11 @@ kramdown:
   auto_ids: true            # generate id="" on headings (TOC anchors)
   hard_wrap: false
 
+# Plugins (on the GitHub Pages whitelist).
+# jekyll-redirect-from 301s removed/renamed pages to a live URL.
+plugins:
+  - jekyll-redirect-from
+
 # Clean, extensionless URLs: faq.html -> /faq/  (served at /faq),
 # guides/connect-via-ssh.md -> /guides/connect-via-ssh/.
 permalink: pretty

@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Host a Node.js or Python Web App on Your Cloud Server | Guides | bithost"
-h1: "How to Host a Node.js or Python Web App on Your Cloud Server"
-description: "This guide walks you through deploying a Node.js or Python web application to a cloud server and keeping it running reliably using a process manager and Ng..."
+title: "How to Host a Node.js or Python App on a VPS | bithost"
+h1: "How to Host a Node.js or Python App on a VPS"
+description: "Deploy a Node.js or Python web app on a VPS and keep it running with a process manager (PM2 or systemd) and Nginx as a reverse proxy."
 canonical: "https://bithost.io/guides/host-nodejs-python-app"
-og_title: "How to Host a Node.js or Python Web App on Your Cloud Server - bithost Guide"
+og_title: "How to Host a Node.js or Python App on a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/host-nodejs-python-app"
-og_description: "This guide walks you through deploying a Node.js or Python web application to a cloud server and keeping it running reliably using a process manager and Ng..."
+og_description: "Deploy a Node.js or Python web app on a VPS and keep it running with a process manager (PM2 or systemd) and Nginx as a reverse proxy."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Use Cases"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "part-a-deploying-a-nodejs-app", label: "Part A: Deploying a Node.js App" }
@@ -25,7 +27,6 @@ sidebar:
   - { url: "/guides/setup-vpn-server", label: "Set up a VPN server" }
   - { url: "/guides/game-server", label: "Run a game server" }
   - { url: "/guides/nextcloud-cloud-storage", label: "Self-host with Nextcloud" }
-  - { url: "/guides/mail-server", label: "Set up a mail server" }
   - { url: "/guides", label: "All guides →" }
 ---
 
@@ -35,9 +36,9 @@ process manager and Nginx as a reverse proxy.
 
 ## Prerequisites
 
-* A cloud server running Ubuntu 22.04
-* SSH access and a non-root sudo user
-* A domain name (optional but recommended)
+* A VPS running Ubuntu 22.04 ([see vps prices](/prices/){: style="color: var(--rd-indigo);"}). Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
+* [SSH access](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"} and a non-root sudo user
+* A [domain name](/guides/point-domain-to-server/){: style="color: var(--rd-indigo);"} (optional but recommended)
 * Your app code ready to deploy
 
 ## Part A: Deploying a Node.js App
@@ -87,8 +88,9 @@ startup ...`).
 
 ### Step 5: Configure Nginx as a Reverse Proxy
 
-Your Node app runs on a port like `3000`. Nginx forwards web traffic to
-it:
+Your Node app runs on a port like `3000`.
+[Nginx](/guides/host-a-website-with-nginx/){: style="color: var(--rd-indigo);"}
+forwards web traffic to it:
 
     nano /etc/nginx/sites-available/my-app
 {: .language-bash}
@@ -194,10 +196,13 @@ Enable and start:
     certbot --nginx -d yourdomain.com -d www.yourdomain.com
 {: .language-bash}
 
+For details and troubleshooting, see [Set up HTTPS
+(SSL)](/guides/setup-ssl-https/){: style="color: var(--rd-indigo);"}.
+
 ## Useful Commands
 
 | Task | Node.js (PM2) | Python (systemd) |
-|----------
+| --- | --- | --- |
 | Start app | `pm2 start app.js` | `systemctl start my-python-app` |
 | Stop app | `pm2 stop my-app` | `systemctl stop my-python-app` |
 | Restart app | `pm2 restart my-app` | `systemctl restart my-python-app` |

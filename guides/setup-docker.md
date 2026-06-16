@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Set Up Docker on Your Cloud Server | Guides | bithost"
-h1: "How to Set Up Docker on Your Cloud Server"
-description: "Docker lets you run applications in isolated containers - making deployments reproducible, portable, and easy to manage. This guide covers installing Docke..."
+title: "How to Set Up Docker on a VPS | Guides | bithost"
+h1: "How to Set Up Docker on a VPS"
+description: "Set up Docker on a VPS (Ubuntu 22.04): install Docker and Compose, run your first container, and manage images and volumes for reproducible deployments."
 canonical: "https://bithost.io/guides/setup-docker"
-og_title: "How to Set Up Docker on Your Cloud Server - bithost Guide"
+og_title: "How to Set Up Docker on a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/setup-docker"
-og_description: "Docker lets you run applications in isolated containers - making deployments reproducible, portable, and easy to manage. This guide covers installing Docke..."
+og_description: "Set up Docker on a VPS (Ubuntu 22.04): install Docker and Compose, run your first container, and manage images and volumes for reproducible deployments."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Performance"
 read_time: "4 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "what-is-docker", label: "What Is Docker?" }
   - { id: "step-1-install-docker", label: "Install Docker" }
@@ -23,6 +25,7 @@ toc:
   - { id: "common-docker-commands", label: "Common Docker Commands" }
   - { id: "step-5-persist-data-with-volumes", label: "Persist Data with Volumes" }
   - { id: "step-6-configure-nginx-as-a-reverse-proxy-for-docker-apps", label: "Configure Nginx as a Reverse Proxy for Docker Apps" }
+  - { id: "popular-docker-images-to-explore", label: "Popular Docker Images to Explore" }
 sidebar_title: "Performance"
 sidebar:
   - { url: "/guides/scale-server-resources", label: "Scale server resources" }
@@ -34,7 +37,7 @@ sidebar:
 Docker lets you run applications in isolated containers - making
 deployments reproducible, portable, and easy to manage. This guide
 covers installing Docker and getting started with containers on Ubuntu
-22.04.
+22.04. [See VPS prices](/prices/){: style="color: var(--rd-indigo);"}.
 
 ## What Is Docker?
 
@@ -155,7 +158,7 @@ Stop it:
 ## Common Docker Commands
 
 | Command | Description |
-|----------
+| --- | --- |
 | `docker ps` | List running containers |
 | `docker ps -a` | List all containers (including stopped) |
 | `docker images` | List downloaded images |
@@ -183,8 +186,9 @@ inside the container.
 
 ## Step 6: Configure Nginx as a Reverse Proxy for Docker Apps
 
-Run your app container on a local port (e.g. 8080) and let Nginx handle
-public traffic:
+Run your app container on a local port (e.g. 8080) and let
+[Nginx](/guides/host-a-website-with-nginx/){: style="color: var(--rd-indigo);"}
+handle public traffic:
 
     server {
         listen 80;
@@ -198,16 +202,16 @@ public traffic:
     }
 {: .language-nginx}
 
-Then add SSL with Certbot as usual.
+Then [add SSL with Certbot](/guides/setup-ssl-https/){: style="color: var(--rd-indigo);"} as usual.
 
 ## Popular Docker Images to Explore
 
 | App | Docker Image |
-|----------
+| --- | --- |
 | Nginx | `nginx` |
 | WordPress | `wordpress` |
 | MySQL | `mysql` |
-| Nextcloud | `nextcloud` |
+| [Nextcloud](/guides/nextcloud-cloud-storage/) | `nextcloud` |
 | Portainer (Docker GUI) | `portainer/portainer-ce` |
 | Gitea (self-hosted Git) | `gitea/gitea` |
 | Uptime Kuma (monitoring) | `louislam/uptime-kuma` |

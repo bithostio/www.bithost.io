@@ -2,24 +2,25 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Set Up Automated Backups for Your Cloud Server | Guides | bithost"
-h1: "How to Set Up Automated Backups for Your Cloud Server"
-description: "Backups are your safety net. This guide covers how to set up automated backups so you can recover quickly from accidental deletion, data corruption, or a s..."
+title: "How to Set Up Backups for Your VPS | Guides | bithost"
+h1: "How to Set Up Backups for Your VPS"
+description: "Learn how to back up your VPS with bithost: automatic backups, manual snapshots, rsync file backups, and database dumps. Protect your server in minutes."
 canonical: "https://bithost.io/guides/automated-backups"
-og_title: "How to Set Up Automated Backups for Your Cloud Server - bithost Guide"
+og_title: "How to Set Up Backups for Your VPS - bithost Guide"
 og_url: "https://bithost.io/guides/automated-backups"
-og_description: "Backups are your safety net. This guide covers how to set up automated backups so you can recover quickly from accidental deletion, data corruption, or a s..."
+og_description: "Learn how to back up your VPS with bithost: automatic backups, manual snapshots, rsync file backups, and database dumps. Protect your server in minutes."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Security"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "backup-strategy-the-3-2-1-rule", label: "Backup Strategy: The 3-2-1 Rule" }
-  - { id: "option-1-provider-snapshots-easiest", label: "Option 1: Provider Snapshots (Easiest)" }
+  - { id: "option-1-bithost-backups-and-snapshots-easiest", label: "Option 1: bithost Backups and Snapshots (Easiest)" }
   - { id: "option-2-automated-file-backups-with-rsync", label: "Option 2: Automated File Backups with rsync" }
   - { id: "option-3-database-backups-mysqlmariadb", label: "Option 3: Database Backups (MySQL/MariaDB)" }
-  - { id: "option-4-back-up-to-object-storage-s3-compatible", label: "Option 4: Back Up to Object Storage (S3-Compatible)" }
   - { id: "testing-your-backups", label: "Testing Your Backups" }
   - { id: "backup-checklist", label: "Backup Checklist" }
 sidebar_title: "Security"
@@ -30,9 +31,9 @@ sidebar:
   - { url: "/guides", label: "All guides →" }
 ---
 
-Backups are your safety net. This guide covers how to set up automated
-backups so you can recover quickly from accidental deletion, data
-corruption, or a security incident.
+Backups are your safety net. This guide covers how to set up backups for
+your VPS so you can recover quickly from accidental deletion, data
+corruption, or a [security incident](/guides/secure-your-server/).
 
 ## Backup Strategy: The 3-2-1 Rule
 
@@ -43,32 +44,42 @@ corruption, or a security incident.
 At minimum: enable provider snapshots **and** back up critical files to
 an external location.
 
-## Option 1: Provider Snapshots (Easiest)
+## Option 1: bithost Backups and Snapshots (Easiest)
 
-Most cloud providers offer built-in snapshot and backup features from
-the control panel.
+You don't need the command line for full-server recovery. Every bithost
+server has a **Backups** tab with two built-in options: scheduled
+**automatic backups** and on-demand **snapshots**. Open your server from
+the **Servers** list and click the **Backups** tab.
 
-### How to Enable
+<img src="/assets/screenshots/bithost_server_management_backups_and_snapshots_5.webp" alt="bithost server Backups tab showing the Automatic backups toggle and the Create snapshot field" width="1176" height="656" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--rd-line);">
 
-1.  Log in to your server control panel
-2.  Go to your server\'s **Backups** or **Snapshots** section
-3.  Enable **Automated Backups** (usually daily or weekly)
-4.  Set your **retention period** (how many backups to keep)
+### Automatic backups
 
-### Pros
+Toggle **Automatic backups** on to have the underlying provider take
+scheduled full-server backups for you. This is the closest thing to
+set-and-forget recovery: a complete disk image you can restore in a few
+clicks.
 
-* No setup required
-* Full disk image - restores the entire server in one click
-* Managed by the provider
+* **Cost:** charged at **20% of the server price** while enabled.
+* **Best for:** production servers you can't afford to rebuild by hand.
 
-### Cons
+### Snapshots
 
-* Usually costs extra (typically 20% of server price)
-* Limited customisation of backup schedule or retention
+A **snapshot** is a point-in-time full-disk image you create yourself.
+Type a name, click **Create snapshot**, and it appears in the list below
+with **Restore** and **Delete** actions. Take one before any risky
+change - an OS upgrade, a config rewrite, a big deploy - so you can roll
+straight back if it goes wrong.
 
-> **Recommendation:** Enable provider backups for all production
-> servers. It\'s the easiest and most reliable full-server recovery
-> option.
+* **Cost:** snapshots are billed at **$0.06/GB per month** for as long
+  as you keep them.
+* **Best for:** manual checkpoints before maintenance, or cloning a
+  server's exact state.
+
+> **Recommendation:** Turn on automatic backups for production servers,
+> and take a manual snapshot before any major change. For a full
+> walkthrough of every control on this screen, see
+> [Understanding your server dashboard](/guides/understanding-your-dashboard/#backups).
 
 ## Option 2: Automated File Backups with rsync
 
@@ -117,28 +128,6 @@ Add:
 > with restricted permissions instead of putting the password in the
 > crontab.
 
-## Option 4: Back Up to Object Storage (S3-Compatible)
-
-Object storage (like Amazon S3, Backblaze B2, or your provider\'s own
-storage) is ideal for offsite backups.
-
-Install `rclone`:
-
-    curl https://rclone.org/install.sh | sudo bash
-    rclone config
-{: .language-bash}
-
-Follow the wizard to connect your storage provider. Then sync your
-backups:
-
-    rclone sync /backups/ remote:my-server-backups/
-{: .language-bash}
-
-Automate with cron:
-
-    0 4 * * * rclone sync /backups/ remote:my-server-backups/ >> /var/log/rclone-backup.log 2>&1
-{: .language-cron}
-
 ## Testing Your Backups
 
 A backup you\'ve never tested is a backup you can\'t trust. Regularly
@@ -147,7 +136,6 @@ verify:
 * **Restore a file** from backup to confirm files are readable
 * **Test a database restore** on a staging server
 * **Check backup logs** to ensure jobs completed without errors
-^
 
     cat /var/log/backup.log
 {: .language-bash}

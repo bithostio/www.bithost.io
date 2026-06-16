@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="specs-title specs-desc" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="specs-title">The four VPS specs that decide your plan: CPU, RAM, storage and bandwidth</title>
+  <desc id="specs-desc">Four labelled tiles. CPU (vCPUs) is your processing cores. RAM is memory for running processes. Storage is SSD or NVMe disk space. Bandwidth is your monthly data transfer. Match these four to your workload to choose the right VPS plan.</desc>
+
+  <!-- TILE 1: CPU -->
+  <rect x="4" y="40" width="224" height="160" rx="14" fill="#ffffff" stroke="rgba(14,17,36,0.12)" stroke-width="1.5"/>
+  <rect x="98" y="70" width="36" height="36" rx="6" fill="none" stroke="#4f64e1" stroke-width="2.2"/>
+  <rect x="108" y="80" width="16" height="16" rx="2" fill="none" stroke="#4f64e1" stroke-width="2.2"/>
+  <g stroke="#4f64e1" stroke-width="2.2" stroke-linecap="round">
+    <line x1="106" y1="64" x2="106" y2="70"/><line x1="116" y1="64" x2="116" y2="70"/><line x1="126" y1="64" x2="126" y2="70"/>
+    <line x1="106" y1="106" x2="106" y2="112"/><line x1="116" y1="106" x2="116" y2="112"/><line x1="126" y1="106" x2="126" y2="112"/>
+    <line x1="92" y1="80" x2="98" y2="80"/><line x1="92" y1="88" x2="98" y2="88"/><line x1="92" y1="96" x2="98" y2="96"/>
+    <line x1="134" y1="80" x2="140" y2="80"/><line x1="134" y1="88" x2="140" y2="88"/><line x1="134" y1="96" x2="140" y2="96"/>
+  </g>
+  <text x="116" y="148" text-anchor="middle" font-size="17" font-weight="700" fill="#0e1124">CPU</text>
+  <text x="116" y="172" text-anchor="middle" font-size="12.5" fill="#6b6d7f">vCPUs · processing cores</text>
+
+  <!-- TILE 2: RAM -->
+  <rect x="260" y="40" width="224" height="160" rx="14" fill="#ffffff" stroke="rgba(14,17,36,0.12)" stroke-width="1.5"/>
+  <rect x="346" y="74" width="52" height="28" rx="3" fill="none" stroke="#4f64e1" stroke-width="2.2"/>
+  <g stroke="#4f64e1" stroke-width="2.2" stroke-linecap="round">
+    <line x1="358" y1="80" x2="358" y2="96"/><line x1="372" y1="80" x2="372" y2="96"/><line x1="386" y1="80" x2="386" y2="96"/>
+    <line x1="356" y1="102" x2="356" y2="108"/><line x1="388" y1="102" x2="388" y2="108"/>
+  </g>
+  <text x="372" y="148" text-anchor="middle" font-size="17" font-weight="700" fill="#0e1124">RAM</text>
+  <text x="372" y="172" text-anchor="middle" font-size="12.5" fill="#6b6d7f">memory for processes</text>
+
+  <!-- TILE 3: Storage -->
+  <rect x="516" y="40" width="224" height="160" rx="14" fill="#ffffff" stroke="rgba(14,17,36,0.12)" stroke-width="1.5"/>
+  <g fill="none" stroke="#4f64e1" stroke-width="2.2">
+    <ellipse cx="628" cy="72" rx="20" ry="6"/>
+    <path d="M608 72 v28"/>
+    <path d="M648 72 v28"/>
+    <path d="M608 100 a20 6 0 0 0 40 0"/>
+    <path d="M608 86 a20 6 0 0 0 40 0"/>
+  </g>
+  <text x="628" y="148" text-anchor="middle" font-size="17" font-weight="700" fill="#0e1124">Storage</text>
+  <text x="628" y="172" text-anchor="middle" font-size="12.5" fill="#6b6d7f">SSD / NVMe disk</text>
+
+  <!-- TILE 4: Bandwidth -->
+  <rect x="772" y="40" width="224" height="160" rx="14" fill="#ffffff" stroke="rgba(14,17,36,0.12)" stroke-width="1.5"/>
+  <g fill="none" stroke="#4f64e1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="876" y1="104" x2="876" y2="68"/>
+    <path d="M868 76 l8 -8 l8 8"/>
+    <line x1="892" y1="68" x2="892" y2="104"/>
+    <path d="M884 96 l8 8 l8 -8"/>
+  </g>
+  <text x="884" y="148" text-anchor="middle" font-size="17" font-weight="700" fill="#0e1124">Bandwidth</text>
+  <text x="884" y="172" text-anchor="middle" font-size="12.5" fill="#6b6d7f">monthly data transfer</text>
+</svg>

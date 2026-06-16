@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Secure Your Cloud Server | Guides | bithost"
-h1: "How to Secure Your Cloud Server"
-description: "A freshly deployed server is exposed to the internet and needs to be hardened before it's production-ready. This guide covers the essential security steps ..."
+title: "How to Secure Your VPS | Guides | bithost"
+h1: "How to Secure Your VPS"
+description: "Secure your VPS step by step: create a non-root user, disable root SSH login, set up a UFW firewall, install Fail2Ban, and enable automatic security updates."
 canonical: "https://bithost.io/guides/secure-your-server"
-og_title: "How to Secure Your Cloud Server - bithost Guide"
+og_title: "How to Secure Your VPS - bithost Guide"
 og_url: "https://bithost.io/guides/secure-your-server"
-og_description: "A freshly deployed server is exposed to the internet and needs to be hardened before it's production-ready. This guide covers the essential security steps ..."
+og_description: "Secure your VPS step by step: create a non-root user, disable root SSH login, set up a UFW firewall, install Fail2Ban, and enable automatic security updates."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Security"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "step-1-keep-the-system-updated", label: "Keep the System Updated" }
   - { id: "step-2-create-a-non-root-user", label: "Create a Non-Root User" }
@@ -32,8 +34,10 @@ sidebar:
 ---
 
 A freshly deployed server is exposed to the internet and needs to be
-hardened before it\'s production-ready. This guide covers the essential
-security steps every server owner should take.
+hardened before it\'s production-ready - especially an [anonymous
+VPS](/anonymous-vps){: style="color: var(--rd-indigo);"} you run for
+privacy. This guide covers the essential steps to harden a Linux server -
+the security checklist every server owner should follow.
 
 ## Step 1: Keep the System Updated
 
@@ -109,7 +113,7 @@ on Ubuntu.
 Only allow ports that your server actually needs. Common ports:
 
 | Port | Service |
-|----------
+| --- | --- |
 | 22 | SSH |
 | 80 | HTTP |
 | 443 | HTTPS |
@@ -198,3 +202,8 @@ ensures critical patches are applied without manual intervention.
 * ✅ UFW firewall enabled, only necessary ports open
 * ✅ Fail2Ban installed and running
 * ✅ Automatic security updates enabled
+
+With your VPS hardened, set up [monitoring for suspicious
+activity](/guides/monitor-suspicious-activity/){: style="color: var(--rd-indigo);"}
+and [automated backups](/guides/automated-backups/){: style="color: var(--rd-indigo);"}
+so you can detect and recover from incidents.

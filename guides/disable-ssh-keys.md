@@ -2,7 +2,7 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Disable SSH Key Authentication and Enable Password Login on Linux | Guides | bithost"
+title: "Disable SSH Key Auth & Enable Password Login | bithost"
 h1: "Disable SSH Key Auth & Enable Password Login on Linux"
 description: "Step-by-step guide to disabling SSH key authentication and enabling password login on a Linux VPS. Edit sshd_config, restart SSH, and test access safely."
 canonical: "https://bithost.io/guides/disable-ssh-keys"
@@ -10,10 +10,12 @@ og_title: "Disable SSH Key Auth and Enable Password Login on Linux - bithost Gui
 og_url: "https://bithost.io/guides/disable-ssh-keys"
 og_description: "How to switch your Linux VPS from SSH key authentication to password-based login - edit sshd_config, restart the SSH daemon, and test safely."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Security"
 read_time: "5 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "set-password", label: "Set a user password" }
@@ -22,6 +24,12 @@ toc:
   - { id: "test-login", label: "Test password login" }
   - { id: "disable-key-auth", label: "Disable key auth entirely" }
   - { id: "security-note", label: "Security considerations" }
+sidebar_title: "Security"
+sidebar:
+  - { url: "/guides/ssh-keys", label: "Set up SSH keys" }
+  - { url: "/guides/secure-your-server", label: "Secure your server" }
+  - { url: "/guides/connect-via-ssh", label: "Connect via SSH" }
+  - { url: "/guides", label: "All guides →" }
 ---
 
 By default, bithost deploys servers with [SSH key

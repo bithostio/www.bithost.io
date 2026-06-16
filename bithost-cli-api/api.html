@@ -1,10 +1,10 @@
 ---
 layout: default
 nav: bithost-cli-api
-title: "API Docs | bithost - Buy Cloud VPS with Bitcoin &amp; Crypto"
-description: "Full REST API reference for bithost - create, resize, and destroy cloud servers programmatically from any language or tool."
+title: "REST API Reference - Automate Crypto VPS | bithost"
+description: "Full REST API reference for bithost - authenticate with a bearer token, then create, resize, snapshot, and destroy DigitalOcean, Linode, and Vultr servers."
 canonical: "https://bithost.io/bithost-cli-api/api"
-og_title: "API Docs | bithost"
+og_title: "REST API Reference - Automate Crypto VPS | bithost"
 og_url: "https://bithost.io/bithost-cli-api/api"
 og_description: "Full REST API reference for bithost - create, resize, and destroy cloud servers programmatically."
 jsonld: jsonld/cli-api-api.html
@@ -14,7 +14,7 @@ jsonld: jsonld/cli-api-api.html
   <!-- DARK HEADER -->
   <div class="rd-guide-header">
     <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; margin-bottom: 10px;">REST API</div>
-    <h1>API Docs</h1>
+    <h1>REST API Reference</h1>
   </div>
 
   <!-- BODY -->
@@ -77,7 +77,7 @@ jsonld: jsonld/cli-api-api.html
 
       <!-- Authentication -->
       <h2 id="authentication" class="api-h2" style="border-top: none; padding-top: 4px;">Authentication</h2>
-      <p class="api-p">Every request must include a valid API key. Generate one from the <a href="https://dashboard.bithost.io/api/keys" style="color: var(--rd-indigo);">API Keys</a> section of your dashboard.</p>
+      <p class="api-p">Every request must include a valid API key. Generate one from the <a href="https://dashboard.bithost.io/api/keys" style="color: var(--rd-indigo);">API Keys</a> section of your dashboard - you'll need a <a href="/guides/getting-started" style="color: var(--rd-indigo);">bithost account</a> first.</p>
       <p class="api-p">Pass your key in the <span class="inline-code">Authorization</span> header using the Bearer scheme:</p>
       <pre class="code-block"><code>Authorization: Bearer YOUR_API_KEY</code></pre>
       <p class="api-p">Example:</p>

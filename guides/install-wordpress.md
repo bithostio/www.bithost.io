@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Install WordPress on a Cloud Server | Guides | bithost"
-h1: "How to Install WordPress on a Cloud Server"
-description: "This guide walks you through installing WordPress on a cloud server running Ubuntu 22.04 with Nginx, MySQL, and PHP (the LEMP stack)."
+title: "How to Install WordPress on a VPS | Guides | bithost"
+h1: "How to Install WordPress on a VPS"
+description: "Install WordPress on a VPS step by step: set up the LEMP stack (Nginx, MySQL, PHP) on Ubuntu 22.04, configure your site, and add free HTTPS."
 canonical: "https://bithost.io/guides/install-wordpress"
-og_title: "How to Install WordPress on a Cloud Server - bithost Guide"
+og_title: "How to Install WordPress on a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/install-wordpress"
-og_description: "This guide walks you through installing WordPress on a cloud server running Ubuntu 22.04 with Nginx, MySQL, and PHP (the LEMP stack)."
+og_description: "Install WordPress on a VPS step by step: set up the LEMP stack (Nginx, MySQL, PHP) on Ubuntu 22.04, configure your site, and add free HTTPS."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Web Hosting"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "step-1-install-required-software", label: "Install Required Software" }
@@ -31,16 +33,17 @@ sidebar:
   - { url: "/guides", label: "All guides →" }
 ---
 
-This guide walks you through installing WordPress on a cloud server
-running Ubuntu 22.04 with Nginx, MySQL, and PHP (the LEMP stack).
+This guide walks you through installing WordPress on a VPS running Ubuntu
+22.04 with Nginx, MySQL, and PHP (the LEMP stack) - so you can self-host
+WordPress with full control over your data.
 
 ## Prerequisites
 
-* A cloud server running Ubuntu 22.04 with SSH access
+* A VPS running Ubuntu 22.04 with SSH access ([see vps prices](/prices/){: style="color: var(--rd-indigo);"}). Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
 * Nginx installed ([Host a Website with
   Nginx](/guides/host-a-website-with-nginx){: style="color:
   var(--rd-indigo);"})
-* A domain name pointed to your server\'s IP
+* A [domain name pointed to your server\'s IP](/guides/point-domain-to-server/){: style="color: var(--rd-indigo);"}
 
 ## Step 1: Install Required Software
 
@@ -165,7 +168,8 @@ Secure your site with a free SSL certificate:
 {: .language-bash}
 
 Follow the prompts and your site will be automatically configured for
-HTTPS.
+HTTPS. For a full walkthrough, see [Set up HTTPS
+(SSL)](/guides/setup-ssl-https/){: style="color: var(--rd-indigo);"}.
 
 ## Useful Tips
 

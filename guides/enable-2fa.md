@@ -2,7 +2,7 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Enable Two-Factor Authentication (2FA) | Guides | bithost"
+title: "How to Enable Two-Factor Authentication (2FA) | bithost"
 h1: "How to Enable Two-Factor Authentication (2FA)"
 description: "Step-by-step guide to enabling two-factor authentication (2FA) on your bithost account. Protect your balance and servers with an authenticator app."
 canonical: "https://bithost.io/guides/enable-2fa"
@@ -10,10 +10,12 @@ og_title: "How to Enable Two-Factor Authentication (2FA) - bithost Guide"
 og_url: "https://bithost.io/guides/enable-2fa"
 og_description: "Step-by-step guide to enabling two-factor authentication (2FA) on your bithost account. Protect your balance and servers with an authenticator app."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Account Security"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "what-is-2fa", label: "What is 2FA?" }
   - { id: "step-1", label: "Step 1 - Get an authenticator app" }
@@ -22,6 +24,9 @@ toc:
   - { id: "step-4", label: "Step 4 - Confirm and save" }
 sidebar_title: "Account security"
 sidebar:
+  - { url: "/guides/secure-your-server", label: "Secure your server" }
+  - { url: "/guides/monitor-suspicious-activity", label: "Monitor for threats" }
+  - { url: "/guides/disable-ssh-keys", label: "Disable SSH key auth" }
   - { url: "/guides", label: "All guides →" }
 ---
 
@@ -97,6 +102,10 @@ next one.
 
 Once confirmed, 2FA is active. From now on, every login will require your
 password and a fresh code from your authenticator app.
+
+With your account locked down, the next step is hardening the servers
+themselves - see [secure your server](/guides/secure-your-server/){: style="color: var(--rd-indigo);"}
+and [monitor for suspicious activity](/guides/monitor-suspicious-activity/){: style="color: var(--rd-indigo);"}.
 
 <p style="background: var(--rd-navy-2); border-left: 3px solid var(--rd-indigo); padding: 14px 18px; border-radius: 0 6px 6px 0; font-size: 0.92rem; margin: 0 0 24px; color: #e2e8f0;">
   <strong>Important:</strong> If you lose access to your phone, account recovery requires verifying your identity through support. bithost may ask for exact transaction amounts, server names, or top-up dates to confirm ownership. Keep a record of those details somewhere safe.

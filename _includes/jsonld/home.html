@@ -43,7 +43,7 @@
   "@type": "WebPage",
   "@id": "https://bithost.io/#webpage",
   "url": "https://bithost.io/",
-  "name": "Bithost — Buy Cloud VPS with Bitcoin &amp; Crypto | No KYC Since 2014",
+  "name": "Bithost — Buy Cloud VPS with Bitcoin & Crypto | No KYC Since 2014",
   "description": "Buy DigitalOcean, Linode, and Vultr cloud servers with Bitcoin, Lightning, ETH, LTC, DOGE and more. Hourly billing. No ID. No credit card. 30K+ users since 2014.",
   "isPartOf": { "@id": "https://bithost.io/#website" },
   "about": { "@id": "https://bithost.io/#organization" },
@@ -80,11 +80,17 @@
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": "6.00",
-    "highPrice": "6000.00",
+    "lowPrice": "0.015",
     "offerCount": "100",
     "availability": "https://schema.org/InStock",
-    "url": "https://bithost.io/prices"
+    "url": "https://bithost.io/prices",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "0.015",
+      "priceCurrency": "USD",
+      "unitCode": "HUR",
+      "unitText": "hour"
+    }
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -126,35 +132,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Do I need to share ID or a credit card to use bithost?",
+      "name": "What are the supported cryptocurrencies on Bithost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Sign up with an email address, send a top-up in any supported cryptocurrency, and deploy your server. We are a reseller of DigitalOcean, Linode, and Vultr — we handle the fiat side so you don't have to."
+        "text": "We support BTC, LTC, XRP, BCH, BSV, DASH, DOGE, EOS, ETH, USDC, and ZEC."
       }
     },
     {
       "@type": "Question",
-      "name": "Which cryptocurrencies does bithost accept?",
+      "name": "Should I use a valid email?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "bithost accepts Bitcoin (BTC), Lightning Network, Ethereum (ETH), Litecoin (LTC), Dogecoin (DOGE), USDC
-        , Zcash (ZEC), XRP, BCH, BSV, DASH, and EOS."
+        "text": "Yes, you must use a valid email. We will send you reminders if your account balance is too low before your server is removed. Users who use disposable e-mails will be banned without any notification."
       }
     },
     {
       "@type": "Question",
-      "name": "How does billing work on bithost?",
+      "name": "Why do you have a server limit with Bithost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Servers are billed on a per-hour basis. If you use a server for less than a month, you only pay the hourly usage. The hourly price is charged until the monthly price cap is reached. Servers are billed as long as they exist, even if powered off."
+        "text": "By default, all accounts are limited on how many servers they can deploy. If you would like this limit increased, then please just submit a support ticket."
       }
     },
     {
       "@type": "Question",
-      "name": "Which cloud providers does bithost support?",
+      "name": "Is it secure?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "bithost supports DigitalOcean, Linode (Akamai Cloud), and Vultr. All three providers offer SSD/NVMe storage and are billed per-hour through your bithost balance."
+        "text": "We do not store any card details, so you do not need to worry about them being leaked. You can also protect your account with 2-step verification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it more expensive than DigitalOcean, Linode, and Vultr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is to mitigate the risk of converting cryptocurrencies back to USD, cover all bank taxes etc, and to help with the running costs of bithost."
       }
     }
   ]

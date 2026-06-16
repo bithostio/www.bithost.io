@@ -10,19 +10,20 @@ og_title: "What to Do If Your Server Is Unreachable - bithost Guide"
 og_url: "https://bithost.io/guides/server-unreachable"
 og_description: "If you can't connect to your server via SSH or your website is down, follow this step-by-step guide to diagnose and fix the issue."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Troubleshooting"
 read_time: "4 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
-  - { id: "step-1-check-server-status-in-the-control-panel", label: "Check Server Status in the Control Panel" }
+  - { id: "step-1-check-server-status-in-your-dashboard", label: "Check Server Status in your dashboard" }
   - { id: "step-2-ping-the-server", label: "Ping the Server" }
-  - { id: "step-3-try-the-web-console", label: "Try the Web Console" }
-  - { id: "step-4-check-if-ssh-is-running", label: "Check if SSH Is Running" }
-  - { id: "step-5-check-if-your-websiteapp-is-running", label: "Check if Your Website/App Is Running" }
-  - { id: "step-6-check-system-resources", label: "Check System Resources" }
-  - { id: "step-7-reboot-the-server", label: "Reboot the Server" }
-  - { id: "step-8-check-the-system-logs", label: "Check the System Logs" }
+  - { id: "step-3-check-if-ssh-is-running", label: "Check if SSH Is Running" }
+  - { id: "step-4-check-if-your-websiteapp-is-running", label: "Check if Your Website/App Is Running" }
+  - { id: "step-5-check-system-resources", label: "Check System Resources" }
+  - { id: "step-6-reboot-the-server", label: "Reboot the Server" }
+  - { id: "step-7-check-the-system-logs", label: "Check the System Logs" }
 sidebar_title: "Troubleshooting"
 sidebar:
   - { url: "/guides/failed-deployment", label: "Recover from failed deploy" }
@@ -33,16 +34,12 @@ sidebar:
 If you can\'t connect to your server via SSH or your website is down,
 follow this step-by-step guide to diagnose and fix the issue.
 
-## Step 1: Check Server Status in the Control Panel
+## Step 1: Check Server Status in your dashboard
 
-Log in to your cloud provider\'s control panel and check:
+Log in to your [bithost server dashboard](/guides/understanding-your-dashboard/){: style="color: var(--rd-indigo);"} and check:
 
 * **Is the server running?** If it shows \"stopped\" or \"offline\",
   start it.
-* **Are there any provider incidents?** Check your provider\'s status
-  page for outages in your region.
-* **Check the monitoring graphs** - sudden CPU or RAM spikes may
-  indicate the cause.
 
 ## Step 2: Ping the Server
 
@@ -56,17 +53,7 @@ From your local machine:
 * **If ping times out** - the server may be offline, crashed, or the
   firewall is blocking ICMP
 
-## Step 3: Try the Web Console
-
-Your control panel should offer a **browser-based console** (also called
-KVM, VNC, or Web Console). This gives you direct access even if SSH is
-broken.
-
-1.  Open the web console from the control panel
-2.  Log in with your root/admin credentials
-3.  Check what\'s happening on the system
-
-## Step 4: Check if SSH Is Running
+## Step 3: Check if SSH Is Running
 
 From the web console:
 
@@ -86,7 +73,7 @@ firewall:
 
 Make sure port 22 (or your custom SSH port) is allowed.
 
-## Step 5: Check if Your Website/App Is Running
+## Step 4: Check if Your Website/App Is Running
 
 For Nginx:
 
@@ -109,7 +96,7 @@ For other services (MySQL, your app, etc.):
     systemctl status your-app-name
 {: .language-bash}
 
-## Step 6: Check System Resources
+## Step 5: Check System Resources
 
 A server often becomes unresponsive when it runs out of RAM or disk
 space:
@@ -147,21 +134,15 @@ Check for OOM (out of memory) kills in the logs:
 
 If a process was killed, restart it and consider upgrading your RAM.
 
-## Step 7: Reboot the Server
+## Step 6: Reboot the Server
 
 If you can\'t identify the issue, a reboot often resolves it:
 
-**From the control panel:** Use the Reboot button (preferred over Force
-Off).
-
-**From the web console or SSH:**
-
-    reboot
-{: .language-bash}
+**From your [bithost server dashboard](/guides/understanding-your-dashboard/){: style="color: var(--rd-indigo);"}:** Use the Restart button.
 
 Wait 1–2 minutes, then try connecting again.
 
-## Step 8: Check the System Logs
+## Step 7: Check the System Logs
 
 After restoring access, review logs to find the root cause:
 
@@ -172,7 +153,7 @@ After restoring access, review logs to find the root cause:
 ## Common Causes and Fixes
 
 | Symptom | Likely Cause | Fix |
-|----------
+| --- | --- | --- |
 | Ping fails, console works | Firewall blocking traffic | Open required ports in UFW |
 | SSH refuses connection | SSHD stopped or port blocked | Restart SSHD, check firewall |
 | Website down but SSH works | Nginx/app crashed | Restart Nginx, check error logs |

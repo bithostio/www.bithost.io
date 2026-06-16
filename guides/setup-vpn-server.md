@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Set Up a VPN on Your Cloud Server | Guides | bithost"
-h1: "How to Set Up a VPN on Your Cloud Server"
-description: "Running your own VPN server gives you full privacy control, lets you bypass geo-restrictions, and secures your traffic on public Wi-Fi - without trusting a..."
+title: "How to Set Up a WireGuard VPN on a VPS | Guides | bithost"
+h1: "How to Set Up a WireGuard VPN on a VPS"
+description: "Set up your own WireGuard VPN on a VPS: install WireGuard, configure the server and client, and route traffic privately - no third-party VPN needed."
 canonical: "https://bithost.io/guides/setup-vpn-server"
-og_title: "How to Set Up a VPN on Your Cloud Server - bithost Guide"
+og_title: "How to Set Up a WireGuard VPN on a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/setup-vpn-server"
-og_description: "Running your own VPN server gives you full privacy control, lets you bypass geo-restrictions, and secures your traffic on public Wi-Fi - without trusting a..."
+og_description: "Set up your own WireGuard VPN on a VPS: install WireGuard, configure the server and client, and route traffic privately - no third-party VPN needed."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Use Cases"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "why-use-your-own-vpn", label: "Why Use Your Own VPN?" }
   - { id: "prerequisites", label: "Prerequisites" }
@@ -23,21 +25,30 @@ toc:
   - { id: "step-4-create-the-server-config", label: "Create the Server Config" }
   - { id: "step-5-enable-ip-forwarding", label: "Enable IP Forwarding" }
   - { id: "step-6-open-the-firewall-port", label: "Open the Firewall Port" }
+  - { id: "step-7-start-wireguard", label: "Start WireGuard" }
+  - { id: "step-8-configure-the-client", label: "Configure the Client" }
+  - { id: "verify-its-working", label: "Verify It's Working" }
 sidebar_title: "Use Cases"
 sidebar:
   - { url: "/guides/game-server", label: "Run a game server" }
   - { url: "/guides/nextcloud-cloud-storage", label: "Self-host with Nextcloud" }
   - { url: "/guides/host-nodejs-python-app", label: "Host a Node.js/Python app" }
-  - { url: "/guides/mail-server", label: "Set up a mail server" }
   - { url: "/guides", label: "All guides →" }
 ---
 
 Running your own VPN server gives you full privacy control, lets you
 bypass geo-restrictions, and secures your traffic on public Wi-Fi -
 without trusting a third-party VPN provider. This guide uses
-**WireGuard**, the fastest and easiest modern VPN protocol.
+**WireGuard**, the fastest and easiest modern VPN protocol. For an exit
+node that isn\'t tied to your identity, run it on an [anonymous VPS](/anonymous-vps/){: style="color: var(--rd-indigo);"}
+paid in crypto.
+
+<img src="/assets/guides/wireguard-vpn-flow.svg" alt="How a self-hosted WireGuard VPN routes your traffic through your VPS" width="1000" height="300" loading="lazy" style="width: 100%; height: auto; display: block; margin: 8px 0 28px;">
 
 ## Why Use Your Own VPN?
+
+A **WireGuard VPS** is simply a VPS running the WireGuard protocol - a
+private, self-hosted VPN endpoint you fully control. The upside:
 
 * No logs - you control all data
 * No monthly VPN subscription fees
@@ -46,8 +57,8 @@ without trusting a third-party VPN provider. This guide uses
 
 ## Prerequisites
 
-* A cloud server running Ubuntu 22.04
-* SSH access to the server
+* A VPS running Ubuntu 22.04 ([see vps prices](/prices/){: style="color: var(--rd-indigo);"}). Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
+* [SSH access to the server](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"}
 * A client device (phone, laptop) to connect from
 
 ## Step 1: Install WireGuard

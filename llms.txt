@@ -16,16 +16,59 @@ bithost lets anyone deploy a Linux or Windows cloud server anonymously using cry
 - [CLI Docs](https://bithost.io/bithost-cli-api/cli): bh CLI installation, commands, and usage examples
 - [Full API & CLI Reference](https://bithost.io/llms-full.txt): Complete API endpoints, error codes, cURL examples, and bh CLI command reference
 
+## Buy a VPS with crypto
+
+- [Bitcoin VPS](https://bithost.io/bitcoin-vps): Buy a DigitalOcean, Linode, or Vultr VPS with Bitcoin or Lightning - run a node, BTCPay Server, or any Linux workload
+- [Anonymous VPS](https://bithost.io/anonymous-vps): No-KYC, no-card VPS hosting - email-only signup, paid in crypto, since 2014
+- [Windows VPS with Bitcoin](https://bithost.io/windows-vps-bitcoin): Windows Server VPS on Vultr paid in crypto, full RDP access, licence included
+- [VPS with USDC](https://bithost.io/usdc-vps): Pay for a VPS with USD Coin - exact-dollar billing, no exchange-rate risk, no KYC
+- [Dedicated server with Bitcoin](https://bithost.io/bitcoin-dedicated-server): Dedicated-CPU and bare-metal servers on DigitalOcean, Linode, and Vultr paid in crypto
+
 ## Guides - Getting Started
 
-- [Deploy your first server with bithost](https://bithost.io/guides/getting-started): Step-by-step guide to creating an account, topping up with crypto, and deploying your first VPS
-- [How to choose the right cloud server plan](https://bithost.io/guides/choose-the-right-plan): Comparison of plan types - general purpose, CPU-optimised, memory-optimised, and storage plans
-- [How to connect to your server via SSH](https://bithost.io/guides/connect-via-ssh): SSH connection instructions for Linux, macOS, and Windows clients
-- [Understanding your server dashboard](https://bithost.io/guides/understanding-your-dashboard): Tour of the bithost control panel - server stats, actions, billing, and snapshots
+- [How to Deploy a VPS with Bitcoin](https://bithost.io/guides/getting-started): Create an account, top up with crypto, and deploy your first VPS in minutes
+- [How to Choose the Right VPS Plan](https://bithost.io/guides/choose-the-right-plan): Understand CPU, RAM, storage, and bandwidth and pick the right plan for your workload
+- [How to Connect to Your VPS via SSH](https://bithost.io/guides/connect-via-ssh): Generate SSH keys on Mac, Linux, or Windows and connect from your terminal
+- [Understanding Your Server Dashboard](https://bithost.io/guides/understanding-your-dashboard): Tour of every tab in the bithost control panel - details, rebuild, resize, backups, events
 
 ## Guides - Account Security
 
-- [How to enable two-factor authentication (2FA)](https://bithost.io/guides/enable-2fa): Protecting your bithost account with an authenticator app - setup, QR code scanning, and confirmation
+- [How to Enable Two-Factor Authentication (2FA)](https://bithost.io/guides/enable-2fa): Protect your account with an authenticator app - setup, QR code, and confirmation
+- [How to Set Up SSH Keys for Your VPS](https://bithost.io/guides/ssh-keys): Generate a key pair and add your public key before deploying a server
+- [Disable SSH Key Auth and Enable Password Login](https://bithost.io/guides/disable-ssh-keys): Switch a Linux VPS from key auth to password login, with safety steps
+
+## Guides - Security
+
+- [How to Secure Your VPS](https://bithost.io/guides/secure-your-server): Harden a Linux server - non-root user, disable root SSH, UFW firewall, Fail2Ban, auto-updates
+- [How to Set Up Backups for Your VPS](https://bithost.io/guides/automated-backups): bithost automatic backups and snapshots, plus rsync and database dumps
+- [How to Monitor a VPS for Suspicious Activity](https://bithost.io/guides/monitor-suspicious-activity): Check logins, auth logs, processes, network connections, and disk usage
+
+## Guides - Web Hosting
+
+- [How to Host a Website on a VPS with Nginx](https://bithost.io/guides/host-a-website-with-nginx): Install Nginx, configure a server block, and serve your site
+- [How to Install WordPress on a VPS](https://bithost.io/guides/install-wordpress): Self-host WordPress on the LEMP stack (Nginx, MySQL, PHP) on Ubuntu 22.04
+- [How to Set Up HTTPS with Let's Encrypt (Free SSL)](https://bithost.io/guides/setup-ssl-https): Set up HTTPS on Nginx with Certbot and auto-renewal
+- [How to Point Your Domain to Your VPS](https://bithost.io/guides/point-domain-to-server): Add an A record, wait for DNS propagation, and test your domain
+
+## Guides - Use Cases
+
+- [How to Set Up a WireGuard VPN on a VPS](https://bithost.io/guides/setup-vpn-server): Run a private, self-hosted WireGuard VPN you fully control
+- [How to Run a Game Server on a VPS](https://bithost.io/guides/game-server): Set up a Minecraft server on a VPS, plus tips for Valheim, Terraria, and CS2
+- [How to Self-Host Cloud Storage with Nextcloud](https://bithost.io/guides/nextcloud-cloud-storage): Self-host Nextcloud on a VPS as a private Google Drive alternative
+- [How to Host a Node.js or Python App on a VPS](https://bithost.io/guides/host-nodejs-python-app): Deploy with PM2 or Gunicorn and Nginx as a reverse proxy
+
+## Guides - Performance & Scaling
+
+- [How to Scale Your VPS Resources](https://bithost.io/guides/scale-server-resources): Vertical vs horizontal scaling, block storage, and dedicated/bare-metal upgrades
+- [How to Monitor CPU, RAM & Disk Usage on a VPS](https://bithost.io/guides/monitor-resource-usage): Built-in tools (top, htop, df) and ongoing monitoring with Netdata
+- [How to Migrate a Website to a VPS](https://bithost.io/guides/migrate-a-website): Move files and databases, test via the hosts file, then switch DNS
+- [How to Set Up Docker on a VPS](https://bithost.io/guides/setup-docker): Install Docker and Compose, run containers, and use Nginx as a reverse proxy
+
+## Guides - Troubleshooting
+
+- [What to Do If Your Server Is Unreachable](https://bithost.io/guides/server-unreachable): Diagnose and fix SSH, firewall, Nginx, and resource issues
+- [How to Recover from a Failed Deployment](https://bithost.io/guides/failed-deployment): Roll back broken configs, revert code, restore a database or snapshot
+- [Common Server Errors and How to Fix Them](https://bithost.io/guides/common-errors): Fixes for SSH, 502/504/403/404 Nginx, MySQL, disk full, and SSL errors
 
 ## Optional
 
