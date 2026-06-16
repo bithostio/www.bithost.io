@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Scale Your VPS Resources | Guides | bithost"
 h1: "How to Scale Your VPS Resources"
 description: "Scale your VPS as you grow: when to add CPU, RAM, or storage, how vertical resizing works, and how to resize safely without losing data."
-canonical: "https://bithost.io/guides/scale-server-resources"
+canonical: "https://bithost.io/guides/scale-server-resources/"
 og_title: "How to Scale Your VPS Resources - bithost Guide"
-og_url: "https://bithost.io/guides/scale-server-resources"
+og_url: "https://bithost.io/guides/scale-server-resources/"
 og_description: "Scale your VPS as you grow: when to add CPU, RAM, or storage, how vertical resizing works, and how to resize safely without losing data."
 og_type: article
 schema_type: Article
@@ -37,7 +37,7 @@ and how to do it.
 
 Vertical scaling means upgrading your existing server to a larger plan -
 more CPU cores, more RAM, more storage - up to a
-[dedicated-CPU or bare-metal server](/bitcoin-dedicated-server){: style="color: var(--rd-indigo);"}
+[dedicated-CPU or bare-metal server](/prices/){: style="color: var(--rd-indigo);"}
 for heavy, sustained workloads.
 
 ### When to Scale Up

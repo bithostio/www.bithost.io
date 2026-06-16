@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "What to Do If Your Server Is Unreachable | Guides | bithost"
 h1: "What to Do If Your Server Is Unreachable"
 description: "If you can't connect to your server via SSH or your website is down, follow this step-by-step guide to diagnose and fix the issue."
-canonical: "https://bithost.io/guides/server-unreachable"
+canonical: "https://bithost.io/guides/server-unreachable/"
 og_title: "What to Do If Your Server Is Unreachable - bithost Guide"
-og_url: "https://bithost.io/guides/server-unreachable"
+og_url: "https://bithost.io/guides/server-unreachable/"
 og_description: "If you can't connect to your server via SSH or your website is down, follow this step-by-step guide to diagnose and fix the issue."
 og_type: article
 schema_type: Article

@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Set Up Docker on a VPS | Guides | bithost"
 h1: "How to Set Up Docker on a VPS"
 description: "Set up Docker on a VPS (Ubuntu 22.04): install Docker and Compose, run your first container, and manage images and volumes for reproducible deployments."
-canonical: "https://bithost.io/guides/setup-docker"
+canonical: "https://bithost.io/guides/setup-docker/"
 og_title: "How to Set Up Docker on a VPS - bithost Guide"
-og_url: "https://bithost.io/guides/setup-docker"
+og_url: "https://bithost.io/guides/setup-docker/"
 og_description: "Set up Docker on a VPS (Ubuntu 22.04): install Docker and Compose, run your first container, and manage images and volumes for reproducible deployments."
 og_type: article
 schema_type: Article

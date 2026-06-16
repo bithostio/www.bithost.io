@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Run a Game Server on a VPS | bithost"
 h1: "How to Run a Game Server on a VPS"
 description: "Run your own game server on a VPS: set up a Minecraft Java Edition server with the right specs, ports, and mods - the same steps work for other games."
-canonical: "https://bithost.io/guides/game-server"
+canonical: "https://bithost.io/guides/game-server/"
 og_title: "How to Run a Game Server on a VPS - bithost Guide"
-og_url: "https://bithost.io/guides/game-server"
+og_url: "https://bithost.io/guides/game-server/"
 og_description: "Run your own game server on a VPS: set up a Minecraft Java Edition server with the right specs, ports, and mods - the same steps work for other games."
 og_type: article
 schema_type: Article
@@ -37,7 +37,7 @@ games like Valheim, Terraria, or CS2.
 
 * A cloud server with at least **2 vCPUs and 4 GB RAM** (8 GB
   recommended for modded Minecraft, or a
-  [dedicated server](/bitcoin-dedicated-server){: style="color: var(--rd-indigo);"}
+  [dedicated server](/bitcoin-vps/){: style="color: var(--rd-indigo);"}
   for a big community) - see [how to choose a
   plan](/guides/choose-the-right-plan/){: style="color: var(--rd-indigo);"}
 * Ubuntu 22.04 with [SSH access](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"}

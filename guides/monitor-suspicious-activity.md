@@ -4,11 +4,11 @@ nav: guides
 jsonld: jsonld/guide.html
 title: "How to Monitor a VPS for Suspicious Activity | bithost"
 h1: "How to Monitor a VPS for Suspicious Activity"
-description: "Monitor your VPS for suspicious activity: check logins and auth logs, watch processes and network connections, review system logs, and set up Logwatch alerts."
-canonical: "https://bithost.io/guides/monitor-suspicious-activity"
+description: "Monitor your VPS for suspicious activity: check logins and auth logs, watch processes and network connections, and review system logs."
+canonical: "https://bithost.io/guides/monitor-suspicious-activity/"
 og_title: "How to Monitor a VPS for Suspicious Activity - bithost Guide"
-og_url: "https://bithost.io/guides/monitor-suspicious-activity"
-og_description: "Monitor your VPS for suspicious activity: check logins and auth logs, watch processes and network connections, review system logs, and set up Logwatch alerts."
+og_url: "https://bithost.io/guides/monitor-suspicious-activity/"
+og_description: "Monitor your VPS for suspicious activity: check logins and auth logs, watch processes and network connections, and review system logs."
 og_type: article
 schema_type: Article
 category: "Security"

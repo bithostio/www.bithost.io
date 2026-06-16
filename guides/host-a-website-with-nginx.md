@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Host a Website on a VPS with Nginx | bithost"
 h1: "How to Host a Website on a VPS with Nginx"
 description: "Host a website with Nginx on a VPS: install and configure Nginx on Ubuntu 22.04, set up a server block, upload your site, and go live in minutes."
-canonical: "https://bithost.io/guides/host-a-website-with-nginx"
+canonical: "https://bithost.io/guides/host-a-website-with-nginx/"
 og_title: "How to Host a Website on a VPS with Nginx - bithost Guide"
-og_url: "https://bithost.io/guides/host-a-website-with-nginx"
+og_url: "https://bithost.io/guides/host-a-website-with-nginx/"
 og_description: "Host a website with Nginx on a VPS: install and configure Nginx on Ubuntu 22.04, set up a server block, upload your site, and go live in minutes."
 og_type: article
 schema_type: Article

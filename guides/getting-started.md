@@ -5,12 +5,12 @@ jsonld: jsonld/guide.html
 title: "How to Deploy a Cloud VPS with Bitcoin | bithost Guide"
 h1: "Deploy your first VPS with bithost"
 description: "Create a bithost account, top up with Bitcoin or Lightning, and deploy your first VPS in under 5 minutes. No KYC, no card."
-canonical: "https://bithost.io/guides/getting-started"
+canonical: "https://bithost.io/guides/getting-started/"
 redirect_from:
   - /guides/set-up-your-first-server
   - /guides/set-up-your-first-server/
 og_title: "How to Deploy a Cloud VPS with Bitcoin - bithost Guide"
-og_url: "https://bithost.io/guides/getting-started"
+og_url: "https://bithost.io/guides/getting-started/"
 og_description: "Create your bithost account, top up with BTC or Lightning, and deploy a live cloud server in under 5 minutes. No ID required."
 og_type: article
 schema_type: Article

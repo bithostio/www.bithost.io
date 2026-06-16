@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Set Up Backups for Your VPS | Guides | bithost"
 h1: "How to Set Up Backups for Your VPS"
 description: "Learn how to back up your VPS with bithost: automatic backups, manual snapshots, rsync file backups, and database dumps. Protect your server in minutes."
-canonical: "https://bithost.io/guides/automated-backups"
+canonical: "https://bithost.io/guides/automated-backups/"
 og_title: "How to Set Up Backups for Your VPS - bithost Guide"
-og_url: "https://bithost.io/guides/automated-backups"
+og_url: "https://bithost.io/guides/automated-backups/"
 og_description: "Learn how to back up your VPS with bithost: automatic backups, manual snapshots, rsync file backups, and database dumps. Protect your server in minutes."
 og_type: article
 schema_type: Article

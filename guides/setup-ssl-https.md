@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Set Up HTTPS with Let's Encrypt (Free SSL) | bithost"
 h1: "How to Set Up HTTPS with Let's Encrypt (Free SSL)"
 description: "Set up free HTTPS with Let's Encrypt on Nginx (Ubuntu 22.04): install Certbot, get a trusted SSL certificate, force HTTPS redirects, and auto-renew."
-canonical: "https://bithost.io/guides/setup-ssl-https"
+canonical: "https://bithost.io/guides/setup-ssl-https/"
 og_title: "How to Set Up HTTPS with Let's Encrypt (Free SSL) - bithost Guide"
-og_url: "https://bithost.io/guides/setup-ssl-https"
+og_url: "https://bithost.io/guides/setup-ssl-https/"
 og_description: "Set up free HTTPS with Let's Encrypt on Nginx (Ubuntu 22.04): install Certbot, get a trusted SSL certificate, force HTTPS redirects, and auto-renew."
 og_type: article
 schema_type: Article

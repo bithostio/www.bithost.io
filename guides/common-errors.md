@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "Common Server Errors and How to Fix Them | bithost"
 h1: "Common Server Error Messages and How to Fix Them"
 description: "Fix the most common Linux server errors: SSH connection refused, 502/504/403/404 Nginx errors, MySQL access denied, disk full, and SSL problems."
-canonical: "https://bithost.io/guides/common-errors"
+canonical: "https://bithost.io/guides/common-errors/"
 og_title: "Common Server Errors and How to Fix Them - bithost Guide"
-og_url: "https://bithost.io/guides/common-errors"
+og_url: "https://bithost.io/guides/common-errors/"
 og_description: "Fix the most common Linux server errors: SSH connection refused, 502/504/403/404 Nginx errors, MySQL access denied, disk full, and SSL problems."
 og_type: article
 schema_type: Article

@@ -4,11 +4,11 @@ nav: guides
 jsonld: jsonld/guide.html
 title: "How to Point Your Domain to Your VPS | Guides | bithost"
 h1: "How to Point Your Domain Name to Your VPS"
-description: "Point your domain to your VPS in minutes: find your server IP, add an A record at your registrar, wait for DNS propagation, and test. Cloudflare tips included."
-canonical: "https://bithost.io/guides/point-domain-to-server"
+description: "Point your domain to your VPS: find your server IP, add an A record at your registrar, wait for DNS propagation, and test before going live."
+canonical: "https://bithost.io/guides/point-domain-to-server/"
 og_title: "How to Point Your Domain to Your VPS - bithost Guide"
-og_url: "https://bithost.io/guides/point-domain-to-server"
-og_description: "Point your domain to your VPS in minutes: find your server IP, add an A record at your registrar, wait for DNS propagation, and test. Cloudflare tips included."
+og_url: "https://bithost.io/guides/point-domain-to-server/"
+og_description: "Point your domain to your VPS: find your server IP, add an A record at your registrar, wait for DNS propagation, and test before going live."
 og_type: article
 schema_type: Article
 category: "Web Hosting"

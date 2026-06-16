@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Migrate a Website to a VPS | bithost"
 h1: "How to Migrate a Website to a VPS"
 description: "Migrate a website to a VPS with minimal downtime: move your files and databases, update DNS, and test before cutting over from shared or cloud hosting."
-canonical: "https://bithost.io/guides/migrate-a-website"
+canonical: "https://bithost.io/guides/migrate-a-website/"
 og_title: "How to Migrate a Website to a VPS - bithost Guide"
-og_url: "https://bithost.io/guides/migrate-a-website"
+og_url: "https://bithost.io/guides/migrate-a-website/"
 og_description: "Migrate a website to a VPS with minimal downtime: move your files and databases, update DNS, and test before cutting over from shared or cloud hosting."
 og_type: article
 schema_type: Article

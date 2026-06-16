@@ -4,11 +4,11 @@ nav: guides
 jsonld: jsonld/guide.html
 title: "Understanding Your Server Dashboard | Guides | bithost"
 h1: "Understanding Your Server Dashboard and Control Panel"
-description: "A walkthrough of every tab in your bithost server dashboard - connection details, OS rebuild, plan resize, backups, snapshots, event log, and power controls."
-canonical: "https://bithost.io/guides/understanding-your-dashboard"
+description: "A walkthrough of every tab in your bithost server dashboard - connection details, OS rebuild, plan resize, backups, snapshots, and power controls."
+canonical: "https://bithost.io/guides/understanding-your-dashboard/"
 og_title: "Understanding Your Server Dashboard and Control Panel - bithost Guide"
-og_url: "https://bithost.io/guides/understanding-your-dashboard"
-og_description: "A walkthrough of every tab in your bithost server dashboard - connection details, OS rebuild, plan resize, backups, snapshots, event log, and power controls."
+og_url: "https://bithost.io/guides/understanding-your-dashboard/"
+og_description: "A walkthrough of every tab in your bithost server dashboard - connection details, OS rebuild, plan resize, backups, snapshots, and power controls."
 og_type: article
 schema_type: Article
 category: "Getting Started"

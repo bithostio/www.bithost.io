@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Recover from a Failed Deployment | Guides | bithost"
 h1: "How to Recover from a Failed Deployment"
 description: "Recover from a failed deployment fast: identify what changed, roll back broken configs, restore from a backup or snapshot, and get your site back online."
-canonical: "https://bithost.io/guides/failed-deployment"
+canonical: "https://bithost.io/guides/failed-deployment/"
 og_title: "How to Recover from a Failed Deployment - bithost Guide"
-og_url: "https://bithost.io/guides/failed-deployment"
+og_url: "https://bithost.io/guides/failed-deployment/"
 og_description: "Recover from a failed deployment fast: identify what changed, roll back broken configs, restore from a backup or snapshot, and get your site back online."
 og_type: article
 schema_type: Article

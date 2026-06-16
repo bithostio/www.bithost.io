@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Set Up a WireGuard VPN on a VPS | Guides | bithost"
 h1: "How to Set Up a WireGuard VPN on a VPS"
 description: "Set up your own WireGuard VPN on a VPS: install WireGuard, configure the server and client, and route traffic privately - no third-party VPN needed."
-canonical: "https://bithost.io/guides/setup-vpn-server"
+canonical: "https://bithost.io/guides/setup-vpn-server/"
 og_title: "How to Set Up a WireGuard VPN on a VPS - bithost Guide"
-og_url: "https://bithost.io/guides/setup-vpn-server"
+og_url: "https://bithost.io/guides/setup-vpn-server/"
 og_description: "Set up your own WireGuard VPN on a VPS: install WireGuard, configure the server and client, and route traffic privately - no third-party VPN needed."
 og_type: article
 schema_type: Article

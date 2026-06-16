@@ -9,9 +9,9 @@ schema_type: Article             # Article renders complete schema; only use "Ho
 title: "GUIDE TITLE | Guides | bithost"      # the <title> tag
 h1: "GUIDE TITLE"                            # on-page <h1>, breadcrumb, and schema name
 description: "Unique meta description, 120-160 characters."
-canonical: "https://bithost.io/guides/GUIDE-SLUG"
+canonical: "https://bithost.io/guides/GUIDE-SLUG/"
 og_title: "GUIDE TITLE - bithost Guide"
-og_url: "https://bithost.io/guides/GUIDE-SLUG"
+og_url: "https://bithost.io/guides/GUIDE-SLUG/"
 og_description: "Open Graph description."
 og_type: article
 category: "Getting Started"      # shown in the meta row
