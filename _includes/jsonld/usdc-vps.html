@@ -1,0 +1,97 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://bithost.io/usdc-vps#service",
+    "name": "VPS with USDC — bithost",
+    "description": "Pay for a VPS with USDC and get exact-dollar billing. No exchange rate risk, no KYC, no credit card. Deploy on DigitalOcean, Vultr, or Linode with stablecoins.",
+    "url": "https://bithost.io/usdc-vps",
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://bithost.io/#organization",
+      "name": "bithost",
+      "url": "https://bithost.io"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "VPS hosting — pay with USDC",
+      "description": "Cloud VPS on DigitalOcean, Vultr, or Linode paid with USD Coin (USDC). Exact-dollar billing, no KYC, hourly billing.",
+      "url": "https://bithost.io/usdc-vps",
+      "priceCurrency": "USD",
+      "price": "0.015",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "0.015",
+        "priceCurrency": "USD",
+        "unitCode": "HUR",
+        "unitText": "hour"
+      }
+    }
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bithost.io/" },
+      { "@type": "ListItem", "position": 2, "name": "VPS with USDC", "item": "https://bithost.io/usdc-vps" }
+    ]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I really pay for a VPS with USDC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. USD Coin (USDC) is one of the 13+ cryptocurrencies bithost accepts. Top up your balance with USDC and deploy servers on DigitalOcean, Vultr, or Linode — no card and no KYC required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 100 USDC equal $100 of hosting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Effectively, yes. Your balance is held in USD and USDC is pegged 1:1 to the dollar, so a 100 USDC deposit credits about $100.00, minus only the network fee you pay to send it. No conversion spread is applied on stablecoins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which network is cheapest for USDC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sending native USDC over Solana is typically the cheapest and fastest, with fees of a fraction of a cent. Ethereum (ERC-20) is the most widely supported but costs more in gas. Always send to the deposit address that matches your chosen network, and check the dashboard for the networks we currently support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between USDC and paying with Bitcoin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USDC is pegged to the dollar, so there is no price movement between when you send and when it credits — ideal for exact budgeting. Bitcoin can rise or fall while it confirms. Both land in the same USD balance, so the choice is purely about whether you want stablecoin predictability or to spend BTC you already hold."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum top-up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum is $20 USD equivalent, which in USDC is about 20 USDC plus the network fee. Your balance carries over month to month with no expiry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I mix USDC with other coins?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All deposits land in the same USD-denominated balance, so you can fund with USDC today and Bitcoin tomorrow. Servers are billed from that single balance regardless of how you topped it up."
+        }
+      }
+    ]
+  }
+</script>

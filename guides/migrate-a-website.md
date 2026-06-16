@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Migrate a Website to Your Cloud Server | Guides | bithost"
-h1: "How to Migrate a Website to Your Cloud Server"
-description: "Whether you're moving from shared hosting, another cloud provider, or a local machine, this guide walks you through migrating a website with minimal downti..."
+title: "How to Migrate a Website to a VPS | bithost"
+h1: "How to Migrate a Website to a VPS"
+description: "Migrate a website to a VPS with minimal downtime: move your files and databases, update DNS, and test before cutting over from shared or cloud hosting."
 canonical: "https://bithost.io/guides/migrate-a-website"
-og_title: "How to Migrate a Website to Your Cloud Server - bithost Guide"
+og_title: "How to Migrate a Website to a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/migrate-a-website"
-og_description: "Whether you're moving from shared hosting, another cloud provider, or a local machine, this guide walks you through migrating a website with minimal downti..."
+og_description: "Migrate a website to a VPS with minimal downtime: move your files and databases, update DNS, and test before cutting over from shared or cloud hosting."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Performance"
 read_time: "4 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "migration-overview", label: "Migration Overview" }
   - { id: "step-1-prepare-the-new-server", label: "Prepare the New Server" }
@@ -22,7 +24,12 @@ toc:
   - { id: "step-4-upload-files-to-the-new-server", label: "Upload Files to the New Server" }
   - { id: "step-5-import-the-database-on-the-new-server", label: "Import the Database on the New Server" }
   - { id: "step-6-update-the-sites-database-configuration", label: "Update the Site's Database Configuration" }
-  - { id: "step-7-test-before-switching-dns", label: "Test Before Switching DNS" }
+  - { id: "step-7-configure-nginx-on-the-new-server", label: "Configure Nginx on the New Server" }
+  - { id: "step-8-test-before-switching-dns", label: "Test Before Switching DNS" }
+  - { id: "step-9-switch-dns", label: "Switch DNS" }
+  - { id: "step-10-set-up-ssl-on-the-new-server", label: "Set Up SSL on the New Server" }
+  - { id: "step-11-keep-the-old-server-running-briefly", label: "Keep the Old Server Running Briefly" }
+  - { id: "migration-checklist", label: "Migration Checklist" }
 sidebar_title: "Performance"
 sidebar:
   - { url: "/guides/scale-server-resources", label: "Scale server resources" }
@@ -39,7 +46,7 @@ minimal downtime.
 
 A typical website migration involves:
 
-1.  Setting up the new server
+1.  Setting up the new server. Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
 2.  Copying files and database
 3.  Testing on the new server
 4.  Updating DNS to point to the new server
@@ -116,39 +123,14 @@ On the new server, create the database and import:
 
 ## Step 6: Update the Site\'s Database Configuration
 
-For WordPress, update `wp-config.php` with the new database credentials:
+For [WordPress](/guides/install-wordpress/){: style="color: var(--rd-indigo);"}, update `wp-config.php` with the new database credentials:
 
     nano /var/www/mysite/wp-config.php
 {: .language-bash}
 
 For other CMS or apps, update their respective config files.
 
-## Step 7: Test Before Switching DNS
-
-Test your site on the new server **before** changing DNS by editing your
-local `hosts` file:
-
-### On macOS/Linux
-
-    sudo nano /etc/hosts
-{: .language-bash}
-
-Add:
-
-    NEW_SERVER_IP    yourdomain.com
-    NEW_SERVER_IP    www.yourdomain.com
-
-Visit your domain in the browser - it will load from the new server
-(only for you). Verify everything works: pages, images, forms, logins.
-
-Remove the hosts entry when done testing.
-
-### On Windows
-
-Edit `C:\Windows\System32\drivers\etc\hosts` as Administrator and add
-the same lines.
-
-## Step 8: Configure Nginx on the New Server
+## Step 7: Configure Nginx on the New Server
 
 Make sure your Nginx server block is correctly configured for your
 domain:
@@ -175,6 +157,31 @@ domain:
 
 Enable and reload Nginx.
 
+## Step 8: Test Before Switching DNS
+
+Test your site on the new server **before** changing DNS by editing your
+local `hosts` file:
+
+### On macOS/Linux
+
+    sudo nano /etc/hosts
+{: .language-bash}
+
+Add:
+
+    NEW_SERVER_IP    yourdomain.com
+    NEW_SERVER_IP    www.yourdomain.com
+
+Visit your domain in the browser - it will load from the new server
+(only for you). Verify everything works: pages, images, forms, logins.
+
+Remove the hosts entry when done testing.
+
+### On Windows
+
+Edit `C:\Windows\System32\drivers\etc\hosts` as Administrator and add
+the same lines.
+
 ## Step 9: Switch DNS
 
 Once testing is successful, update your domain\'s DNS **A record** to
@@ -192,6 +199,9 @@ After DNS propagates:
 
     certbot --nginx -d yourdomain.com -d www.yourdomain.com
 {: .language-bash}
+
+For details and troubleshooting, see [Set up HTTPS
+(SSL)](/guides/setup-ssl-https/){: style="color: var(--rd-indigo);"}.
 
 ## Step 11: Keep the Old Server Running Briefly
 

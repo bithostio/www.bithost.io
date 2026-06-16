@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Self-Host Cloud Storage with Nextcloud | Guides | bithost"
+title: "How to Self-Host Cloud Storage with Nextcloud | bithost"
 h1: "How to Self-Host Cloud Storage with Nextcloud"
-description: "Nextcloud is a powerful, open-source alternative to Google Drive or Dropbox. You get full control over your data, file syncing, photo backup, calendar, con..."
+description: "Self-host Nextcloud on a VPS for a private Google Drive alternative: file sync, photo backup, calendar, and contacts - all on your own server."
 canonical: "https://bithost.io/guides/nextcloud-cloud-storage"
 og_title: "How to Self-Host Cloud Storage with Nextcloud - bithost Guide"
 og_url: "https://bithost.io/guides/nextcloud-cloud-storage"
-og_description: "Nextcloud is a powerful, open-source alternative to Google Drive or Dropbox. You get full control over your data, file syncing, photo backup, calendar, con..."
+og_description: "Self-host Nextcloud on a VPS for a private Google Drive alternative: file sync, photo backup, calendar, and contacts - all on your own server."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Use Cases"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "step-1-install-dependencies", label: "Install Dependencies" }
@@ -23,23 +25,26 @@ toc:
   - { id: "step-5-configure-nginx", label: "Configure Nginx" }
   - { id: "step-6-set-up-https", label: "Set Up HTTPS" }
   - { id: "step-7-complete-installation-via-browser", label: "Complete Installation via Browser" }
+  - { id: "step-8-install-the-nextcloud-desktop-and-mobile-apps", label: "Install Desktop and Mobile Apps" }
+  - { id: "useful-nextcloud-apps-to-install", label: "Useful Nextcloud Apps to Install" }
 sidebar_title: "Use Cases"
 sidebar:
   - { url: "/guides/setup-vpn-server", label: "Set up a VPN server" }
   - { url: "/guides/game-server", label: "Run a game server" }
   - { url: "/guides/host-nodejs-python-app", label: "Host a Node.js/Python app" }
-  - { url: "/guides/mail-server", label: "Set up a mail server" }
   - { url: "/guides", label: "All guides →" }
 ---
 
 Nextcloud is a powerful, open-source alternative to Google Drive or
-Dropbox. You get full control over your data, file syncing, photo
-backup, calendar, contacts, and more - all hosted on your own server.
+Dropbox. This guide shows you how to **self-host Nextcloud on a VPS** -
+giving you full control over your data, file syncing, photo backup,
+calendar, contacts, and more, all hosted on a [private VPS](/anonymous-vps/){: style="color: var(--rd-indigo);"}
+you control.
 
 ## Prerequisites
 
-* A cloud server running Ubuntu 22.04 with at least 2 GB RAM
-* A domain name pointed to your server
+* A VPS running Ubuntu 22.04 with at least 2 GB RAM ([see vps prices](/prices/){: style="color: var(--rd-indigo);"}). Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
+* A [domain name pointed to your server](/guides/point-domain-to-server/){: style="color: var(--rd-indigo);"}
 * Nginx and MySQL installed (or follow the steps below)
 
 ## Step 1: Install Dependencies
@@ -159,6 +164,9 @@ Enable and reload:
     certbot --nginx -d cloud.yourdomain.com
 {: .language-bash}
 
+For details and troubleshooting, see [Set up HTTPS
+(SSL)](/guides/setup-ssl-https/){: style="color: var(--rd-indigo);"}.
+
 ## Step 7: Complete Installation via Browser
 
 Visit:
@@ -177,7 +185,7 @@ Fill in:
 
 Click **Finish setup**.
 
-## Step 8: Install the Nextcloud Desktop &amp; Mobile Apps
+## Step 8: Install the Nextcloud Desktop and Mobile Apps
 
 Download from [nextcloud.com/install][1] for:
 

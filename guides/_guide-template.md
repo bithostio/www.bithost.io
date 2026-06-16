@@ -5,7 +5,7 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html        # auto-generates HowTo/Article + BreadcrumbList from the fields below
-schema_type: HowTo               # use "Article" for conceptual/explainer guides
+schema_type: Article             # Article renders complete schema; only use "HowTo" if you populate step[] in the include
 title: "GUIDE TITLE | Guides | bithost"      # the <title> tag
 h1: "GUIDE TITLE"                            # on-page <h1>, breadcrumb, and schema name
 description: "Unique meta description, 120-160 characters."

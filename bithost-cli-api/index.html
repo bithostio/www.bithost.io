@@ -1,13 +1,13 @@
 ---
 layout: default
 nav: bithost-cli-api
-title: "API &amp; CLI | bithost - Buy Cloud VPS with Bitcoin &amp; Crypto"
-description: "Manage bithost servers from the terminal or automate deployments with the REST API. Install the bh CLI and explore the full API reference."
+title: "VPS API &amp; CLI to Automate Crypto Servers | bithost"
+description: "Manage bithost servers from the terminal or automate deployments with the REST API. Install the bh CLI and explore the full API reference. No browser required."
 canonical: "https://bithost.io/bithost-cli-api/"
-og_title: "API &amp; CLI | bithost"
+og_title: "VPS API &amp; CLI to Automate Crypto Servers | bithost"
 og_url: "https://bithost.io/bithost-cli-api/"
 og_description: "Manage bithost servers from the terminal or automate deployments with the REST API."
-twitter_title: "API &amp; CLI | bithost"
+twitter_title: "VPS API &amp; CLI to Automate Crypto Servers | bithost"
 twitter_description: "Manage bithost servers from the terminal or automate deployments with the REST API."
 jsonld: jsonld/cli-api-index.html
 ---
@@ -27,8 +27,10 @@ jsonld: jsonld/cli-api-index.html
     <p style="max-width: 640px; font-size: 1.05rem; line-height: 1.75; color: var(--rd-ink); opacity: 0.75; margin: 0 0 56px;">
       The bithost REST API and command-line tool let you manage cloud servers without touching the dashboard. Automate deployments inside CI/CD pipelines, write infrastructure scripts that spin up or destroy servers on demand, or manage dozens of droplets from a single terminal session - no browser required.
       <br><br>
-      Deploy, resize, snapshot, and tear down programmatically. From any language.
+      Deploy, resize, snapshot, and tear down programmatically. From any language. New to bithost? <a href="/guides/getting-started" style="color: var(--rd-indigo);">Deploy your first server</a> and add an <a href="/guides/connect-via-ssh" style="color: var(--rd-indigo);">SSH key</a> first, then automate the rest.
     </p>
+
+    <h2 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 24px; letter-spacing: -0.01em;">Two ways to automate your crypto VPS</h2>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px;">
 
@@ -49,6 +51,15 @@ jsonld: jsonld/cli-api-index.html
       </a>
 
     </div>
+
+    <h2 style="font-size: 1.35rem; font-weight: 700; margin: 56px 0 16px; letter-spacing: -0.01em;">Install the bh CLI</h2>
+    <p style="max-width: 640px; font-size: 0.95rem; line-height: 1.6; color: var(--rd-ink-mute); margin: 0 0 16px;">
+      One command installs the <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">bh</code> binary on Linux, macOS, or Windows (WSL):
+    </p>
+    <pre style="background: var(--rd-navy); color: var(--rd-paper); border-radius: 10px; padding: 16px 20px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; max-width: 640px;"><code>curl -fsSL https://bithost.io/cli | bash</code></pre>
+    <p style="max-width: 640px; font-size: 0.95rem; line-height: 1.6; color: var(--rd-ink-mute); margin: 16px 0 0;">
+      Authenticate with a bearer token from your <a href="/bithost-cli-api/api" style="color: var(--rd-indigo);">API settings</a>, then run <code style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; background: var(--rd-line); padding: 1px 5px; border-radius: 4px;">bh servers new</code> to deploy a crypto-paid server in one line.
+    </p>
 
   </section>
 

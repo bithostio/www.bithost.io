@@ -8,7 +8,9 @@
   "description": "{{ page.description }}",
   "publisher": { "@id": "https://bithost.io/#organization" },
   "url": "{{ page.canonical }}",
-  "inLanguage": "en"
+  {% if page.date_published %}"datePublished": "{{ page.date_published }}",
+  {% endif %}{% if page.date_modified %}"dateModified": "{{ page.date_modified }}",
+  {% endif %}"inLanguage": "en"
 }
 </script>
 {% else %}

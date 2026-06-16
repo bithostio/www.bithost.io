@@ -3,17 +3,22 @@ layout: guide
 nav: guides
 jsonld: jsonld/guide.html
 title: "How to Deploy a Cloud VPS with Bitcoin | bithost Guide"
-h1: "Deploy your first server with bithost"
-description: "Step-by-step guide: create a bithost account, top up your balance with Bitcoin or Lightning, and deploy your first cloud VPS in under 5 minutes. No KYC required."
+h1: "Deploy your first VPS with bithost"
+description: "Create a bithost account, top up with Bitcoin or Lightning, and deploy your first VPS in under 5 minutes. No KYC, no card."
 canonical: "https://bithost.io/guides/getting-started"
+redirect_from:
+  - /guides/set-up-your-first-server
+  - /guides/set-up-your-first-server/
 og_title: "How to Deploy a Cloud VPS with Bitcoin - bithost Guide"
 og_url: "https://bithost.io/guides/getting-started"
 og_description: "Create your bithost account, top up with BTC or Lightning, and deploy a live cloud server in under 5 minutes. No ID required."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Getting Started"
 read_time: "5 min read"
 updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "create-account", label: "1. Create account" }
@@ -23,8 +28,9 @@ toc:
 ---
 
 This guide walks you through creating your first bithost account and
-deploying a cloud VPS paid entirely in crypto. No ID, no credit card -
-just an email address and some crypto.
+[buying a VPS with Bitcoin](/bitcoin-vps){: style="color: var(--rd-indigo);"}
+or another coin. No ID, no credit card - just an email address and some
+crypto.
 
 ## Prerequisites   {#prerequisites}
 
@@ -43,7 +49,7 @@ var(--rd-indigo);"} and enter your email address and a password.
 ![bithost registration form with email and password
 fields](/assets/screenshots/bithost_registration_form.webp){:
 width="497" height="478" style="max-width: 100%; height: auto;
-border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy"
+border-radius: 8px; border: 1px solid var(--rd-line);"
 fetchpriority="high" srcset="/assets/screenshots/bithost_registration_form_740w.webp 740w, /assets/screenshots/bithost_registration_form.webp 994w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
@@ -94,7 +100,7 @@ border: 1px solid var(--rd-line);" loading="lazy" srcset="/assets/screenshots/bi
   confirmation (typically 10-20 min).
 * **Lightning Network** - Instant. Credits in under a second.
   Recommended for fast, low-fee top-ups.
-* **ETH, LTC, DOGE, USDC, XRP, ZEC, BCH and more** - Credits after
+* **ETH, LTC, DOGE, [USDC](/usdc-vps){: style="color: var(--rd-indigo);"}, XRP, ZEC, BCH and more** - Credits after
   network confirmation. [Full list of supported coins
   →](/pay-with-crypto){: style="color: var(--rd-indigo);"}
 
@@ -126,7 +132,7 @@ width="1209" height="799" style="max-width: 100%; height: auto;
 border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy" srcset="/assets/screenshots/bithost_create_server_provider_region_select_740w.webp 740w, /assets/screenshots/bithost_create_server_provider_region_select_1480w.webp 1480w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
-**Select a size.** Plans start from $0.007/hr. Choose the CPU, RAM, and
+**Select a size.** Plans start from $0.015/hr. Choose the CPU, RAM, and
 disk that fits your workload. [See the prices](/prices){: style="color:
 var(--rd-indigo);"}.
 
@@ -162,7 +168,7 @@ are available. The most common choices are:
           </tr>
           <tr>
             <td style="padding: 10px 14px 10px 0; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 13px;">Windows Server</td>
-            <td style="padding: 10px 14px;">Windows-specific apps (usually costs extra)</td>
+            <td style="padding: 10px 14px;"><a href="/windows-vps-bitcoin" style="color: var(--rd-indigo);">Windows-specific apps</a> (usually costs extra)</td>
           </tr>
         </tbody>
       </table>
@@ -181,7 +187,8 @@ border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy" srcset="/a
 
 **Add your SSH key.** bithost uses SSH key authentication - there are no
 passwords emailed to you. Paste your public key and give it a name. If
-you don\'t have a key pair yet, generate one first:
+you don\'t have a key pair yet, [generate one
+first](/guides/ssh-keys/){: style="color: var(--rd-indigo);"}:
 
     ssh-keygen -t ed25519 -C "your@email.com"
 
@@ -215,7 +222,7 @@ border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy" srcset="/a
 ## 4. Login to the server   {#login}
 
 Once the server status shows **Active**, copy the IP address from the
-dashboard and connect via SSH.
+dashboard and [connect via SSH](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"}.
 
 If you added an SSH key during setup:
 

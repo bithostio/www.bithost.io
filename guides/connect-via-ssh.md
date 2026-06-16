@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Connect to Your Cloud Server via SSH | Guides | bithost"
-h1: "How to Connect to Your Cloud Server via SSH"
-description: "Generate SSH keys on Mac, Linux, or Windows, add your public key to the server, and connect from your terminal. Covers ed25519 keys, PuTTY, and SSH config shortcuts."
+title: "How to Connect to Your VPS via SSH | Guides | bithost"
+h1: "How to Connect to Your VPS via SSH"
+description: "Generate SSH keys on Mac, Linux, or Windows, add your public key to the server, and connect from your terminal. Covers ed25519, PuTTY, and SSH config."
 canonical: "https://bithost.io/guides/connect-via-ssh"
-og_title: "How to Connect to Your Cloud Server via SSH - bithost Guide"
+og_title: "How to Connect to Your VPS via SSH - bithost Guide"
 og_url: "https://bithost.io/guides/connect-via-ssh"
-og_description: "Generate SSH keys on Mac, Linux, or Windows, add your public key to the server, and connect from your terminal. Covers ed25519 keys, PuTTY, and SSH config shortcuts."
+og_description: "Generate SSH keys on Mac, Linux, or Windows, add your public key to the server, and connect from your terminal. Covers ed25519, PuTTY, and SSH config."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Getting Started"
 read_time: "4 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "what-is-ssh", label: "What Is SSH?" }
   - { id: "part-1-generate-an-ssh-key-recommended", label: "Part 1: Generate an SSH Key (Recommended)" }
@@ -40,10 +42,13 @@ SSH is an encrypted protocol that lets you control your server from your
 computer\'s terminal (command line). Think of it as a secure remote
 control for your server.
 
+<img src="/assets/guides/ssh-connection-flow.svg" alt="How an SSH key connects your computer to your bithost server" width="1000" height="300" loading="lazy" style="width: 100%; height: auto; display: block; margin: 8px 0 28px;">
+
 ## Part 1: Generate an SSH Key (Recommended)   {#part-1-generate-an-ssh-key-recommended}
 
-SSH keys are more secure than passwords. If you already have one, skip
-to Part 2.
+SSH keys are more secure than passwords. For a deeper walkthrough, see
+the [SSH keys guide](/guides/ssh-keys/){: style="color: var(--rd-indigo);"}.
+If you already have one, skip to Part 2.
 
 ### On macOS / Linux
 
@@ -90,8 +95,10 @@ Follow the same steps as above. Keys are saved in
 
 ## Part 2: Add Your Public Key to the Server   {#part-2-add-your-public-key-to-the-server}
 
-When creating your server, paste your public key into the **SSH Key**
-field in your control panel. This is the recommended approach.
+When [creating your server](/guides/getting-started/){: style="color: var(--rd-indigo);"},
+paste your public key into the **SSH Key** field in your
+[control panel](/guides/understanding-your-dashboard/){: style="color: var(--rd-indigo);"}.
+This is the recommended approach.
 
 If your server is already running, add the key manually:
 
@@ -170,7 +177,7 @@ Add this to your `~/.ssh/config` to prevent timeouts:
 ## Troubleshooting   {#troubleshooting}
 
 | Problem | Solution |
-|----------
+| --- | --- |
 | `Connection refused` | Server may still be booting - wait 1–2 min and retry |
 | `Permission denied (publickey)` | Wrong key or key not added to server - check `~/.ssh/authorized_keys` |
 | `Host key verification failed` | Run `ssh-keygen -R YOUR_SERVER_IP` to clear old entry |

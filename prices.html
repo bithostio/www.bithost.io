@@ -2,12 +2,12 @@
 layout: default
 nav: prices
 title: "VPS Pricing - Pay with Bitcoin &amp; Crypto | bithost"
-description: "Hourly VPS from $0.018/hr. Buy DigitalOcean, Vultr or Linode servers anonymously with Bitcoin, ETH and 30+ other coins. No KYC. Instant deploy. See full pricing →"
+description: "Hourly crypto VPS pricing from $0.015/hr. Buy DigitalOcean, Vultr or Linode servers anonymously with Bitcoin, Lightning, ETH and more. No KYC. Instant deploy."
 canonical: "https://bithost.io/prices"
-og_title: "VPS Prices - Pay with Bitcoin &amp; Crypto | bithost"
+og_title: "VPS Pricing - Pay with Bitcoin &amp; Crypto | bithost"
 og_url: "https://bithost.io/prices"
 og_description: "DigitalOcean, Linode, and Vultr cloud servers paid with Bitcoin, Lightning, ETH, and more. Hourly billing, no KYC, no credit card required."
-twitter_title: "VPS Prices - Pay with Bitcoin &amp; Crypto | bithost"
+twitter_title: "VPS Pricing - Pay with Bitcoin &amp; Crypto | bithost"
 twitter_description: "DigitalOcean, Linode, and Vultr servers paid with Bitcoin, Lightning, ETH and more. Hourly billing, no KYC."
 jsonld: jsonld/prices.html
 ---
@@ -22,12 +22,12 @@ jsonld: jsonld/prices.html
       <span class="rd-breadcrumb-current">Prices</span>
     </nav>
     <div class="rd-sec-head" style="display: block; margin-bottom: 32px;">
-      <h1 id="pricing-heading">Hourly billing. <em>Pay only what you run.</em></h1>
+      <h1 id="pricing-heading">VPS pricing. <em>Hourly billing &mdash; pay only what you run.</em></h1>
     </div>
 
     <p class="rd-pricing-intro">
-      To pay for bithost servers, you must top up at least $20 in crypto.<br>
-      Servers are billed on per-hour basis and don&#39;t require a minimum period of usage. If you used a server for less than a month, you only pay the hour-based usage. Servers are billed as long as they exist even if they are powered off. If you no longer need a server, delete it to avoid further charges.
+      To pay for bithost servers, you must top up at least $20 in <a href="/pay-with-crypto" style="color: var(--rd-indigo);">crypto</a>.<br>
+      Servers are billed on per-hour basis and don&#39;t require a minimum period of usage. If you used a server for less than a month, you only pay the hour-based usage. Servers are billed as long as they exist even if they are powered off. If you no longer need a server, delete it to avoid further charges. Not sure which to pick? See <a href="/guides/choose-the-right-plan" style="color: var(--rd-indigo);">how to choose the right plan</a>, or <a href="/bitcoin-vps" style="color: var(--rd-indigo);">buy a VPS with Bitcoin</a>.
     </p>
 
     <!-- Provider tabs -->
@@ -41,6 +41,23 @@ jsonld: jsonld/prices.html
 
     <!-- Plan rows -->
     <ul class="rd-pricing-rows" id="rd-plan-rows" aria-label="Server plans"></ul>
+
+    <!-- Static fallback for crawlers and no-JS clients; the interactive table above replaces this when JavaScript runs -->
+    <noscript>
+      <h2>Crypto VPS pricing by provider</h2>
+      <p>Deploy DigitalOcean, Linode, or Vultr servers and pay in Bitcoin, Lightning, ETH, and other cryptocurrencies. Billed per hour, no KYC, no credit card. Minimum top-up: $20.</p>
+      <table>
+        <thead>
+          <tr><th>Provider</th><th>Starting price</th><th>RAM range</th><th>Regions</th><th>Storage</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>DigitalOcean</td><td>from $0.018/hr</td><td>1 GB – 256 GB</td><td>14</td><td>NVMe SSD</td></tr>
+          <tr><td>Linode (Akamai)</td><td>from $0.015/hr</td><td>1 GB – 192 GB</td><td>11</td><td>NVMe SSD</td></tr>
+          <tr><td>Vultr</td><td>from $0.018/hr</td><td>512 MB – 96 GB</td><td>32</td><td>NVMe SSD (GPU available)</td></tr>
+        </tbody>
+      </table>
+      <p>Plans scale from basic shared-CPU instances up to dedicated-CPU, high-memory, storage-optimized, and GPU servers. Prices are shown in USD equivalent and charged hourly from your crypto balance until the monthly cap is reached. <a href="https://dashboard.bithost.io/registration">Create an account</a> to see the full live plan list, or read <a href="/guides/choose-the-right-plan">how to choose the right plan</a>.</p>
+    </noscript>
 
     <p style="margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--rd-ink-mute); line-height: 1.6;">
       All prices in USD equivalent. All prices are subject to change without notice. Servers accrue charges even when powered off. Delete to stop billing.

@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Set Up HTTPS with Let's Encrypt (Free SSL) | Guides | bithost"
+title: "How to Set Up HTTPS with Let's Encrypt (Free SSL) | bithost"
 h1: "How to Set Up HTTPS with Let's Encrypt (Free SSL)"
-description: "HTTPS encrypts traffic between your server and visitors, protects user data, and is required for modern websites. Let's Encrypt provides free, trusted SSL ..."
+description: "Set up free HTTPS with Let's Encrypt on Nginx (Ubuntu 22.04): install Certbot, get a trusted SSL certificate, force HTTPS redirects, and auto-renew."
 canonical: "https://bithost.io/guides/setup-ssl-https"
 og_title: "How to Set Up HTTPS with Let's Encrypt (Free SSL) - bithost Guide"
 og_url: "https://bithost.io/guides/setup-ssl-https"
-og_description: "HTTPS encrypts traffic between your server and visitors, protects user data, and is required for modern websites. Let's Encrypt provides free, trusted SSL ..."
+og_description: "Set up free HTTPS with Let's Encrypt on Nginx (Ubuntu 22.04): install Certbot, get a trusted SSL certificate, force HTTPS redirects, and auto-renew."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Web Hosting"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "step-1-install-certbot", label: "Install Certbot" }
@@ -23,6 +25,7 @@ toc:
   - { id: "checking-certificate-details", label: "Checking Certificate Details" }
   - { id: "manual-renewal-if-needed", label: "Manual Renewal (if needed)" }
   - { id: "troubleshooting", label: "Troubleshooting" }
+  - { id: "what-your-nginx-config-looks-like-after-certbot", label: "Nginx Config After Certbot" }
 sidebar_title: "Web Hosting"
 sidebar:
   - { url: "/guides/host-a-website-with-nginx", label: "Host a website with Nginx" }
@@ -33,13 +36,13 @@ sidebar:
 
 HTTPS encrypts traffic between your server and visitors, protects user
 data, and is required for modern websites. Let\'s Encrypt provides free,
-trusted SSL certificates. This guide covers setup on Ubuntu 22.04 with
-Nginx.
+trusted SSL certificates. This guide covers setting up HTTPS on Nginx
+(Ubuntu 22.04) with Certbot.
 
 ## Prerequisites
 
-* A domain name pointed to your server\'s IP
-* Nginx installed and running
+* A [domain name pointed to your server\'s IP](/guides/point-domain-to-server/){: style="color: var(--rd-indigo);"}. Buy server [with crypto](https://dashboard.bithost.io/registration){: style="color: var(--rd-indigo);"}
+* [Nginx installed and running](/guides/host-a-website-with-nginx/){: style="color: var(--rd-indigo);"}
 * Port 80 and 443 open in your firewall
 
 ## Step 1: Install Certbot
@@ -101,7 +104,7 @@ View your certificate\'s expiry date and domains:
 ## Troubleshooting
 
 | Problem | Solution |
-|----------
+| --- | --- |
 | `Domain not resolving` | Check your DNS A record points to the correct server IP |
 | `Port 80 not accessible` | Make sure port 80 is open in your firewall (`ufw allow 80`) |
 | `Too many requests` | Let\'s Encrypt has rate limits - wait an hour and try again |

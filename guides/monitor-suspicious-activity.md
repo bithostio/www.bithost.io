@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Monitor Your Server for Suspicious Activity | Guides | bithost"
-h1: "How to Monitor Your Server for Suspicious Activity"
-description: "Monitoring helps you catch security incidents, performance issues, and unusual behaviour before they become serious problems. This guide covers essential m..."
+title: "How to Monitor a VPS for Suspicious Activity | bithost"
+h1: "How to Monitor a VPS for Suspicious Activity"
+description: "Monitor your VPS for suspicious activity: check logins and auth logs, watch processes and network connections, review system logs, and set up Logwatch alerts."
 canonical: "https://bithost.io/guides/monitor-suspicious-activity"
-og_title: "How to Monitor Your Server for Suspicious Activity - bithost Guide"
+og_title: "How to Monitor a VPS for Suspicious Activity - bithost Guide"
 og_url: "https://bithost.io/guides/monitor-suspicious-activity"
-og_description: "Monitoring helps you catch security incidents, performance issues, and unusual behaviour before they become serious problems. This guide covers essential m..."
+og_description: "Monitor your VPS for suspicious activity: check logins and auth logs, watch processes and network connections, review system logs, and set up Logwatch alerts."
 og_type: article
 schema_type: Article
 category: "Security"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "1-check-who-is-logged-in", label: "Check Who Is Logged In" }
   - { id: "2-monitor-authentication-logs", label: "Monitor Authentication Logs" }
@@ -23,6 +25,9 @@ toc:
   - { id: "6-review-system-logs", label: "Review System Logs" }
   - { id: "7-set-up-logwatch-for-daily-reports", label: "Set Up Logwatch for Daily Reports" }
   - { id: "8-check-fail2ban-status", label: "Check Fail2Ban Status" }
+  - { id: "9-set-up-uptime-monitoring", label: "Set Up Uptime Monitoring" }
+  - { id: "red-flags-to-watch-for", label: "Red Flags to Watch For" }
+  - { id: "quick-security-audit-commands", label: "Quick Security Audit Commands" }
 sidebar_title: "Security"
 sidebar:
   - { url: "/guides/secure-your-server", label: "Secure your server" }
@@ -33,7 +38,9 @@ sidebar:
 
 Monitoring helps you catch security incidents, performance issues, and
 unusual behaviour before they become serious problems. This guide covers
-essential monitoring tools and techniques.
+essential monitoring tools and techniques. Pair it with proper [VPS
+hardening](/guides/secure-your-server/){: style="color: var(--rd-indigo);"}
+and regular [backups](/guides/automated-backups/){: style="color: var(--rd-indigo);"}.
 
 ## 1. Check Who Is Logged In
 
@@ -115,7 +122,7 @@ malware:
 Key log files:
 
 | Log File | What It Contains |
-|----------
+| --- | --- |
 | `/var/log/auth.log` | SSH logins, sudo usage, authentication |
 | `/var/log/syslog` | General system messages |
 | `/var/log/nginx/access.log` | HTTP requests to your site |

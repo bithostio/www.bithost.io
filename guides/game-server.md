@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Run a Game Server on Your Cloud Server | Guides | bithost"
-h1: "How to Run a Game Server on Your Cloud Server"
-description: "Hosting your own game server gives you full control over settings, mods, and who can join. This guide covers setting up a Minecraft Java Edition server - t..."
+title: "How to Run a Game Server on a VPS | bithost"
+h1: "How to Run a Game Server on a VPS"
+description: "Run your own game server on a VPS: set up a Minecraft Java Edition server with the right specs, ports, and mods - the same steps work for other games."
 canonical: "https://bithost.io/guides/game-server"
-og_title: "How to Run a Game Server on Your Cloud Server - bithost Guide"
+og_title: "How to Run a Game Server on a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/game-server"
-og_description: "Hosting your own game server gives you full control over settings, mods, and who can join. This guide covers setting up a Minecraft Java Edition server - t..."
+og_description: "Run your own game server on a VPS: set up a Minecraft Java Edition server with the right specs, ports, and mods - the same steps work for other games."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Use Cases"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "setting-up-a-minecraft-java-edition-server", label: "Setting Up a Minecraft Java Edition Server" }
@@ -23,20 +25,22 @@ sidebar:
   - { url: "/guides/setup-vpn-server", label: "Set up a VPN server" }
   - { url: "/guides/nextcloud-cloud-storage", label: "Self-host with Nextcloud" }
   - { url: "/guides/host-nodejs-python-app", label: "Host a Node.js/Python app" }
-  - { url: "/guides/mail-server", label: "Set up a mail server" }
   - { url: "/guides", label: "All guides →" }
 ---
 
 Hosting your own game server gives you full control over settings, mods,
-and who can join. This guide covers setting up a **Minecraft Java
-Edition** server - the same principles apply to other games like
-Valheim, Terraria, or CS2.
+and who can join. This guide covers running a **Minecraft server on a
+VPS** (Minecraft Java Edition) - and the same principles apply to other
+games like Valheim, Terraria, or CS2.
 
 ## Prerequisites
 
 * A cloud server with at least **2 vCPUs and 4 GB RAM** (8 GB
-  recommended for modded Minecraft)
-* Ubuntu 22.04 with SSH access
+  recommended for modded Minecraft, or a
+  [dedicated server](/bitcoin-dedicated-server){: style="color: var(--rd-indigo);"}
+  for a big community) - see [how to choose a
+  plan](/guides/choose-the-right-plan/){: style="color: var(--rd-indigo);"}
+* Ubuntu 22.04 with [SSH access](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"}
 * Port 25565 open in your firewall (for Minecraft)
 
 ## Setting Up a Minecraft Java Edition Server
@@ -52,7 +56,7 @@ Minecraft Java Edition requires Java 21:
 
 ### Step 2: Create a Dedicated User
 
-Run the server as a non-root user for security:
+Run the server as a non-root user for [security](/guides/secure-your-server/){: style="color: var(--rd-indigo);"}:
 
     adduser minecraft
     su - minecraft
@@ -163,7 +167,7 @@ server\'s IP address:
 ## Tips for Other Games
 
 | Game | Install Method | Default Port |
-|----------
+| --- | --- | --- |
 | Valheim | SteamCMD | 2456–2458 |
 | Terraria | TShock server | 7777 |
 | CS2 | SteamCMD | 27015 |

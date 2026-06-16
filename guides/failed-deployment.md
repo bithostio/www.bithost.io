@@ -4,16 +4,18 @@ nav: guides
 jsonld: jsonld/guide.html
 title: "How to Recover from a Failed Deployment | Guides | bithost"
 h1: "How to Recover from a Failed Deployment"
-description: "Deployments can go wrong - a broken config file, a failed database migration, or an incompatible package update can take your site offline. This guide walk..."
+description: "Recover from a failed deployment fast: identify what changed, roll back broken configs, restore from a backup or snapshot, and get your site back online."
 canonical: "https://bithost.io/guides/failed-deployment"
 og_title: "How to Recover from a Failed Deployment - bithost Guide"
 og_url: "https://bithost.io/guides/failed-deployment"
-og_description: "Deployments can go wrong - a broken config file, a failed database migration, or an incompatible package update can take your site offline. This guide walk..."
+og_description: "Recover from a failed deployment fast: identify what changed, roll back broken configs, restore from a backup or snapshot, and get your site back online."
 og_type: article
-schema_type: HowTo
+schema_type: Article
 category: "Troubleshooting"
 read_time: "4 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "step-1-dont-panic-identify-what-changed", label: "Don't Panic — Identify What Changed" }
   - { id: "step-2-check-whats-broken", label: "Check What's Broken" }
@@ -84,7 +86,7 @@ state**.
 
 ## Step 3: Fix a Broken Nginx Config
 
-If Nginx won\'t start after a config change:
+If [Nginx](/guides/host-a-website-with-nginx/){: style="color: var(--rd-indigo);"} won\'t start after a config change:
 
     nginx -t
 {: .language-bash}
@@ -141,7 +143,8 @@ If a database migration broke your app:
     mysql -u root -p mysite_db < /backups/mysite-db-before-migration.sql
 {: .language-bash}
 
-> This is why you should always **back up before migrations**.
+> This is why you should always [**back up before
+> migrations**](/guides/automated-backups/){: style="color: var(--rd-indigo);"}.
 
 ### Manually Roll Back a Migration
 
@@ -158,14 +161,16 @@ If your framework supports rollbacks:
 
 If the deployment broke the server badly and you have a snapshot:
 
-1.  Log in to your control panel
+1.  Log in to your [control panel](/guides/understanding-your-dashboard/#backups){: style="color: var(--rd-indigo);"}
 2.  Navigate to **Snapshots** or **Backups**
 3.  Find the snapshot taken **before** the deployment
 4.  Click **Restore**
 
-> ⚠️ Restoring a snapshot rolls back the **entire server** to that point
-> in time - including files, database, and config. This is the nuclear
-> option but it always works.
+> ⚠️ Restoring a snapshot creates a **new server** with an image of your
+> snapshot, so you can continue from the moment in time when you took
+> your snapshot - including files, database, and config. This is the
+> nuclear option but it always works. But please note - the IP of your
+> server will be different.
 
 ## Step 7: Roll Forward If You Can\'t Roll Back
 

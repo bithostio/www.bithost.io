@@ -2,18 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Monitor CPU, RAM, and Disk Usage on Your Cloud Server | Guides | bithost"
-h1: "How to Monitor CPU, RAM, and Disk Usage on Your Cloud Server"
-description: "Monitoring your server's resources helps you catch performance issues early, plan for scaling, and spot unusual activity. This guide covers built-in tools ..."
+title: "How to Monitor CPU, RAM & Disk Usage on a VPS | bithost"
+h1: "How to Monitor CPU, RAM & Disk Usage on a VPS"
+description: "Monitor CPU, RAM, and disk usage on a VPS: use built-in tools like top, htop, and df, set up ongoing monitoring, and catch performance issues early."
 canonical: "https://bithost.io/guides/monitor-resource-usage"
-og_title: "How to Monitor CPU, RAM, and Disk Usage on Your Cloud Server - bithost Guide"
+og_title: "How to Monitor CPU, RAM & Disk Usage on a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/monitor-resource-usage"
-og_description: "Monitoring your server's resources helps you catch performance issues early, plan for scaling, and spot unusual activity. This guide covers built-in tools ..."
+og_description: "Monitor CPU, RAM, and disk usage on a VPS: use built-in tools like top, htop, and df, set up ongoing monitoring, and catch performance issues early."
 og_type: article
 schema_type: Article
 category: "Performance"
 read_time: "3 min read"
-updated: "May 2026"
+updated: "June 2026"
+date_published: "2026-05-01"
+date_modified: "2026-06-15"
 toc:
   - { id: "quick-real-time-monitoring", label: "Quick Real-Time Monitoring" }
   - { id: "cpu-monitoring", label: "CPU Monitoring" }
@@ -32,8 +34,9 @@ sidebar:
 ---
 
 Monitoring your server\'s resources helps you catch performance issues
-early, plan for scaling, and spot unusual activity. This guide covers
-built-in tools and how to set up ongoing monitoring.
+early, [plan for scaling](/guides/scale-server-resources/){: style="color: var(--rd-indigo);"},
+and [spot unusual activity](/guides/monitor-suspicious-activity/){: style="color: var(--rd-indigo);"}.
+This guide covers built-in tools and how to set up ongoing monitoring.
 
 ## Quick Real-Time Monitoring
 
