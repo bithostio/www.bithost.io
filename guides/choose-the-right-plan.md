@@ -30,7 +30,7 @@ sidebar:
 ---
 
 Picking the right plan from the start saves you time, money, and
-headaches - whether you're [buying a VPS with Bitcoin](/bitcoin-vps){: style="color: var(--rd-indigo);"}
+headaches - whether you're [buying a VPS with Bitcoin](/bitcoin-vps/){: style="color: var(--rd-indigo);"}
 for a side project or a production app. This guide walks you through the
 key factors so you can make a confident decision.
 

@@ -43,4 +43,4 @@ your-command --here
 
 ## Next steps   {#next-steps}
 
-- [Getting started guide](/guides/getting-started){: style="color: var(--rd-indigo);"} — if you haven't already.
+- [Getting started guide](/guides/getting-started/){: style="color: var(--rd-indigo);"} — if you haven't already.

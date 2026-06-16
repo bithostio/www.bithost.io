@@ -41,7 +41,7 @@ WordPress with full control over your data.
 
 * A VPS running Ubuntu 22.04 with SSH access ([see vps prices](/prices/){: style="color: var(--rd-indigo);"}). Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
 * Nginx installed ([Host a Website with
-  Nginx](/guides/host-a-website-with-nginx){: style="color:
+  Nginx](/guides/host-a-website-with-nginx/){: style="color:
   var(--rd-indigo);"})
 * A [domain name pointed to your server\'s IP](/guides/point-domain-to-server/){: style="color: var(--rd-indigo);"}
 
@@ -177,5 +177,5 @@ HTTPS. For a full walkthrough, see [Set up HTTPS
 * Keep WordPress, themes, and plugins updated regularly
 * Install a caching plugin (e.g. WP Super Cache) to improve performance
 * Take regular backups ([How to Set Up Automated
-  Backups](/guides/automated-backups){: style="color:
+  Backups](/guides/automated-backups/){: style="color:
   var(--rd-indigo);"})

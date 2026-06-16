@@ -33,7 +33,7 @@ sidebar:
 ---
 
 By default, bithost deploys servers with [SSH key
-authentication](/guides/ssh-keys){: style="color: var(--rd-indigo);"} -
+authentication](/guides/ssh-keys/){: style="color: var(--rd-indigo);"} -
 the most secure way to log in. But there are legitimate reasons to
 switch to password-based SSH login: legacy automation scripts, shared
 access without distributing keys, or testing environments where
@@ -56,7 +56,7 @@ limiting SSH access by IP.
 ## Prerequisites   {#prerequisites}
 
 * A running Linux VPS - [deploy one on
-  bithost](/guides/getting-started){: style="color: var(--rd-indigo);"}
+  bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}
   in under a minute.
 * An active SSH session connected via key auth (you need to be logged in
   before making changes).
@@ -188,5 +188,5 @@ measures that significantly reduce risk:
   unused port) to `sshd_config`.
 * **Re-enable key auth when possible.** SSH keys are phishing-resistant
   and immune to brute force - switch back via [this
-  guide](/guides/ssh-keys){: style="color: var(--rd-indigo);"} once your
+  guide](/guides/ssh-keys/){: style="color: var(--rd-indigo);"} once your
   use case allows it.

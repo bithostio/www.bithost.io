@@ -42,7 +42,7 @@ your first website on a cloud server running Ubuntu 22.04.
 
 * A VPS running Ubuntu 22.04 ([see vps prices](/prices/){: style="color: var(--rd-indigo);"}). Deploy your first [VPS with bithost](/guides/getting-started/){: style="color: var(--rd-indigo);"}.
 * SSH access to the server ([How to Connect via
-  SSH](/guides/connect-via-ssh){: style="color: var(--rd-indigo);"})
+  SSH](/guides/connect-via-ssh/){: style="color: var(--rd-indigo);"})
 * A [domain name pointed to your server\'s IP](/guides/point-domain-to-server/){: style="color: var(--rd-indigo);"} (optional, but recommended)
 
 ## Step 1: Update Your Server
