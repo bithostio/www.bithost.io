@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Host a Node.js or Python App on a VPS | bithost"
 h1: "How to Host a Node.js or Python App on a VPS"
 description: "Deploy a Node.js or Python web app on a VPS and keep it running with a process manager (PM2 or systemd) and Nginx as a reverse proxy."
-canonical: "https://bithost.io/guides/host-nodejs-python-app"
+canonical: "https://bithost.io/guides/host-nodejs-python-app/"
 og_title: "How to Host a Node.js or Python App on a VPS - bithost Guide"
-og_url: "https://bithost.io/guides/host-nodejs-python-app"
+og_url: "https://bithost.io/guides/host-nodejs-python-app/"
 og_description: "Deploy a Node.js or Python web app on a VPS and keep it running with a process manager (PM2 or systemd) and Nginx as a reverse proxy."
 og_type: article
 schema_type: Article

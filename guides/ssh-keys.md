@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Set Up SSH Keys for Your VPS | bithost"
 h1: "How to Set Up SSH Keys for Your VPS"
 description: "Generate an SSH key pair and add your public key to your bithost account. Step-by-step setup for Mac, Linux, and Windows including Ed25519 key generation."
-canonical: "https://bithost.io/guides/ssh-keys"
+canonical: "https://bithost.io/guides/ssh-keys/"
 og_title: "How to Set Up SSH Keys for Your VPS - bithost Guide"
-og_url: "https://bithost.io/guides/ssh-keys"
+og_url: "https://bithost.io/guides/ssh-keys/"
 og_description: "Generate an SSH key pair and add your public key to bithost before deploying a server. Ed25519 setup for Mac, Linux, and Windows."
 og_type: article
 schema_type: Article

@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Choose the Right VPS Plan | Guides | bithost"
 h1: "How to Choose the Right VPS Plan"
 description: "Not sure which VPS plan to pick? CPU, RAM, storage and bandwidth explained in plain English, with recommended specs for blogs, game servers, VPNs and more."
-canonical: "https://bithost.io/guides/choose-the-right-plan"
+canonical: "https://bithost.io/guides/choose-the-right-plan/"
 og_title: "How to Choose the Right VPS Plan - bithost Guide"
-og_url: "https://bithost.io/guides/choose-the-right-plan"
+og_url: "https://bithost.io/guides/choose-the-right-plan/"
 og_description: "Not sure which VPS plan to pick? CPU, RAM, storage and bandwidth explained in plain English, with recommended specs for blogs, game servers, VPNs and more."
 og_type: article
 schema_type: Article

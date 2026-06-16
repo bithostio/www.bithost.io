@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Install WordPress on a VPS | Guides | bithost"
 h1: "How to Install WordPress on a VPS"
 description: "Install WordPress on a VPS step by step: set up the LEMP stack (Nginx, MySQL, PHP) on Ubuntu 22.04, configure your site, and add free HTTPS."
-canonical: "https://bithost.io/guides/install-wordpress"
+canonical: "https://bithost.io/guides/install-wordpress/"
 og_title: "How to Install WordPress on a VPS - bithost Guide"
-og_url: "https://bithost.io/guides/install-wordpress"
+og_url: "https://bithost.io/guides/install-wordpress/"
 og_description: "Install WordPress on a VPS step by step: set up the LEMP stack (Nginx, MySQL, PHP) on Ubuntu 22.04, configure your site, and add free HTTPS."
 og_type: article
 schema_type: Article

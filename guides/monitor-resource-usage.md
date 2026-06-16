@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Monitor CPU, RAM & Disk Usage on a VPS | bithost"
 h1: "How to Monitor CPU, RAM & Disk Usage on a VPS"
 description: "Monitor CPU, RAM, and disk usage on a VPS: use built-in tools like top, htop, and df, set up ongoing monitoring, and catch performance issues early."
-canonical: "https://bithost.io/guides/monitor-resource-usage"
+canonical: "https://bithost.io/guides/monitor-resource-usage/"
 og_title: "How to Monitor CPU, RAM & Disk Usage on a VPS - bithost Guide"
-og_url: "https://bithost.io/guides/monitor-resource-usage"
+og_url: "https://bithost.io/guides/monitor-resource-usage/"
 og_description: "Monitor CPU, RAM, and disk usage on a VPS: use built-in tools like top, htop, and df, set up ongoing monitoring, and catch performance issues early."
 og_type: article
 schema_type: Article

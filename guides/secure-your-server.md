@@ -4,11 +4,11 @@ nav: guides
 jsonld: jsonld/guide.html
 title: "How to Secure Your VPS | Guides | bithost"
 h1: "How to Secure Your VPS"
-description: "Secure your VPS step by step: create a non-root user, disable root SSH login, set up a UFW firewall, install Fail2Ban, and enable automatic security updates."
-canonical: "https://bithost.io/guides/secure-your-server"
+description: "Secure your VPS step by step: create a non-root user, disable root SSH login, set up a UFW firewall, and install Fail2Ban."
+canonical: "https://bithost.io/guides/secure-your-server/"
 og_title: "How to Secure Your VPS - bithost Guide"
-og_url: "https://bithost.io/guides/secure-your-server"
-og_description: "Secure your VPS step by step: create a non-root user, disable root SSH login, set up a UFW firewall, install Fail2Ban, and enable automatic security updates."
+og_url: "https://bithost.io/guides/secure-your-server/"
+og_description: "Secure your VPS step by step: create a non-root user, disable root SSH login, set up a UFW firewall, and install Fail2Ban."
 og_type: article
 schema_type: Article
 category: "Security"

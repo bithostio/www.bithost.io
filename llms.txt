@@ -22,7 +22,6 @@ bithost lets anyone deploy a Linux or Windows cloud server anonymously using cry
 - [Anonymous VPS](https://bithost.io/anonymous-vps): No-KYC, no-card VPS hosting - email-only signup, paid in crypto, since 2014
 - [Windows VPS with Bitcoin](https://bithost.io/windows-vps-bitcoin): Windows Server VPS on Vultr paid in crypto, full RDP access, licence included
 - [VPS with USDC](https://bithost.io/usdc-vps): Pay for a VPS with USD Coin - exact-dollar billing, no exchange-rate risk, no KYC
-- [Dedicated server with Bitcoin](https://bithost.io/bitcoin-dedicated-server): Dedicated-CPU and bare-metal servers on DigitalOcean, Linode, and Vultr paid in crypto
 
 ## Guides - Getting Started
 

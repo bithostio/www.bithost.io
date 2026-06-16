@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Enable Two-Factor Authentication (2FA) | bithost"
 h1: "How to Enable Two-Factor Authentication (2FA)"
 description: "Step-by-step guide to enabling two-factor authentication (2FA) on your bithost account. Protect your balance and servers with an authenticator app."
-canonical: "https://bithost.io/guides/enable-2fa"
+canonical: "https://bithost.io/guides/enable-2fa/"
 og_title: "How to Enable Two-Factor Authentication (2FA) - bithost Guide"
-og_url: "https://bithost.io/guides/enable-2fa"
+og_url: "https://bithost.io/guides/enable-2fa/"
 og_description: "Step-by-step guide to enabling two-factor authentication (2FA) on your bithost account. Protect your balance and servers with an authenticator app."
 og_type: article
 schema_type: Article

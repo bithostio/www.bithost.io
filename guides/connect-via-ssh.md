@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Connect to Your VPS via SSH | Guides | bithost"
 h1: "How to Connect to Your VPS via SSH"
 description: "Generate SSH keys on Mac, Linux, or Windows, add your public key to the server, and connect from your terminal. Covers ed25519, PuTTY, and SSH config."
-canonical: "https://bithost.io/guides/connect-via-ssh"
+canonical: "https://bithost.io/guides/connect-via-ssh/"
 og_title: "How to Connect to Your VPS via SSH - bithost Guide"
-og_url: "https://bithost.io/guides/connect-via-ssh"
+og_url: "https://bithost.io/guides/connect-via-ssh/"
 og_description: "Generate SSH keys on Mac, Linux, or Windows, add your public key to the server, and connect from your terminal. Covers ed25519, PuTTY, and SSH config."
 og_type: article
 schema_type: Article

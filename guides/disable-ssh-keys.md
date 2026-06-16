@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "Disable SSH Key Auth & Enable Password Login | bithost"
 h1: "Disable SSH Key Auth & Enable Password Login on Linux"
 description: "Step-by-step guide to disabling SSH key authentication and enabling password login on a Linux VPS. Edit sshd_config, restart SSH, and test access safely."
-canonical: "https://bithost.io/guides/disable-ssh-keys"
+canonical: "https://bithost.io/guides/disable-ssh-keys/"
 og_title: "Disable SSH Key Auth and Enable Password Login on Linux - bithost Guide"
-og_url: "https://bithost.io/guides/disable-ssh-keys"
+og_url: "https://bithost.io/guides/disable-ssh-keys/"
 og_description: "How to switch your Linux VPS from SSH key authentication to password-based login - edit sshd_config, restart the SSH daemon, and test safely."
 og_type: article
 schema_type: Article

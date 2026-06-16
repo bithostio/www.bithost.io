@@ -5,9 +5,9 @@ jsonld: jsonld/guide.html
 title: "How to Self-Host Cloud Storage with Nextcloud | bithost"
 h1: "How to Self-Host Cloud Storage with Nextcloud"
 description: "Self-host Nextcloud on a VPS for a private Google Drive alternative: file sync, photo backup, calendar, and contacts - all on your own server."
-canonical: "https://bithost.io/guides/nextcloud-cloud-storage"
+canonical: "https://bithost.io/guides/nextcloud-cloud-storage/"
 og_title: "How to Self-Host Cloud Storage with Nextcloud - bithost Guide"
-og_url: "https://bithost.io/guides/nextcloud-cloud-storage"
+og_url: "https://bithost.io/guides/nextcloud-cloud-storage/"
 og_description: "Self-host Nextcloud on a VPS for a private Google Drive alternative: file sync, photo backup, calendar, and contacts - all on your own server."
 og_type: article
 schema_type: Article
