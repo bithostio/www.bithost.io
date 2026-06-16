@@ -28,14 +28,14 @@ toc:
 ---
 
 This guide walks you through creating your first bithost account and
-[buying a VPS with Bitcoin](/bitcoin-vps){: style="color: var(--rd-indigo);"}
+[buying a VPS with Bitcoin](/bitcoin-vps/){: style="color: var(--rd-indigo);"}
 or another coin. No ID, no credit card - just an email address and some
 crypto.
 
 ## Prerequisites   {#prerequisites}
 
 * A cryptocurrency wallet (Bitcoin, Lightning Network, ETH, LTC, DOGE,
-  or any [supported coin](/pay-with-crypto){: style="color: var(--rd-indigo);"})
+  or any [supported coin](/pay-with-crypto/){: style="color: var(--rd-indigo);"})
 * An SSH key pair (we\'ll show you where to add it during server
   creation)
 * About 5 minutes
@@ -53,7 +53,7 @@ border-radius: 8px; border: 1px solid var(--rd-line);"
 fetchpriority="high" srcset="/assets/screenshots/bithost_registration_form_740w.webp 740w, /assets/screenshots/bithost_registration_form.webp 994w" sizes="(max-width: 680px) 100vw, 640px"}
 </figure>
 
-Before completing registration, read the [Terms of Service](/terms){: style="color: var(--rd-indigo);"}.
+Before completing registration, read the [Terms of Service](/terms/){: style="color: var(--rd-indigo);"}.
 
 <figure style="margin: 24px auto 32px; max-width: 640px;" markdown="1">
 ![bithost registration - accepting the terms of
@@ -100,9 +100,9 @@ border: 1px solid var(--rd-line);" loading="lazy" srcset="/assets/screenshots/bi
   confirmation (typically 10-20 min).
 * **Lightning Network** - Instant. Credits in under a second.
   Recommended for fast, low-fee top-ups.
-* **ETH, LTC, DOGE, [USDC](/usdc-vps){: style="color: var(--rd-indigo);"}, XRP, ZEC, BCH and more** - Credits after
+* **ETH, LTC, DOGE, [USDC](/usdc-vps/){: style="color: var(--rd-indigo);"}, XRP, ZEC, BCH and more** - Credits after
   network confirmation. [Full list of supported coins
-  →](/pay-with-crypto){: style="color: var(--rd-indigo);"}
+  →](/pay-with-crypto/){: style="color: var(--rd-indigo);"}
 
 Your balance is denominated in USD and converted at the exchange rate at
 the time of deposit. A fresh deposit address is generated for each
@@ -122,7 +122,7 @@ border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy" srcset="/a
 
 **Pick a provider and region.** bithost runs on DigitalOcean, Linode,
 and Vultr across 30+ locations worldwide. Not sure which to choose? See
-the [choose the right plan guide](/guides/choose-the-right-plan){:
+the [choose the right plan guide](/guides/choose-the-right-plan/){:
 style="color: var(--rd-indigo);"}.
 
 <figure style="margin: 24px auto 32px; max-width: 640px;" markdown="1">
@@ -133,7 +133,7 @@ border-radius: 8px; border: 1px solid var(--rd-line);" loading="lazy" srcset="/a
 </figure>
 
 **Select a size.** Plans start from $0.015/hr. Choose the CPU, RAM, and
-disk that fits your workload. [See the prices](/prices){: style="color:
+disk that fits your workload. [See the prices](/prices/){: style="color:
 var(--rd-indigo);"}.
 
 <figure style="margin: 24px auto 32px; max-width: 640px;" markdown="1">
@@ -168,7 +168,7 @@ are available. The most common choices are:
           </tr>
           <tr>
             <td style="padding: 10px 14px 10px 0; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 13px;">Windows Server</td>
-            <td style="padding: 10px 14px;"><a href="/windows-vps-bitcoin" style="color: var(--rd-indigo);">Windows-specific apps</a> (usually costs extra)</td>
+            <td style="padding: 10px 14px;"><a href="/windows-vps-bitcoin/" style="color: var(--rd-indigo);">Windows-specific apps</a> (usually costs extra)</td>
           </tr>
         </tbody>
       </table>

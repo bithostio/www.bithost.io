@@ -35,7 +35,7 @@ sidebar:
 
 A freshly deployed server is exposed to the internet and needs to be
 hardened before it\'s production-ready - especially an [anonymous
-VPS](/anonymous-vps){: style="color: var(--rd-indigo);"} you run for
+VPS](/anonymous-vps/){: style="color: var(--rd-indigo);"} you run for
 privacy. This guide covers the essential steps to harden a Linux server -
 the security checklist every server owner should follow.
 
@@ -160,7 +160,7 @@ If you haven\'t already, disable password authentication for SSH (done
 in Step 3) and use only SSH keys. This eliminates brute-force password
 attacks entirely.
 
-See: [How to Connect via SSH](/guides/connect-via-ssh){: style="color:
+See: [How to Connect via SSH](/guides/connect-via-ssh/){: style="color:
 var(--rd-indigo);"}
 
 ## Step 7: Change the Default SSH Port (Optional)

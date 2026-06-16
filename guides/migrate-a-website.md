@@ -57,7 +57,7 @@ A typical website migration involves:
 Make sure your new server has everything installed:
 
 * Nginx (or Apache) - [How to Host a Website with
-  Nginx](/guides/host-a-website-with-nginx){: style="color:
+  Nginx](/guides/host-a-website-with-nginx/){: style="color:
   var(--rd-indigo);"}
 * PHP (if needed)
 * MySQL/MariaDB (if your site uses a database)
@@ -188,7 +188,7 @@ Once testing is successful, update your domain\'s DNS **A record** to
 point to the new server\'s IP:
 
 [How to Point Your Domain to Your
-Server](/guides/point-domain-to-server){: style="color:
+Server](/guides/point-domain-to-server/){: style="color:
 var(--rd-indigo);"}
 
 DNS propagation takes 15 minutes to 48 hours.

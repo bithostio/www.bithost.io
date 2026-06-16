@@ -109,7 +109,7 @@ in since Windows 10. The commands are identical. Your keys are stored in
 `C:\Users\YourName\.ssh\`. Alternatively, use PuTTY with PuTTYgen to
 generate keys in PPK format, or convert them to OpenSSH format.
 
-See also: [Connect to your server via SSH](/guides/connect-via-ssh){:
+See also: [Connect to your server via SSH](/guides/connect-via-ssh/){:
 style="color:var(--rd-indigo);"} for a full walkthrough including
 troubleshooting.
 
