@@ -26,9 +26,9 @@ toc:
   - { id: "step-7-check-the-system-logs", label: "Check the System Logs" }
 sidebar_title: "Troubleshooting"
 sidebar:
-  - { url: "/guides/failed-deployment", label: "Recover from failed deploy" }
-  - { url: "/guides/common-errors", label: "Common error messages" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/failed-deployment/", label: "Recover from failed deploy" }
+  - { url: "/guides/common-errors/", label: "Common error messages" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 If you can\'t connect to your server via SSH or your website is down,

@@ -28,10 +28,10 @@ toc:
   - { id: "popular-docker-images-to-explore", label: "Popular Docker Images to Explore" }
 sidebar_title: "Performance"
 sidebar:
-  - { url: "/guides/scale-server-resources", label: "Scale server resources" }
-  - { url: "/guides/monitor-resource-usage", label: "Monitor resource usage" }
-  - { url: "/guides/migrate-a-website", label: "Migrate a website" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/scale-server-resources/", label: "Scale server resources" }
+  - { url: "/guides/monitor-resource-usage/", label: "Monitor resource usage" }
+  - { url: "/guides/migrate-a-website/", label: "Migrate a website" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Docker lets you run applications in isolated containers - making

@@ -30,10 +30,10 @@ toc:
   - { id: "quick-security-audit-commands", label: "Quick Security Audit Commands" }
 sidebar_title: "Security"
 sidebar:
-  - { url: "/guides/secure-your-server", label: "Secure your server" }
-  - { url: "/guides/automated-backups", label: "Set up automated backups" }
-  - { url: "/guides/disable-ssh-keys", label: "Disable SSH key auth" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/secure-your-server/", label: "Secure your server" }
+  - { url: "/guides/automated-backups/", label: "Set up automated backups" }
+  - { url: "/guides/disable-ssh-keys/", label: "Disable SSH key auth" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Monitoring helps you catch security incidents, performance issues, and

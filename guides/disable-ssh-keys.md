@@ -26,10 +26,10 @@ toc:
   - { id: "security-note", label: "Security considerations" }
 sidebar_title: "Security"
 sidebar:
-  - { url: "/guides/ssh-keys", label: "Set up SSH keys" }
-  - { url: "/guides/secure-your-server", label: "Secure your server" }
-  - { url: "/guides/connect-via-ssh", label: "Connect via SSH" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/ssh-keys/", label: "Set up SSH keys" }
+  - { url: "/guides/secure-your-server/", label: "Secure your server" }
+  - { url: "/guides/connect-via-ssh/", label: "Connect via SSH" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 By default, bithost deploys servers with [SSH key

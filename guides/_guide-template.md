@@ -24,8 +24,8 @@ toc:
 # Related links shown under the TOC
 sidebar_title: "Getting Started"
 sidebar:
-  - { url: "/guides/getting-started", label: "Deploy your first server" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/getting-started/", label: "Deploy your first server" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Intro paragraph describing what this guide covers and who it's for.

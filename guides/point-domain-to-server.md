@@ -27,10 +27,10 @@ toc:
   - { id: "optional-using-cloudflare-as-your-dns-provider", label: "Optional: Using Cloudflare as Your DNS Provider" }
 sidebar_title: "Web Hosting"
 sidebar:
-  - { url: "/guides/host-a-website-with-nginx", label: "Host a website with Nginx" }
-  - { url: "/guides/install-wordpress", label: "Install WordPress" }
-  - { url: "/guides/setup-ssl-https", label: "Set up HTTPS (SSL)" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/host-a-website-with-nginx/", label: "Host a website with Nginx" }
+  - { url: "/guides/install-wordpress/", label: "Install WordPress" }
+  - { url: "/guides/setup-ssl-https/", label: "Set up HTTPS (SSL)" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 To make your website accessible via a domain (e.g. `yoursite.com`

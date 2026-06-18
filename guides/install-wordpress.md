@@ -27,10 +27,10 @@ toc:
   - { id: "step-7-add-https-strongly-recommended", label: "Add HTTPS (Strongly Recommended)" }
 sidebar_title: "Web Hosting"
 sidebar:
-  - { url: "/guides/host-a-website-with-nginx", label: "Host a website with Nginx" }
-  - { url: "/guides/setup-ssl-https", label: "Set up HTTPS (SSL)" }
-  - { url: "/guides/point-domain-to-server", label: "Point domain to server" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/host-a-website-with-nginx/", label: "Host a website with Nginx" }
+  - { url: "/guides/setup-ssl-https/", label: "Set up HTTPS (SSL)" }
+  - { url: "/guides/point-domain-to-server/", label: "Point domain to server" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 This guide walks you through installing WordPress on a VPS running Ubuntu

@@ -27,10 +27,10 @@ toc:
   - { id: "monitoring-checklist", label: "Monitoring Checklist" }
 sidebar_title: "Performance"
 sidebar:
-  - { url: "/guides/scale-server-resources", label: "Scale server resources" }
-  - { url: "/guides/migrate-a-website", label: "Migrate a website" }
-  - { url: "/guides/setup-docker", label: "Set up Docker" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/scale-server-resources/", label: "Scale server resources" }
+  - { url: "/guides/migrate-a-website/", label: "Migrate a website" }
+  - { url: "/guides/setup-docker/", label: "Set up Docker" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Monitoring your server\'s resources helps you catch performance issues

@@ -27,9 +27,9 @@ toc:
   - { id: "deployment-best-practices-to-prevent-future-issues", label: "Deployment Best Practices to Prevent Future Issues" }
 sidebar_title: "Troubleshooting"
 sidebar:
-  - { url: "/guides/server-unreachable", label: "Server unreachable" }
-  - { url: "/guides/common-errors", label: "Common error messages" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/server-unreachable/", label: "Server unreachable" }
+  - { url: "/guides/common-errors/", label: "Common error messages" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Deployments can go wrong - a broken config file, a failed database

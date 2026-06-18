@@ -24,10 +24,10 @@ toc:
   - { id: "useful-commands", label: "Useful Commands" }
 sidebar_title: "Use Cases"
 sidebar:
-  - { url: "/guides/setup-vpn-server", label: "Set up a VPN server" }
-  - { url: "/guides/game-server", label: "Run a game server" }
-  - { url: "/guides/nextcloud-cloud-storage", label: "Self-host with Nextcloud" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/setup-vpn-server/", label: "Set up a VPN server" }
+  - { url: "/guides/game-server/", label: "Run a game server" }
+  - { url: "/guides/nextcloud-cloud-storage/", label: "Self-host with Nextcloud" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 This guide walks you through deploying a Node.js or Python web
