@@ -23,10 +23,10 @@ toc:
   - { id: "resource-usage-reference", label: "Resource Usage Reference" }
 sidebar_title: "Performance"
 sidebar:
-  - { url: "/guides/monitor-resource-usage", label: "Monitor resource usage" }
-  - { url: "/guides/migrate-a-website", label: "Migrate a website" }
-  - { url: "/guides/setup-docker", label: "Set up Docker" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/monitor-resource-usage/", label: "Monitor resource usage" }
+  - { url: "/guides/migrate-a-website/", label: "Migrate a website" }
+  - { url: "/guides/setup-docker/", label: "Set up Docker" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 As your website or application grows, you may need more CPU, RAM, or

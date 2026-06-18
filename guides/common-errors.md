@@ -25,9 +25,9 @@ toc:
   - { id: "general-diagnostic-commands", label: "General Diagnostic Commands" }
 sidebar_title: "Troubleshooting"
 sidebar:
-  - { url: "/guides/server-unreachable", label: "Server unreachable" }
-  - { url: "/guides/failed-deployment", label: "Recover from failed deploy" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/server-unreachable/", label: "Server unreachable" }
+  - { url: "/guides/failed-deployment/", label: "Recover from failed deploy" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 This reference guide covers the most frequent errors you\'ll encounter

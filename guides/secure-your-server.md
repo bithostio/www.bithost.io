@@ -27,10 +27,10 @@ toc:
   - { id: "step-8-enable-automatic-security-patches", label: "Enable Automatic Security Patches" }
 sidebar_title: "Security"
 sidebar:
-  - { url: "/guides/automated-backups", label: "Set up automated backups" }
-  - { url: "/guides/monitor-suspicious-activity", label: "Monitor for threats" }
-  - { url: "/guides/disable-ssh-keys", label: "Disable SSH key auth" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/automated-backups/", label: "Set up automated backups" }
+  - { url: "/guides/monitor-suspicious-activity/", label: "Monitor for threats" }
+  - { url: "/guides/disable-ssh-keys/", label: "Disable SSH key auth" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 A freshly deployed server is exposed to the internet and needs to be

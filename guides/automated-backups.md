@@ -25,10 +25,10 @@ toc:
   - { id: "backup-checklist", label: "Backup Checklist" }
 sidebar_title: "Security"
 sidebar:
-  - { url: "/guides/secure-your-server", label: "Secure your server" }
-  - { url: "/guides/monitor-suspicious-activity", label: "Monitor for threats" }
-  - { url: "/guides/disable-ssh-keys", label: "Disable SSH key auth" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/secure-your-server/", label: "Secure your server" }
+  - { url: "/guides/monitor-suspicious-activity/", label: "Monitor for threats" }
+  - { url: "/guides/disable-ssh-keys/", label: "Disable SSH key auth" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Backups are your safety net. This guide covers how to set up backups for

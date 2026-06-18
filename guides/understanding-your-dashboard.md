@@ -25,10 +25,10 @@ toc:
   - { id: "power", label: "Stop, Restart & Delete" }
 sidebar_title: "Getting Started"
 sidebar:
-  - { url: "/guides/getting-started", label: "Deploy your first server" }
-  - { url: "/guides/choose-the-right-plan", label: "Choose the right plan" }
-  - { url: "/guides/connect-via-ssh", label: "Connect via SSH" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/getting-started/", label: "Deploy your first server" }
+  - { url: "/guides/choose-the-right-plan/", label: "Choose the right plan" }
+  - { url: "/guides/connect-via-ssh/", label: "Connect via SSH" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Every server on bithost has its own control panel page. This is where

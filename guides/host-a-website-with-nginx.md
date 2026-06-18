@@ -28,10 +28,10 @@ toc:
   - { id: "step-8-visit-your-website", label: "Visit Your Website" }
 sidebar_title: "Web Hosting"
 sidebar:
-  - { url: "/guides/install-wordpress", label: "Install WordPress" }
-  - { url: "/guides/setup-ssl-https", label: "Set up HTTPS (SSL)" }
-  - { url: "/guides/point-domain-to-server", label: "Point domain to server" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/install-wordpress/", label: "Install WordPress" }
+  - { url: "/guides/setup-ssl-https/", label: "Set up HTTPS (SSL)" }
+  - { url: "/guides/point-domain-to-server/", label: "Point domain to server" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Nginx is a fast, lightweight web server used to serve websites and web

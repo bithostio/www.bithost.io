@@ -26,10 +26,10 @@ toc:
   - { id: "troubleshooting", label: "Troubleshooting" }
 sidebar_title: "Getting Started"
 sidebar:
-  - { url: "/guides/getting-started", label: "Deploy your first server" }
-  - { url: "/guides/choose-the-right-plan", label: "Choose the right plan" }
-  - { url: "/guides/understanding-your-dashboard", label: "Understanding your dashboard" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/getting-started/", label: "Deploy your first server" }
+  - { url: "/guides/choose-the-right-plan/", label: "Choose the right plan" }
+  - { url: "/guides/understanding-your-dashboard/", label: "Understanding your dashboard" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 SSH (Secure Shell) is the standard way to access and manage your Linux

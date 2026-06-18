@@ -22,10 +22,10 @@ toc:
   - { id: "tips-for-other-games", label: "Tips for Other Games" }
 sidebar_title: "Use Cases"
 sidebar:
-  - { url: "/guides/setup-vpn-server", label: "Set up a VPN server" }
-  - { url: "/guides/nextcloud-cloud-storage", label: "Self-host with Nextcloud" }
-  - { url: "/guides/host-nodejs-python-app", label: "Host a Node.js/Python app" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/setup-vpn-server/", label: "Set up a VPN server" }
+  - { url: "/guides/nextcloud-cloud-storage/", label: "Self-host with Nextcloud" }
+  - { url: "/guides/host-nodejs-python-app/", label: "Host a Node.js/Python app" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Hosting your own game server gives you full control over settings, mods,

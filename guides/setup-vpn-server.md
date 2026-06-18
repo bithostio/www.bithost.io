@@ -30,10 +30,10 @@ toc:
   - { id: "verify-its-working", label: "Verify It's Working" }
 sidebar_title: "Use Cases"
 sidebar:
-  - { url: "/guides/game-server", label: "Run a game server" }
-  - { url: "/guides/nextcloud-cloud-storage", label: "Self-host with Nextcloud" }
-  - { url: "/guides/host-nodejs-python-app", label: "Host a Node.js/Python app" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/game-server/", label: "Run a game server" }
+  - { url: "/guides/nextcloud-cloud-storage/", label: "Self-host with Nextcloud" }
+  - { url: "/guides/host-nodejs-python-app/", label: "Host a Node.js/Python app" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Running your own VPN server gives you full privacy control, lets you

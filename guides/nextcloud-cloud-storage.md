@@ -29,10 +29,10 @@ toc:
   - { id: "useful-nextcloud-apps-to-install", label: "Useful Nextcloud Apps to Install" }
 sidebar_title: "Use Cases"
 sidebar:
-  - { url: "/guides/setup-vpn-server", label: "Set up a VPN server" }
-  - { url: "/guides/game-server", label: "Run a game server" }
-  - { url: "/guides/host-nodejs-python-app", label: "Host a Node.js/Python app" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/setup-vpn-server/", label: "Set up a VPN server" }
+  - { url: "/guides/game-server/", label: "Run a game server" }
+  - { url: "/guides/host-nodejs-python-app/", label: "Host a Node.js/Python app" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Nextcloud is a powerful, open-source alternative to Google Drive or

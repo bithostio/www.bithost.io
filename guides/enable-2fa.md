@@ -24,10 +24,10 @@ toc:
   - { id: "step-4", label: "Step 4 - Confirm and save" }
 sidebar_title: "Account security"
 sidebar:
-  - { url: "/guides/secure-your-server", label: "Secure your server" }
-  - { url: "/guides/monitor-suspicious-activity", label: "Monitor for threats" }
-  - { url: "/guides/disable-ssh-keys", label: "Disable SSH key auth" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/secure-your-server/", label: "Secure your server" }
+  - { url: "/guides/monitor-suspicious-activity/", label: "Monitor for threats" }
+  - { url: "/guides/disable-ssh-keys/", label: "Disable SSH key auth" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Your bithost account holds a balance and controls live servers.

@@ -28,10 +28,10 @@ toc:
   - { id: "what-your-nginx-config-looks-like-after-certbot", label: "Nginx Config After Certbot" }
 sidebar_title: "Web Hosting"
 sidebar:
-  - { url: "/guides/host-a-website-with-nginx", label: "Host a website with Nginx" }
-  - { url: "/guides/install-wordpress", label: "Install WordPress" }
-  - { url: "/guides/point-domain-to-server", label: "Point domain to server" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/host-a-website-with-nginx/", label: "Host a website with Nginx" }
+  - { url: "/guides/install-wordpress/", label: "Install WordPress" }
+  - { url: "/guides/point-domain-to-server/", label: "Point domain to server" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 HTTPS encrypts traffic between your server and visitors, protects user

@@ -25,10 +25,10 @@ toc:
   - { id: "windows", label: "Windows setup" }
 sidebar_title: "Security"
 sidebar:
-  - { url: "/guides/connect-via-ssh", label: "Connect via SSH" }
-  - { url: "/guides/secure-your-server", label: "Secure your server" }
-  - { url: "/guides/getting-started", label: "Deploy your first server" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/connect-via-ssh/", label: "Connect via SSH" }
+  - { url: "/guides/secure-your-server/", label: "Secure your server" }
+  - { url: "/guides/getting-started/", label: "Deploy your first server" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 bithost uses SSH key authentication by default on all new servers. You

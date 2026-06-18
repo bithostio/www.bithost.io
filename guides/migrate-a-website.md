@@ -32,10 +32,10 @@ toc:
   - { id: "migration-checklist", label: "Migration Checklist" }
 sidebar_title: "Performance"
 sidebar:
-  - { url: "/guides/scale-server-resources", label: "Scale server resources" }
-  - { url: "/guides/monitor-resource-usage", label: "Monitor resource usage" }
-  - { url: "/guides/setup-docker", label: "Set up Docker" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/scale-server-resources/", label: "Scale server resources" }
+  - { url: "/guides/monitor-resource-usage/", label: "Monitor resource usage" }
+  - { url: "/guides/setup-docker/", label: "Set up Docker" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Whether you\'re moving from shared hosting, another cloud provider, or a

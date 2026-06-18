@@ -23,10 +23,10 @@ toc:
   - { id: "start-small-scale-later", label: "Start Small, Scale Later" }
 sidebar_title: "Getting Started"
 sidebar:
-  - { url: "/guides/getting-started", label: "Deploy your first server" }
-  - { url: "/guides/connect-via-ssh", label: "Connect via SSH" }
-  - { url: "/guides/understanding-your-dashboard", label: "Understanding your dashboard" }
-  - { url: "/guides", label: "All guides →" }
+  - { url: "/guides/getting-started/", label: "Deploy your first server" }
+  - { url: "/guides/connect-via-ssh/", label: "Connect via SSH" }
+  - { url: "/guides/understanding-your-dashboard/", label: "Understanding your dashboard" }
+  - { url: "/guides/", label: "All guides →" }
 ---
 
 Picking the right plan from the start saves you time, money, and
