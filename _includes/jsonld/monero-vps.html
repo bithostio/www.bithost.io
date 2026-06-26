@@ -1,0 +1,97 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://bithost.io/monero-vps#service",
+    "name": "VPS with Monero — bithost",
+    "description": "Pay for a VPS with Monero (XMR) — private by default, no KYC, no credit card. Deploy on DigitalOcean, Linode, or Vultr with crypto.",
+    "url": "https://bithost.io/monero-vps/",
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://bithost.io/#organization",
+      "name": "bithost",
+      "url": "https://bithost.io"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "VPS hosting — pay with Monero",
+      "description": "Cloud VPS on DigitalOcean, Linode, or Vultr paid with Monero (XMR). Private payments, no KYC, hourly billing.",
+      "url": "https://bithost.io/monero-vps/",
+      "priceCurrency": "USD",
+      "price": "0.015",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "0.015",
+        "priceCurrency": "USD",
+        "unitCode": "HUR",
+        "unitText": "hour"
+      }
+    }
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bithost.io/" },
+      { "@type": "ListItem", "position": 2, "name": "VPS with Monero", "item": "https://bithost.io/monero-vps/" }
+    ]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I really pay for a VPS with Monero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Monero (XMR) is one of the 300+ cryptocurrencies bithost accepts. Top up your balance with XMR and deploy servers on DigitalOcean, Linode, or Vultr — no card and no KYC required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is paying with Monero actually private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Monero hides the sender, recipient, and amount on its blockchain by default using ring signatures, stealth addresses, and RingCT — so a payment isn't publicly visible on a block explorer the way a Bitcoin transaction is. Combined with our email-only, no-KYC signup, there is no identity or card linked to your account. As always, your own network privacy (for example using a VPN or Tor) is up to you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long until my Monero deposit is credited?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Monero blocks are about two minutes apart, and deposits credit after a handful of confirmations — typically around 20 minutes from sending. You'll see the balance update automatically once it confirms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why pay with Monero instead of Bitcoin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both work and both land in the same USD balance. The difference is privacy: Bitcoin's ledger is fully public, so anyone can trace amounts and addresses, while Monero's are hidden by design. If keeping your payment trail private matters as much as not handing over ID, Monero is the stronger choice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum top-up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum is $20 USD equivalent in XMR, plus the network fee. Your balance carries over month to month with no expiry, so you can top up once and deploy over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I mix Monero with other coins?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All deposits land in the same USD-denominated balance, so you can fund with Monero today and Bitcoin or a stablecoin tomorrow. Servers are billed from that single balance regardless of how you topped it up."
+        }
+      }
+    ]
+  }
+</script>
