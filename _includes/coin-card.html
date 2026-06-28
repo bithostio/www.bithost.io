@@ -1,0 +1,8 @@
+{% assign c = include.c %}<div class="coin-card" data-search="{{ c.symbol | downcase }} {{ c.name | downcase }}{% for n in c.networks %} {{ n | downcase }}{% endfor %}">
+        <img src="/assets/coins/{{ c.icon }}" alt="{{ c.name }}" width="32" height="32" loading="lazy">
+        <div>
+          <div class="coin-sym">{{ c.symbol }}</div>
+          <div class="coin-name">{{ c.name }}</div>
+          {% if c.networks.size > 0 %}<div class="coin-nets">{% for n in c.networks %}<span>{{ n }}</span>{% endfor %}</div>{% endif %}
+        </div>
+      </div>

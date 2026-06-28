@@ -1,0 +1,133 @@
+---
+layout: default
+nav: pay-with-crypto
+title: "Accepted Cryptocurrencies — 300+ Coins for VPS | bithost"
+description: "Every cryptocurrency bithost accepts — 300+ coins and tokens including Bitcoin, Ethereum, USDT, USDC, Monero, and Solana. No KYC, no card."
+canonical: "https://bithost.io/accepted-cryptocurrencies/"
+og_title: "Accepted Cryptocurrencies — 300+ Coins for VPS | bithost"
+og_url: "https://bithost.io/accepted-cryptocurrencies/"
+og_description: "Every cryptocurrency bithost accepts — 300+ coins and tokens including Bitcoin, Ethereum, USDT, USDC, Monero, and Solana. No KYC, no card."
+jsonld: jsonld/accepted-cryptocurrencies.html
+---
+
+  <!-- INTRO -->
+  <section class="rd-block" style="flex: 1; padding-top: 40px; padding-bottom: 0;">
+
+    <nav class="rd-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="rd-breadcrumb-sep">&rarr;</span>
+      <a href="/pay-with-crypto/">Pay with Crypto</a>
+      <span class="rd-breadcrumb-sep">&rarr;</span>
+      <span class="rd-breadcrumb-current">Accepted Cryptocurrencies</span>
+    </nav>
+
+    <div class="rd-sec-head" style="display: block; margin-bottom: 24px;">
+      <h1>Cryptocurrencies <em>we accept.</em></h1>
+    </div>
+
+    <p style="font-size: 1.1rem; line-height: 1.7; max-width: 680px; color: var(--rd-ink-mute); margin: 0 0 24px;">
+      bithost accepts <strong>{{ site.data.coins | size }}+ cryptocurrencies and tokens</strong> across Bitcoin, Ethereum, BNB Chain, Tron, Solana, Polygon, Arbitrum, Optimism, Base, and more. Top up your balance with any of them and deploy a server &mdash; no card, no KYC. New here? See <a href="/pay-with-crypto/" style="color: var(--rd-indigo);">how paying with crypto works</a>.
+    </p>
+
+    <div style="max-width: 480px; margin: 0 0 8px;">
+      <input id="coinSearch" type="search" placeholder="Search a coin or network — e.g. Monero, USDT, Polygon" aria-label="Search cryptocurrencies"
+        style="width: 100%; padding: 12px 16px; font-size: 0.95rem; border: 1px solid var(--rd-line); border-radius: 10px; background: var(--rd-paper); color: var(--rd-ink);">
+    </div>
+    <p id="coinCount" style="font-size: 0.85rem; color: var(--rd-ink-mute); margin: 0 0 48px;"></p>
+
+  </section>
+
+  {% assign popular = site.data.coins | where: "cat", "popular" %}
+  {% assign stable = site.data.coins | where: "cat", "stablecoin" %}
+  {% assign privacy = site.data.coins | where: "cat", "privacy" %}
+  {% assign other = site.data.coins | where: "cat", "other" %}
+
+  <section class="rd-block" style="padding-top: 0; padding-bottom: 80px;">
+
+    <div class="coin-group" data-group>
+      <h2 class="coin-h2">Popular coins</h2>
+      <div class="coin-grid">
+        {% for c in popular %}{% include coin-card.html c=c %}{% endfor %}
+      </div>
+    </div>
+
+    <div class="coin-group" data-group>
+      <h2 class="coin-h2">Stablecoins</h2>
+      <div class="coin-grid">
+        {% for c in stable %}{% include coin-card.html c=c %}{% endfor %}
+      </div>
+    </div>
+
+    <div class="coin-group" data-group>
+      <h2 class="coin-h2">Privacy coins</h2>
+      <div class="coin-grid">
+        {% for c in privacy %}{% include coin-card.html c=c %}{% endfor %}
+      </div>
+    </div>
+
+    <div class="coin-group" data-group>
+      <h2 class="coin-h2">All other coins &amp; tokens</h2>
+      <div class="coin-grid">
+        {% for c in other %}{% include coin-card.html c=c %}{% endfor %}
+      </div>
+    </div>
+
+    <p id="coinNoResults" style="display: none; color: var(--rd-ink-mute); font-size: 0.95rem;">No coins match your search. Try a different name or network.</p>
+
+    <p style="font-size: 0.9rem; color: var(--rd-ink-mute); margin: 40px 0 0; max-width: 680px;">
+      Support for individual coins and networks can change over time. The live, current list is always shown on the deposit screen when you <a href="https://dashboard.bithost.io/registration" style="color: var(--rd-indigo);">top up your balance</a>.
+    </p>
+
+  </section>
+
+  <style>
+    .coin-h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 16px; letter-spacing: -0.01em; }
+    .coin-group { margin-bottom: 48px; }
+    .coin-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+    .coin-card { display: flex; align-items: center; gap: 12px; border: 1px solid var(--rd-line); border-radius: 10px; padding: 12px 14px; }
+    .coin-card img { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; }
+    .coin-sym { font-size: 0.9rem; font-weight: 700; color: var(--rd-ink); line-height: 1.2; }
+    .coin-name { font-size: 0.8rem; color: var(--rd-ink-mute); line-height: 1.3; }
+    .coin-nets { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 3px; }
+    .coin-nets span { font-size: 0.65rem; color: var(--rd-ink-mute); border: 1px solid var(--rd-line); border-radius: 4px; padding: 1px 5px; }
+  </style>
+
+  <script>
+    (function () {
+      var input = document.getElementById('coinSearch');
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.coin-card'));
+      var groups = Array.prototype.slice.call(document.querySelectorAll('[data-group]'));
+      var countEl = document.getElementById('coinCount');
+      var noRes = document.getElementById('coinNoResults');
+      var total = cards.length;
+      function render() {
+        var q = (input.value || '').trim().toLowerCase();
+        var shown = 0;
+        cards.forEach(function (c) {
+          var match = !q || c.getAttribute('data-search').indexOf(q) !== -1;
+          c.style.display = match ? '' : 'none';
+          if (match) shown++;
+        });
+        groups.forEach(function (g) {
+          var any = g.querySelectorAll('.coin-card:not([style*="none"])').length > 0;
+          g.style.display = any ? '' : 'none';
+        });
+        noRes.style.display = shown === 0 ? '' : 'none';
+        countEl.textContent = q ? ('Showing ' + shown + ' of ' + total) : (total + ' coins accepted');
+      }
+      input.addEventListener('input', render);
+      render();
+    })();
+  </script>
+
+  <!-- CROSS LINKS -->
+  <section class="rd-block" style="padding-top: 0; padding-bottom: 96px;">
+    <h2 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 16px; letter-spacing: -0.01em;">Popular ways to pay</h2>
+    <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;">
+      <li><a href="/bitcoin-vps/" style="color: var(--rd-indigo);">Buy a VPS with Bitcoin &rarr;</a></li>
+      <li><a href="/monero-vps/" style="color: var(--rd-indigo);">Buy a VPS with Monero &rarr;</a></li>
+      <li><a href="/usdc-vps/" style="color: var(--rd-indigo);">Buy a VPS with USDC &rarr;</a></li>
+      <li><a href="/pay-with-crypto/" style="color: var(--rd-indigo);">How paying with crypto works &rarr;</a></li>
+      <li><a href="/prices/" style="color: var(--rd-indigo);">Full VPS pricing &rarr;</a></li>
+    </ul>
+  </section>
