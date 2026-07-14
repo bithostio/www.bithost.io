@@ -4,7 +4,52 @@ Disallow:
 User-agent: Wget
 Disallow:
 
-User-agent: *
+# =======================================================
+# 1. BLOCK TRAINING SCRAPERS (No referral value)
+# =======================================================
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Google-Extended lets you opt out of Gemini training while keeping normal Google Search
+User-agent: Google-Extended
+Disallow: /
+
+# Applebot-Extended lets you opt out of Apple Intelligence training
+User-agent: Applebot-Extended
+Disallow: /
+
+
+# =======================================================
+# 2. ALLOW SEARCH & USER RETRIEVAL (Drives traffic)
+# =======================================================
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://bithost.io/sitemap.xml
