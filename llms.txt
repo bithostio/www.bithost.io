@@ -1,8 +1,8 @@
 # bithost
 
-> Privacy-first cloud VPS reseller powered by DigitalOcean, Linode, and Vultr. Pay with Bitcoin, Lightning Network, Ethereum, and 11 other cryptocurrencies. No KYC, no credit card, no identity verification. Hourly billing with no auto-renewals. Operating since 2014.
+> Privacy-first cloud VPS reseller powered by DigitalOcean, Linode, and Vultr. Pay with Bitcoin, Lightning Network, Ethereum, Monero, and 300+ other cryptocurrencies. No KYC, no credit card, no identity verification. Hourly billing with no auto-renewals. Operating since 2014.
 
-bithost lets anyone deploy a Linux or Windows cloud server anonymously using crypto. Servers are provisioned in minutes across 30+ global locations. Full root access via SSH. Manage everything from the web dashboard or the bh CLI. Minimum top-up is $20.
+bithost lets anyone deploy a Linux or Windows cloud server anonymously using crypto. Servers are provisioned in minutes across 30+ global locations. Full root access via SSH. Manage everything from the web dashboard or the bh CLI. Servers start at $0.015/hr, billed hourly with no monthly minimum or auto-renewal; minimum top-up is $20.
 
 ## Core pages
 
@@ -24,6 +24,9 @@ bithost lets anyone deploy a Linux or Windows cloud server anonymously using cry
 - [VPS with USDC](https://bithost.io/usdc-vps): Pay for a VPS with USD Coin - exact-dollar billing, no exchange-rate risk, no KYC
 - [VPS with Monero](https://bithost.io/monero-vps): Pay for a VPS with Monero (XMR) - private by default, no public payment trail, no KYC, no card
 - [Accepted Cryptocurrencies](https://bithost.io/accepted-cryptocurrencies): Full list of 300+ accepted coins and tokens across Bitcoin, Ethereum, BNB Chain, Tron, Solana, Polygon, Arbitrum, Optimism and Base
+- [DigitalOcean with Crypto](https://bithost.io/digitalocean-with-crypto): Deploy DigitalOcean Droplets paid in Bitcoin or 300+ cryptocurrencies - bithost provisions the server, no card, no KYC
+- [Linode with Crypto](https://bithost.io/linode-with-crypto): Deploy Linode instances paid in Bitcoin or 300+ cryptocurrencies - bithost provisions the server, no card, no KYC
+- [Vultr with Crypto](https://bithost.io/vultr-with-crypto): Deploy Vultr instances paid in Bitcoin or 300+ cryptocurrencies - bithost provisions the server, no card, no KYC
 
 ## Guides - Getting Started
 
