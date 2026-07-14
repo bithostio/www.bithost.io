@@ -2,6 +2,15 @@
 
 This document provides comprehensive syntax, parameters, and error handling for automating bithost infrastructure.
 
+## Pricing & Billing
+
+- **Servers start at $0.015/hour.** All plans are billed hourly from a prepaid balance held in USD.
+- **No monthly minimum, no contracts, no auto-renewals.** Delete a server and billing stops immediately — you only pay for the hours it existed.
+- **Minimum top-up: $20** (USD equivalent) in crypto. Balance carries over month to month with no expiry.
+- **Backups:** optional, about 20% of the server's price. **Snapshots:** $0.06/GB per month.
+- **API keys:** $10.00, valid for 3 months.
+- Per-plan CPU, RAM, and storage prices mirror the underlying DigitalOcean, Linode, and Vultr plans. Full, current price tables: https://bithost.io/prices
+
 ## 1. Authentication & System Access
 
 - **API Key**: Generate from https://dashboard.bithost.io/api/keys
