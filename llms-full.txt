@@ -5,7 +5,7 @@ This document provides comprehensive syntax, parameters, and error handling for 
 ## Pricing & Billing
 
 - **Servers start at $0.015/hour.** All plans are billed hourly from a prepaid balance held in USD.
-- **No monthly minimum, no contracts, no auto-renewals.** Delete a server and billing stops immediately — you only pay for the hours it existed.
+- **No monthly minimum, no contracts, no auto-renewals.** Delete a server and billing stops immediately - you only pay for the hours it existed.
 - **Minimum top-up: $20** (USD equivalent) in crypto. Balance carries over month to month with no expiry.
 - **Backups:** optional, about 20% of the server's price. **Snapshots:** $0.06/GB per month.
 - **API keys:** $10.00, valid for 3 months.
@@ -34,11 +34,11 @@ All responses are JSON. Errors use the following envelope:
 
 ### HTTP Status Codes
 
-- `200` — Success
-- `401` — Unauthorized (missing or invalid API key)
-- `403` — Forbidden (account not allowed to perform this action)
-- `404` — Not Found
-- `422` — Validation error
+- `200` - Success
+- `401` - Unauthorized (missing or invalid API key)
+- `403` - Forbidden (account not allowed to perform this action)
+- `404` - Not Found
+- `422` - Validation error
 
 ### Error Codes
 
@@ -51,29 +51,29 @@ Collection endpoints return up to 50 items per page. Use the `page` query parame
 ## 4. REST API Endpoints
 
 ### User
-- `GET /api/v1/user` — Profile and account balance
+- `GET /api/v1/user` - Profile and account balance
 
 ### Servers
-- `GET /api/v1/servers` — List servers
-- `GET /api/v1/servers/:id` — Get server details
-- `POST /api/v1/servers` — Deploy a server (requires `terms: true`)
-- `DELETE /api/v1/servers/:id` — Destroy a server
-- `POST /api/v1/servers/:id/power` — Power action (`on`, `off`, `reboot`)
-- `POST /api/v1/servers/:id/rebuild` — Rebuild server
-- `POST /api/v1/servers/:id/resize` — Resize server
-- `POST /api/v1/servers/:id/backup` — Trigger backup
-- `POST /api/v1/servers/:id/snapshot` — Take snapshot
+- `GET /api/v1/servers` - List servers
+- `GET /api/v1/servers/:id` - Get server details
+- `POST /api/v1/servers` - Deploy a server (requires `terms: true`)
+- `DELETE /api/v1/servers/:id` - Destroy a server
+- `POST /api/v1/servers/:id/power` - Power action (`on`, `off`, `reboot`)
+- `POST /api/v1/servers/:id/rebuild` - Rebuild server
+- `POST /api/v1/servers/:id/resize` - Resize server
+- `POST /api/v1/servers/:id/backup` - Trigger backup
+- `POST /api/v1/servers/:id/snapshot` - Take snapshot
 
 ### SSH Keys
-- `GET /api/v1/keys` — List SSH keys
-- `POST /api/v1/keys` — Add SSH key (requires nested `{"key": {"label": "...", "key": "..."}}`)
+- `GET /api/v1/keys` - List SSH keys
+- `POST /api/v1/keys` - Add SSH key (requires nested `{"key": {"label": "...", "key": "..."}}`)
 
 ### Discovery
-- `GET /api/v1/providers` — List available providers (digitalocean, linode, vultr)
-- `GET /api/v1/regions?provider=<slug>` — List regions for a provider
-- `GET /api/v1/sizes?provider=<slug>` — List sizes for a provider
-- `GET /api/v1/images?provider=<slug>` — List images for a provider
-- `GET /api/v1/images/:id` — Get image details
+- `GET /api/v1/providers` - List available providers (digitalocean, linode, vultr)
+- `GET /api/v1/regions?provider=<slug>` - List regions for a provider
+- `GET /api/v1/sizes?provider=<slug>` - List sizes for a provider
+- `GET /api/v1/images?provider=<slug>` - List images for a provider
+- `GET /api/v1/images/:id` - Get image details
 
 Note: deployment requires integer IDs (size_id, region_id, image_id), not slugs.
 

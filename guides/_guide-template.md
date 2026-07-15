@@ -17,7 +17,7 @@ og_type: article
 category: "Getting Started"      # shown in the meta row
 read_time: "5 min read"
 updated: "May 2026"
-# "On this page" sidebar — each id must match a {#id} on a heading below
+# "On this page" sidebar - each id must match a {#id} on a heading below
 toc:
   - { id: "section-one", label: "Section one" }
   - { id: "next-steps", label: "Next steps" }
@@ -43,4 +43,4 @@ your-command --here
 
 ## Next steps   {#next-steps}
 
-- [Getting started guide](/guides/getting-started/){: style="color: var(--rd-indigo);"} — if you haven't already.
+- [Getting started guide](/guides/getting-started/){: style="color: var(--rd-indigo);"} - if you haven't already.
