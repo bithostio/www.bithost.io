@@ -199,9 +199,14 @@ jsonld: jsonld/home.html
   <!-- ===== 02 · HOW IT WORKS ===== -->
   <div class="rd-dark">
     <div class="rd-inner">
+      <style>
+        @media (min-width: 1200px) {
+          #rd-loop-head { max-width: none; white-space: nowrap; font-size: clamp(30px, 3vw, 40px); }
+        }
+      </style>
       <div class="rd-sec-head">
         <div class="rd-num rd-eyebrow">02 · the loop</div>
-        <h2>Top up. Deploy. <em>Forget the invoice.</em></h2>
+        <h2 id="rd-loop-head">Top up. Deploy. <em>Forget the invoice.</em></h2>
         <div class="rd-aux">three steps · zero forms</div>
       </div>
 
