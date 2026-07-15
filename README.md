@@ -1,6 +1,6 @@
 # bithost.io
 
-The marketing site for [bithost.io](https://bithost.io) — a Jekyll static site
+The marketing site for [bithost.io](https://bithost.io) - a Jekyll static site
 deployed via GitHub Pages.
 
 ## Prerequisites
@@ -21,7 +21,7 @@ bundle install
 ```
 
 This installs the [`github-pages`](https://github.com/github/pages-gem) gem,
-which pins Jekyll and its plugins to the exact versions GitHub Pages uses — so
+which pins Jekyll and its plugins to the exact versions GitHub Pages uses - so
 what you see locally matches production.
 
 ## Run locally
@@ -88,4 +88,4 @@ GitHub Pages builds and serves the site automatically on every push to the
 - The custom domain (`bithost.io`) is set via the `CNAME` file; enable
   **Enforce HTTPS** in the Pages settings.
 
-No build step or CI is required — GitHub runs Jekyll server-side.
+No build step or CI is required - GitHub runs Jekyll server-side.

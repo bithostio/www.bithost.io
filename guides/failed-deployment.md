@@ -17,7 +17,7 @@ updated: "June 2026"
 date_published: "2026-05-01"
 date_modified: "2026-06-15"
 toc:
-  - { id: "step-1-dont-panic-identify-what-changed", label: "Don't Panic — Identify What Changed" }
+  - { id: "step-1-dont-panic-identify-what-changed", label: "Don't Panic - Identify What Changed" }
   - { id: "step-2-check-whats-broken", label: "Check What's Broken" }
   - { id: "step-3-fix-a-broken-nginx-config", label: "Fix a Broken Nginx Config" }
   - { id: "step-4-revert-a-failed-code-deployment", label: "Revert a Failed Code Deployment" }
