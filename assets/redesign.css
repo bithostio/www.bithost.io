@@ -1,10 +1,10 @@
 /* Self-hosted fonts (replaces Google Fonts; eliminates the third-party request and refresh flash) */
-@font-face { font-family: 'Sora'; font-style: normal; font-weight: 400; font-display: optional; src: url('/assets/fonts/sora-v17-latin-regular.woff2') format('woff2'); }
-@font-face { font-family: 'Sora'; font-style: normal; font-weight: 500; font-display: optional; src: url('/assets/fonts/sora-v17-latin-500.woff2') format('woff2'); }
-@font-face { font-family: 'Sora'; font-style: normal; font-weight: 600; font-display: optional; src: url('/assets/fonts/sora-v17-latin-600.woff2') format('woff2'); }
-@font-face { font-family: 'Sora'; font-style: normal; font-weight: 700; font-display: optional; src: url('/assets/fonts/sora-v17-latin-700.woff2') format('woff2'); }
-@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: optional; src: url('/assets/fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2'); }
-@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: optional; src: url('/assets/fonts/jetbrains-mono-v24-latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'Sora'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/sora-v17-latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Sora'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/sora-v17-latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'Sora'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/sora-v17-latin-600.woff2') format('woff2'); }
+@font-face { font-family: 'Sora'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/sora-v17-latin-700.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/jetbrains-mono-v24-latin-500.woff2') format('woff2'); }
 
 :root {
   --rd-indigo: #4f64e1;
