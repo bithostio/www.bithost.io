@@ -1,9 +1,32 @@
-<!-- Cookie consent banner (was the second IIFE in assets/footer.js). -->
+<!-- Cookie consent banner + consent-gated Google Analytics (GA4).
+     GA is loaded ONLY after the visitor clicks Accept (or on return visits if
+     they accepted before). Nothing loads and no analytics cookies are set until
+     then. Decline keeps analytics off. -->
 <script>
 (function () {
   var STORE_KEY = 'rd_cookies_accepted';
 
-  if (localStorage.getItem(STORE_KEY)) return;
+  /* GA4 Measurement ID for bithost.io. */
+  var GA_ID = 'G-PH6GZC8QDR';
+
+  function loadAnalytics() {
+    if (window.__gaLoaded) return;
+    if (!GA_ID || GA_ID.indexOf('G-') !== 0 || GA_ID === 'G-XXXXXXXXXX') return; /* no-op until a real ID is set */
+    window.__gaLoaded = true;
+
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
+  }
+
+  /* Returning visitor who already accepted: load analytics, no banner. */
+  if (localStorage.getItem(STORE_KEY)) { loadAnalytics(); return; }
 
   var banner = document.createElement('div');
   banner.id = 'rd-cookie-banner';
@@ -12,7 +35,7 @@
   banner.innerHTML =
     '<div id="rd-cookie-inner">' +
       '<p id="rd-cookie-text">' +
-        'We use cookies to keep you logged in and remember your preferences. No tracking, no ads. ' +
+        'We use cookies to keep you logged in and remember your preferences. With your consent, we also use Google Analytics to measure page visits - no ads, no selling your data. ' +
         '<a href="/privacy/" id="rd-cookie-link">Privacy policy</a>' +
       '</p>' +
       '<div id="rd-cookie-actions">' +
@@ -67,7 +90,10 @@
   setTimeout(function () { banner.classList.add('rd-visible'); }, 600);
 
   function dismiss(accepted) {
-    if (accepted) localStorage.setItem(STORE_KEY, '1');
+    if (accepted) {
+      localStorage.setItem(STORE_KEY, '1');
+      loadAnalytics();
+    }
     banner.style.transition = 'transform .25s ease';
     banner.style.transform = 'translateY(100%)';
     setTimeout(function () { banner.remove(); }, 300);
