@@ -2,20 +2,20 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Choose the Right VPS Plan | Guides | bithost"
+title: "How to Choose the Right VPS Plan: CPU, RAM, Storage | bithost"
 h1: "How to Choose the Right VPS Plan"
 description: "Not sure which VPS plan to pick? CPU, RAM, storage and bandwidth explained in plain English, with recommended specs for blogs, game servers, VPNs and more."
 canonical: "https://bithost.io/guides/choose-the-right-plan/"
-og_title: "How to Choose the Right VPS Plan - bithost Guide"
+og_title: "How to Choose the Right VPS Plan: CPU, RAM, Storage | bithost"
 og_url: "https://bithost.io/guides/choose-the-right-plan/"
 og_description: "Not sure which VPS plan to pick? CPU, RAM, storage and bandwidth explained in plain English, with recommended specs for blogs, game servers, VPNs and more."
 og_type: article
 schema_type: Article
 category: "Getting Started"
 read_time: "3 min read"
-updated: "June 2026"
+updated: "September 2026"
 date_published: "2026-05-01"
-date_modified: "2026-06-15"
+date_modified: "2026-09-23"
 toc:
   - { id: "understand-your-workload", label: "Understand Your Workload" }
   - { id: "key-specs-explained", label: "Key Specs Explained" }

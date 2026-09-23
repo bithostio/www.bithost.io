@@ -4,18 +4,18 @@ nav: guides
 jsonld: jsonld/guide.html
 title: "How to Host a Node.js or Python App on a VPS | bithost"
 h1: "How to Host a Node.js or Python App on a VPS"
-description: "Deploy a Node.js or Python web app on a VPS and keep it running with a process manager (PM2 or systemd) and Nginx as a reverse proxy."
+description: "Deploy a Node.js or Python web app on a VPS and keep it online 24/7 with a process manager (PM2 or systemd), Nginx as a reverse proxy, and free HTTPS."
 canonical: "https://bithost.io/guides/host-nodejs-python-app/"
 og_title: "How to Host a Node.js or Python App on a VPS - bithost Guide"
 og_url: "https://bithost.io/guides/host-nodejs-python-app/"
-og_description: "Deploy a Node.js or Python web app on a VPS and keep it running with a process manager (PM2 or systemd) and Nginx as a reverse proxy."
+og_description: "Deploy a Node.js or Python web app on a VPS and keep it online 24/7 with a process manager (PM2 or systemd), Nginx as a reverse proxy, and free HTTPS."
 og_type: article
 schema_type: Article
 category: "Use Cases"
 read_time: "3 min read"
-updated: "June 2026"
+updated: "September 2026"
 date_published: "2026-05-01"
-date_modified: "2026-06-15"
+date_modified: "2026-09-23"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "part-a-deploying-a-nodejs-app", label: "Part A: Deploying a Node.js App" }
