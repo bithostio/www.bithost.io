@@ -2,23 +2,23 @@
 layout: guide
 nav: guides
 jsonld: jsonld/guide.html
-title: "How to Deploy a Cloud VPS with Bitcoin | bithost Guide"
-h1: "Deploy your first VPS with bithost"
-description: "Create a bithost account, top up with Bitcoin or crypto, and deploy your first VPS in under 5 minutes. No KYC, no card."
+title: "How to Deploy a VPS with Bitcoin in 5 Minutes | bithost"
+h1: "Deploy your first VPS with Bitcoin"
+description: "Deploy a cloud VPS paid in Bitcoin in about 5 minutes: sign up with an email, top up in crypto, launch your server. No KYC, no card, from $0.015/hr."
 canonical: "https://bithost.io/guides/getting-started/"
 redirect_from:
   - /guides/set-up-your-first-server
   - /guides/set-up-your-first-server/
-og_title: "How to Deploy a Cloud VPS with Bitcoin - bithost Guide"
+og_title: "How to Deploy a VPS with Bitcoin in 5 Minutes | bithost"
 og_url: "https://bithost.io/guides/getting-started/"
-og_description: "Create your bithost account, top up with BTC or crypto, and deploy a live cloud server in under 5 minutes. No ID required."
+og_description: "Deploy a cloud VPS paid in Bitcoin in about 5 minutes: sign up with an email, top up in crypto, launch your server. No KYC, no card, from $0.015/hr."
 og_type: article
 schema_type: Article
 category: "Getting Started"
 read_time: "5 min read"
-updated: "June 2026"
+updated: "September 2026"
 date_published: "2026-05-01"
-date_modified: "2026-06-15"
+date_modified: "2026-09-23"
 toc:
   - { id: "prerequisites", label: "Prerequisites" }
   - { id: "create-account", label: "1. Create account" }
@@ -27,10 +27,11 @@ toc:
   - { id: "login", label: "4. Login to the server" }
 ---
 
-This guide walks you through creating your first bithost account and
-[buying a VPS with Bitcoin](/bitcoin-vps/){: style="color: var(--rd-indigo);"}
-or another coin. No ID, no credit card - just an email address and some
-crypto.
+This guide walks you through deploying your first VPS in about five
+minutes - create a bithost account, top up in
+[Bitcoin](/bitcoin-vps/){: style="color: var(--rd-indigo);"} or another
+coin, and launch a server. No ID and no credit card, just an email
+address and some crypto. Servers start at $0.015/hr, billed hourly.
 
 ## Prerequisites   {#prerequisites}
 
