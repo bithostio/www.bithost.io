@@ -4,14 +4,14 @@ nav: guides
 jsonld: jsonld/guide.html
 title: "How to Deploy a Cloud VPS with Bitcoin | bithost Guide"
 h1: "Deploy your first VPS with bithost"
-description: "Create a bithost account, top up with Bitcoin or Lightning, and deploy your first VPS in under 5 minutes. No KYC, no card."
+description: "Create a bithost account, top up with Bitcoin or crypto, and deploy your first VPS in under 5 minutes. No KYC, no card."
 canonical: "https://bithost.io/guides/getting-started/"
 redirect_from:
   - /guides/set-up-your-first-server
   - /guides/set-up-your-first-server/
 og_title: "How to Deploy a Cloud VPS with Bitcoin - bithost Guide"
 og_url: "https://bithost.io/guides/getting-started/"
-og_description: "Create your bithost account, top up with BTC or Lightning, and deploy a live cloud server in under 5 minutes. No ID required."
+og_description: "Create your bithost account, top up with BTC or crypto, and deploy a live cloud server in under 5 minutes. No ID required."
 og_type: article
 schema_type: Article
 category: "Getting Started"
@@ -34,7 +34,7 @@ crypto.
 
 ## Prerequisites   {#prerequisites}
 
-* A cryptocurrency wallet (Bitcoin, Lightning Network, ETH, LTC, DOGE,
+* A cryptocurrency wallet (Bitcoin, ETH, LTC, DOGE,
   or any [supported coin](/pay-with-crypto/){: style="color: var(--rd-indigo);"})
 * An SSH key pair (we\'ll show you where to add it during server
   creation)
@@ -98,8 +98,6 @@ border: 1px solid var(--rd-line);" loading="lazy" srcset="/assets/screenshots/bi
 
 * **Bitcoin (BTC)** - On-chain. Credits once the transaction has 1
   confirmation (typically 10-20 min).
-* **Lightning Network** - Instant. Credits in under a second.
-  Recommended for fast, low-fee top-ups.
 * **ETH, LTC, DOGE, [USDC](/usdc-vps/){: style="color: var(--rd-indigo);"}, XRP, ZEC, BCH and more** - Credits after
   network confirmation. [Full list of supported coins
   →](/pay-with-crypto/){: style="color: var(--rd-indigo);"}
