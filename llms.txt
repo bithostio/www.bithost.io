@@ -1,6 +1,6 @@
 # bithost
 
-> Privacy-first cloud VPS reseller powered by DigitalOcean, Linode, and Vultr. Pay with Bitcoin, Lightning Network, Ethereum, Monero, and 300+ other cryptocurrencies. No KYC, no credit card, no identity verification. Hourly billing with no auto-renewals. Operating since 2014.
+> Privacy-first cloud VPS reseller powered by DigitalOcean, Linode, and Vultr. Pay with Bitcoin, Ethereum, Monero, and 300+ other cryptocurrencies. No KYC, no credit card, no identity verification. Hourly billing with no auto-renewals. Operating since 2014.
 
 bithost lets anyone deploy a Linux or Windows cloud server anonymously using crypto. Servers are provisioned in minutes across 30+ global locations. Full root access via SSH. Manage everything from the web dashboard or the bh CLI. Servers start at $0.015/hr, billed hourly with no monthly minimum or auto-renewal; minimum top-up is $20.
 
@@ -9,7 +9,7 @@ bithost lets anyone deploy a Linux or Windows cloud server anonymously using cry
 - [Homepage](https://bithost.io/): Overview of the service, providers, billing model, and supported cryptocurrencies
 - [Prices](https://bithost.io/prices): Full pricing tables for DigitalOcean, Linode, and Vultr plans - CPU, RAM, storage, and hourly/monthly rates
 - [FAQ](https://bithost.io/faq): Answers on crypto payments, billing, server limits, account security, and balance management
-- [Pay with Crypto](https://bithost.io/pay-with-crypto): Full list of accepted cryptocurrencies - Bitcoin, Lightning Network, ETH, DOGE, LTC, USDC, SOL, and more
+- [Pay with Crypto](https://bithost.io/pay-with-crypto): Full list of accepted cryptocurrencies - Bitcoin, ETH, DOGE, LTC, USDC, SOL, and more
 - [Dashboard](https://dashboard.bithost.io/): Login, top up balance, deploy and manage servers
 - [API & CLI](https://bithost.io/bithost-cli-api/): Overview of the REST API and bh command-line tool
 - [API Docs](https://bithost.io/bithost-cli-api/api): Full REST API reference - authentication, endpoints, request/response format
@@ -18,7 +18,7 @@ bithost lets anyone deploy a Linux or Windows cloud server anonymously using cry
 
 ## Buy a VPS with crypto
 
-- [Bitcoin VPS](https://bithost.io/bitcoin-vps): Buy a DigitalOcean, Linode, or Vultr VPS with Bitcoin or Lightning - run a node, BTCPay Server, or any Linux workload
+- [Bitcoin VPS](https://bithost.io/bitcoin-vps): Buy a DigitalOcean, Linode, or Vultr VPS with Bitcoin - run a node, BTCPay Server, or any Linux workload
 - [Anonymous VPS](https://bithost.io/anonymous-vps): No-KYC, no-card VPS hosting - email-only signup, paid in crypto, since 2014
 - [Windows VPS with Bitcoin](https://bithost.io/windows-vps-bitcoin): Windows Server VPS on Vultr paid in crypto, full RDP access, licence included
 - [VPS with USDC](https://bithost.io/usdc-vps): Pay for a VPS with USD Coin - exact-dollar billing, no exchange-rate risk, no KYC
